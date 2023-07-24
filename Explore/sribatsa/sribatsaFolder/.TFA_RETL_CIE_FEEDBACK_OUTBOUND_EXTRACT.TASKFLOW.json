@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "3EruY5LQhocgVS6a4pNyqi",
+    "name" : "TFA_RETL_CIE_FEEDBACK_OUTBOUND_EXTRACT",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "1V4AdypKwKBqRi9-gt-13200479-2022-06-28T10:30:09.285Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,185 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>hMFmabeAzu2JQht-gt-16726527-2021-12-16T12:03:56.127Z::svc.xml</types1:EntryId>
+      <types1:Name>scTestXquery</types1:Name>
+      <types1:ParentFlowIds>gq695kchzt1Y6tM-gt-2813652-2023-07-10T14:04:45.112Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>adsf</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-16T12:03:56Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-07-13T11:56:01Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-07-10T14:10:15Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scTestXquery/scTestXquery_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scTestXquery"
+                            label=""
+                            name="scTestXquery"
+                            uuid="5b1199b3-bd09-46ba-a861-6bb48fa227ff">
+            <description>adsf</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="testXquery"
+                       maxRedirects="100"
+                       name="testXquery"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="tempXML"
+                                nogen="true"
+                                required="false"
+                                testWith="{&#xA;&#34;customerProfile&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;accountName&#34;: &#34;Fantasie Bus&amp; Auto-Test CAI&#34;, &#xA;&#x9;&#34;numberOfEmployees&#34;: &#34;1000&#34;, &#xA;&#x9;&#34;businessDescription&#34;:  &#34;Flotte Mercedes - et vdl Mid car scolaire 52000  euros.&#34;,&#xA;&#x9;&#34;duns&#34;: &#34;&#34;,&#xA;&#x9;&#34;website&#34;: &#34;http://www.fbc.nl/&#34;&#xA;&#x9;}],&#xA;&#34;systemAccountIdentifiers&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;value&#34;: &#34;SampleRahul001&#34;,&#xA;&#x9;&#34;qualifier&#34;: &#34;SampleRahul001&#34;,&#xA;&#x9;&#34;source&#34;: &#34;salesforce_crm&#34;&#xA;&#x9;}],&#xA;&#34;addresses&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;addressType&#34;: &#34;Billing&#34;,&#xA;&#x9;&#34;addressLine1&#34;: &#34;Spaarnestraat 4&#34;,&#xA;&#x9;&#34;addressLine2&#34;: &#34;&#34;,&#xA;&#x9;&#34;countryCode&#34;: &#34;NL&#34;,&#xA;&#x9;&#34;region&#34;: &#34;&#34;,&#xA;&#x9;&#34;city&#34;: &#34;Rotterdam&#34;,&#xA;&#x9;&#34;postalCode&#34;: &#34;3030ZZ&#34;&#xA;&#x9;}],&#xA;&#34;phoneNumbers&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;phoneType&#34;: &#34;Fax&#34;,&#xA;&#x9;&#34;phoneNumber&#34;: &#34;10010111&#34;&#xA;&#x9;}],&#xA;&#34;phoneNumbers&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;phoneType&#34;: &#34;Telephone&#34;,&#xA;&#x9;&#34;phoneNumber&#34;: &#34;0615401646&#34;&#xA;&#x9;}],&#xA;&#34;emails&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;emailUsageType&#34;: &#34;Business&#34;,&#xA;&#x9;&#34;emailAddress&#34;: &#34;FBC@email.com&#34;&#xA;&#x9;}],&#xA;&#34;alternateNames&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;nameType&#34;: &#34;Legal Name&#34;,&#xA;&#x9;&#34;alternateName&#34;: &#34;Audi Group&#34;&#xA;&#x9;}],&#xA;&#34;statuses&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;statusType&#34;: &#34;&#34;,&#xA;&#x9;&#34;statusValue&#34;: &#34;&#34;&#xA;&#x9;}],&#xA;&#34;businessIdentifiers&#34;: [&#xA;&#x9;{&#xA;&#x9;&#34;qualifier&#34;: &#34;COC&#34;,&#xA;&#x9;&#34;value&#34;: &#34;123456789&#34;&#xA;&#x9;}]&#xA;}"
+                                type="string">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">$po:$any</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://run.mocky.io/v3/991b50d5-20c0-422c-9252-42322b5124c1"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/xml</header>
+                        </httpHeaders>
+                        <body/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="Response" type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">$po:$any</option>
+                        </options>
+                        <xquery>{let $xml1 := util:parseJSON('{
+    "birthDate": "1945-09-13",
+    "X_trip_details": [
+        {
+            "X_last_trip": "2017-09-09",
+            "X_loyalty": {
+                "Code": "Silver",
+                "Name": "Silver"
+            },
+            "X_number_of_trips": 12
+        }
+    ]
+}')
+
+let $nodesInXml1 := $xml1/name()
+
+let $xml2 := util:parseJSON('{
+    "birthDate": "1945-09-12",
+    "birthPlace": "Non-US Resident",
+    "firstName": "Jane",
+    "fullName": "Jane Grey",
+    "lastName": "Grey",
+    "ElectronicAddress": [
+        {
+            "_id": "1000007",
+            "electronicAddress": "jane_gray@uoa.edu",
+            "usageType": {
+                "Code": "Personal",
+                "Name": "Personal"
+            }
+        }
+    ],
+    "Phone": [
+        {
+            "_id": "1000007",
+            "phoneNumber": "(520) 773-9050",
+            "phoneType": {
+                "Code": "Mobile",
+                "Name": "Mobile"
+            }
+        }
+    ],
+    "PostalAddress": [
+        {
+            "_id": "1000007",
+            "addressLine1": "888 N Euclid",
+            "addressType": {
+                "Code": "Home",
+                "Name": "Home"
+            },
+            "city": "Tucson",
+            "country": {
+                "Code": "US",
+                "Name": "United States"
+            },
+            "postalCode": "AZ 85721"
+        }
+    ],
+    "X_trip_details": [
+        {
+            "_id": "1000007",
+            "X_last_trip": "2017-09-08",
+            "X_loyalty": {
+                "Code": "Gold",
+                "Name": "Gold"
+            },
+            "X_number_of_trips": 11
+        }
+    ],
+    "_meta": {
+        "id": "MDM0000007579I",
+        "businessId": "MDM0000007579I",
+        "businessEntity": "c360.person",
+        "createdBy": "Jayanta_Das",
+        "creationDate": 1680021373443,
+        "updatedBy": "Jayanta_Das",
+        "lastUpdateDate": 1680021373443,
+        "states": {
+            "base": "ACTIVE",
+            "consolidation": "MATCHED",
+            "searchIndex": "SEARCH_DIRTY",
+            "validation": "PENDING"
+        },
+        "jobId": "ac4d89ab-353e-4f62-8a60-6e91f9ee4c58",
+        "sourceSystem": "booking_app",
+        "sourcePrimaryKey": "1000007",
+        "xrefType": "DATA"
+    }
+}')
+
+let $nodesInXml2 := $xml2/name()
+
+return &lt;root&gt;
+{for $node in $nodesInXml2
+return if (exists(index-of($nodesInXml1, $node))) then
+$xml1[name()=$node]
+else $xml2[name()=$node]}
+&lt;/root&gt;}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>0gomVB3rhIVcLvkjKLJ30g</types1:GUID>
+      <types1:DisplayName>scTestXquery</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:13.085Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

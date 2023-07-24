@@ -1,0 +1,120 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>7YGeFRqXpIW7WHK-gt-60263363-2022-09-03T07:04:59.371Z::pd.xml</types1:EntryId>
+      <types1:Name>pWriteToS3</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-09-03T07:04:59Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-01-25T15:01:29Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-01-25T15:04:41Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pWriteToS3/pWriteToS3.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pWriteToS3"
+                  name="pWriteToS3"
+                  overrideAPIName="true">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="tempS3Writer" type="reference">
+                  <options>
+                     <option name="referenceTo">acAmazonS3:StoreS3ObjectRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">ijE0pQqz8wakRpRvzqrhys</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes>.</notes>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l7lk8m9i" targetId="l7lk8m9h"/>
+               </start>
+               <service id="l7lk8m9h">
+                  <title>CreateAttachment</title>
+                  <serviceName>apAttachments:CreateAttachment</serviceName>
+                  <serviceGUID>7aYtxBmEFaRhcf6lK0PG4a</serviceGUID>
+                  <serviceInput>
+                     <parameter name="in_submit_order" source="constant">&lt;test&gt;&lt;margin&gt;48.36&lt;/margin&gt;&lt;/test&gt;</parameter>
+                  </serviceInput>
+                  <link id="l7lk8m9j" targetId="l64p85j0"/>
+               </service>
+               <service id="l64p85jh">
+                  <title>TargetAwsS3Writer</title>
+                  <serviceName>acAmazonS3:TargetAwsS3Writer</serviceName>
+                  <serviceGUID>ijE0pQqz8wakRpRvzqrhys</serviceGUID>
+                  <serviceInput>
+                     <parameter name="storeS3ObjectRequest" source="field" updatable="true">temp.tempS3Writer</parameter>
+                     <parameter name="attachment" source="field" updatable="true">output.attachment</parameter>
+                  </serviceInput>
+                  <link id="l7lk8m9y" targetId="c"/>
+               </service>
+               <assignment id="l64p85j0">
+                  <title>Assignment to tempS3Writer</title>
+                  <operation source="formula" to="temp.tempS3Writer">
+                     <expression language="XQuery">&lt;StoreS3ObjectRequest&gt;
+   &lt;s3ObjectParameters&gt;
+      &lt;awsS3Key&gt;sribatsa/tgt/{sff:getAttachmentName($output.attachment )}&lt;/awsS3Key&gt;
+      &lt;contentType&gt;&lt;/contentType&gt;
+      &lt;contentControl&gt;&lt;/contentControl&gt;
+      &lt;contentDisposition&gt;&lt;/contentDisposition&gt;
+      &lt;contentEncoding&gt;&lt;/contentEncoding&gt;
+      &lt;lastModified&gt;&lt;/lastModified&gt;
+      &lt;storageClass&gt;&lt;/storageClass&gt;
+      &lt;cannedAcl&gt;&lt;/cannedAcl&gt;
+      &lt;s3Acl&gt;&lt;/s3Acl&gt;
+   &lt;/s3ObjectParameters&gt;
+   &lt;format&gt;Attachment&lt;/format&gt;
+   &lt;content&gt;&lt;/content&gt;
+   &lt;objectName&gt;&lt;/objectName&gt;
+   &lt;listName&gt;&lt;/listName&gt;
+   &lt;object&gt;
+   &lt;/object&gt;
+   &lt;objects&gt;
+   &lt;/objects&gt;
+&lt;/StoreS3ObjectRequest&gt;
+</expression>
+                  </operation>
+                  <link id="l64p85ji" targetId="l64p85jh"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>2b9b3be4-38bc-4750-989b-b93c4bd40234</ns1:Id>
+               <ns1:Name>empty</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-09-03T07:04:59Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-09-03T07:04:59Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>6Gel7ZyJNu5jZZkTovIjI5</types1:GUID>
+      <types1:DisplayName>pWriteToS3</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:26.752Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

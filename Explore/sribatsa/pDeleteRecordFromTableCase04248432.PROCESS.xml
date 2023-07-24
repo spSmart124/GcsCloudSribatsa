@@ -1,0 +1,92 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>B4fYLnzYLnzYLnz-gt-8789396-2021-12-14T12:14:35.446Z::pd.xml</types1:EntryId>
+      <types1:Name>pDeleteRecordFromTableCase04248432</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-14T12:14:35Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-12-14T12:36:03Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-12-14T12:36:08Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pDeleteRecordFromTableCase04248432/pDeleteRecordFromTableCase04248432.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pDeleteRecordFromTableCase04248432"
+                  name="pDeleteRecordFromTableCase04248432"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="tempOrder" type="reference">
+                  <options>
+                     <option name="referenceTo">oracleJDBC:ORDERS</option>
+                     <option name="required">false</option>
+                     <option name="guid">74x7rjkgh02cni3sg3xJ86</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kx6290jf" targetId="kx6290je"/>
+               </start>
+               <assignment id="kx6290je">
+                  <title>Assignment to tempOrder</title>
+                  <operation source="query" to="temp.tempOrder">
+                     <query advanceQuery="false" from="oracleJDBC:ORDERS">
+                        <where>ORDERID=1</where>
+                     </query>
+                  </operation>
+                  <link id="kx6290jn" targetId="kx6290jm"/>
+               </assignment>
+               <service id="kx6290jm">
+                  <title>Delete Object</title>
+                  <serviceName>avDeleteAnyEntityService</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Connection Name" source="constant">oracleJDBC</parameter>
+                     <parameter name="Object Type" source="constant">ORDERS</parameter>
+                     <parameter name="Object Id" source="field">temp.tempOrder</parameter>
+                  </serviceInput>
+                  <link id="kx6290jo" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>a1508c7e-a5a0-4162-925a-6d7f32a35cc7</ns1:Id>
+               <ns1:Name>dummy</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-12-14T12:18:28Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-12-14T12:18:28Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>cjWokvR0G2vbAkoX4EwWoS</types1:GUID>
+      <types1:DisplayName>pDeleteRecordFromTableCase04248432</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.241Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

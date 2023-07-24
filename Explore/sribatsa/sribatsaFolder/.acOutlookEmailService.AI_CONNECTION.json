@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "6RnqhiL58CRehCryxDJaSk",
+    "name" : "acOutlookEmailService",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lP0ttNfWoAXUCZ4-gt-18899977-2021-06-18T15:43:19.191Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "57jhZHbmwkoeipGjkVHS0k",
+    "name" : "poNullElementCreation",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "RKWa-gt-36925264-2022-12-08T11:24:42.704Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "2y1X7pUlzcEduaJums9M61",
+    "name" : "poAlternateIdentifier",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "AupIO3M4WwOC2XZ-gt-36690171-2022-12-08T11:21:58.428Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  } ]
+}

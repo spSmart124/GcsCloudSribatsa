@@ -1,0 +1,464 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>pjJBUhtycotFgpK-gt-35081451-2021-12-28T04:28:41.248Z::svc.xml</types1:EntryId>
+      <types1:Name>scRestApiVesion3ScheduleCase04253090</types1:Name>
+      <types1:ParentFlowIds>bcgiciT6sFsdsFs-gt-36255705-2021-12-28T14:10:28.018Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-28T04:28:41Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-01-17T14:41:31Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-01-17T14:48:48Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scRestApiVesion3ScheduleCase04253090/scRestApiVesion3ScheduleCase04253090_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scRestApiVesion3ScheduleCase04253090"
+                            label=""
+                            name="scRestApiVesion3ScheduleCase04253090"
+                            uuid="1b791136-2ee0-4732-ad64-a25e2b7ead3e">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="loginUrl"
+                                    required="true"
+                                    testWith="https://dm-us.informaticacloud.com/saas/public/core/v3/login"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="username"
+                                    required="true"
+                                    testWith="GcsCloudAdminSri"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="password"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="scheduleUri"
+                                    required="true"
+                                    testWith="/public/core/v3/schedule"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="userUri"
+                                    required="true"
+                                    testWith="/public/core/v3/users"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="Login"
+                       maxRedirects="100"
+                       name="Login"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$loginUrl}" verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                        <body>{{
+    "username": "{$username}",
+    "password": "{$password}"
+}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="baseApiUrl"
+                            property="baseApiUrl"
+                            type="string"/>
+                     <field description=""
+                            name="sessionId"
+                            property="sessionId"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="ListSchedules"
+                       maxRedirects="100"
+                       name="ListSchedules"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="baseApiUrl"
+                                name="baseApiUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="sessionId"
+                                name="sessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="8obrJpEtgyWcKoHVji3cWd"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$baseApiUrl}{$scheduleUri}"
+                                        verb="GET">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="INFA-SESSION-ID">{$sessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="schedules" type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{&lt;root&gt;{util:parseJSON($RESTResponse/*:payload/text())}&lt;/root&gt;/schedules}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetScheduleById"
+                       maxRedirects="100"
+                       name="GetScheduleById"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="id"
+                                name="id"
+                                nogen="true"
+                                required="true"
+                                testWith="4LIW2E9dmSefqixInUK4onD0000000000002"
+                                type="string"/>
+                     <parameter label="baseApiUrl"
+                                name="baseApiUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="sessionId"
+                                name="sessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="2isi8vAohwUbiAf2fOaAou"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$baseApiUrl}{$scheduleUri}/{$id}"
+                                        verb="GET">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="INFA-SESSION-ID">{$sessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="CreateSchedule"
+                       maxRedirects="100"
+                       name="CreateSchedule"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="baseApiUrl"
+                                name="baseApiUrl"
+                                nogen="true"
+                                required="false"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="sessionId"
+                                name="sessionId"
+                                nogen="true"
+                                required="false"
+                                testWith="4LKf38M40xfizuFqRHUjQj"
+                                type="string"/>
+                     <parameter label="name"
+                                name="name"
+                                nogen="true"
+                                required="true"
+                                testWith="ScheduleCreatedFromRestV31"
+                                type="string"/>
+                     <parameter label="startTime"
+                                name="startTime"
+                                nogen="true"
+                                required="true"
+                                testWith="2021-12-17T17:00:55.000Z"
+                                type="string"/>
+                     <parameter label="interval"
+                                name="interval"
+                                nogen="true"
+                                required="true"
+                                testWith="Minutely"
+                                type="string"/>
+                     <parameter label="frequency"
+                                name="frequency"
+                                nogen="true"
+                                required="true"
+                                testWith="5"
+                                type="int"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$baseApiUrl}{$scheduleUri}"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="INFA-SESSION-ID">{$sessionId}</header>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{
+	"name": "{$name }",
+    "startTime": "{$startTime }",
+    "interval": "{$interval }",
+    "frequency": {$frequency }
+}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="createEntireResponsePayload" type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{$RESTResponse/*:payload}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="UpdateSchedule"
+                       maxRedirects="100"
+                       name="UpdateSchedule"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="baseApiUrl"
+                                name="baseApiUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="sessionId"
+                                name="sessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="2isi8vAohwUbiAf2fOaAou"
+                                type="string"/>
+                     <parameter label="id"
+                                name="id"
+                                nogen="true"
+                                required="true"
+                                testWith="4LIW2E9dmSefqixInUK4onD0000000000005"
+                                type="string"/>
+                     <parameter label="scheduleFrsId"
+                                name="scheduleFrsId"
+                                nogen="true"
+                                required="true"
+                                testWith="gIhP5JuZdi6dbSFp6MVSK7"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$baseApiUrl}{$scheduleUri}/{$id}"
+                                        verb="PATCH">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="INFA-SESSION-ID">{$sessionId}</header>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                        <body>{{
+    "schedules": [
+        {{       
+            "id": "{$id}",  
+            "scheduleFederatedId" : "{$scheduleFrsId}",
+            "description": "Update version 2"
+        }}
+    ]
+}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="updateEntireResponsePayload" type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{$RESTResponse/*:payload}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="DeleteSchedule"
+                       maxRedirects="100"
+                       name="DeleteSchedule"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="baseApiUrl"
+                                name="baseApiUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="sessionId"
+                                name="sessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="2isi8vAohwUbiAf2fOaAou"
+                                type="string"/>
+                     <parameter label="id"
+                                name="id"
+                                nogen="true"
+                                required="true"
+                                testWith="4LIW2E9dmSefqixInUK4onD0000000000005"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$baseApiUrl}{$scheduleUri}/{$id}"
+                                        verb="DELETE">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="INFA-SESSION-ID">{$sessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GetUsers"
+                       maxRedirects="100"
+                       name="GetUsers"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="baseApiUrl"
+                                name="baseApiUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="sessionId"
+                                name="sessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="bhsRhNiKHQ9gxqwGI8MfAq"
+                                type="string"/>
+                     <parameter name="userStateFilterValue"
+                                nogen="true"
+                                required="true"
+                                testWith="Provisioned"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$baseApiUrl}{$userUri}"
+                                        verb="GET">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="INFA-SESSION-ID">{$sessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="responseXml" type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{util:simplifyXml(&lt;users&gt;{util:parseJSON($RESTResponse//*:payload)}&lt;/users&gt;)}</xquery>
+                     </field>
+                     <field description="" name="userIds" type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{let $elements := $responseXml/*
+
+for $ele in $elements
+return if ($ele/*[name()="state" and text()=$userStateFilterValue]) then
+($ele/id)
+else()}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="DeleteUser"
+                       maxRedirects="100"
+                       name="DeleteUser"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="baseApiUrl"
+                                name="baseApiUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="sessionId"
+                                name="sessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="bhsRhNiKHQ9gxqwGI8MfAq"
+                                type="string"/>
+                     <parameter label="id"
+                                name="id"
+                                nogen="true"
+                                required="true"
+                                testWith="2U5DDoriODXceQ5CGXOiKu"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="{$baseApiUrl}{$userUri}/{$id}" verb="DELETE">
+                        <httpHeaders>
+                           <header name="INFA-SESSION-ID">{$sessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>0DQDKpQARUcjYv5rldsdeL</types1:GUID>
+      <types1:DisplayName>scRestApiVesion3ScheduleCase04253090</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:19.433Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

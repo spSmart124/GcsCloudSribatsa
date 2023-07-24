@@ -1,0 +1,105 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>lH8n55ErhNzUzeA-gt-8424000-2021-07-22T16:17:41.188Z::pd.xml</types1:EntryId>
+      <types1:Name>P-JHEES-EvtsSubs</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description>JH EES Publisher Catalogue Silverlake 2020 API's</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-22T16:17:41Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="P-JHEES-EvtsSubs"
+                  name="P-JHEES-EvtsSubs"
+                  overrideAPIName="false">
+            <appliesTo/>
+            <description>JH EES Publisher Catalogue Silverlake 2020 API's</description>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="Events" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="O_Resp" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="O_Events" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="O_Req" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="t_Chk" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload inputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kr6610nq" targetId="kr6610np"/>
+               </start>
+               <service id="kr6610np">
+                  <title>EESEventAdd</title>
+                  <serviceName>C-JH-EES:EESEventAdd</serviceName>
+                  <serviceGUID>aFXcjxkIDR0ddOCcxXVqEs</serviceGUID>
+                  <serviceInput>
+                     <parameter name="EESEventAdd" source="formula">
+                        <expression language="XQuery">$input.Events </expression>
+                     </parameter>
+                  </serviceInput>
+                  <link id="kr6610o1" targetId="kr6610o0"/>
+               </service>
+               <assignment id="kr6610o0">
+                  <title>Reply</title>
+                  <operation source="formula" to="output.O_Req">
+                     <expression language="XQuery">$input.Events </expression>
+                  </operation>
+                  <operation source="field" to="output.O_Events">input.Events</operation>
+                  <operation source="field" to="output.O_Resp">output.EESEventAddResponse</operation>
+                  <operation source="field" to="temp.t_Chk">output.EESEventAddResponse[1]/RsStat</operation>
+                  <link id="kr6610o2" targetId="c"/>
+               </assignment>
+               <end id="c">
+                  <title>End - 200 Ok</title>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>chQhyZDtmsIjhD2rs7MWe6</types1:GUID>
+      <types1:DisplayName>P-JHEES-EvtsSubs</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:27.053Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

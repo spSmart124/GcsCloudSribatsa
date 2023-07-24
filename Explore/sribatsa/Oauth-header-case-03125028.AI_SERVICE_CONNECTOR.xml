@@ -1,0 +1,690 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>OlkZ2sBsoZduD2L-gt-75216430-2021-07-01T12:17:18.657Z::svc.xml</types1:EntryId>
+      <types1:Name>Oauth-header-case-03125028</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>OAuth1.0</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-01T12:17:19Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-07-01T12:19:10Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="Oauth-header-case-03125028"
+                            label=""
+                            name="Oauth-header-case-03125028"
+                            uuid="3c1630e0-621e-476d-88c1-b602dc01064d">
+            <description>OAuth1.0</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="consumer_key"
+                                    required="false"
+                                    testWith="e1adc702745b4fb798cae39c661dacf8"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="consumer_secret"
+                                    required="false"
+                                    testWith="2c7ae61b3221cfe2"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="access_token"
+                                    required="false"
+                                    testWith="ea64217df25348c2be5fe15d3e0dc397"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="access_token_secret"
+                                    required="false"
+                                    testWith="1019626ce8145f05"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="url"
+                                    required="false"
+                                    testWith="http://httpbin.org/anything"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="signature_method"
+                                    required="false"
+                                    testWith="HMAC-SHA1"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="version"
+                                    required="false"
+                                    testWith="1.0"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="method"
+                                    required="false"
+                                    testWith="POST"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="limit"
+                                    required="false"
+                                    testWith="100"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="false"
+                       forSearch="false"
+                       label="Generate Header"
+                       maxRedirects="100"
+                       name="Generate Header"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="body"
+                                required="false"
+                                testWith="{  &#34;start&#34;:{&#34;from&#34;:1571471315000,&#34;to&#34;:1571471435000},  &#34;source&#34;:[&#34;WhatsApp Business&#34;]  }"
+                                type="string"/>
+                     <parameter name="offset" required="false" testWith="0" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$url}?offset={$offset}&amp;amp;limit={$limit}"
+                                        verb="POST">
+                        <otherParams>
+                           <otherParam name="oauth_nonce" nogen="true">{util:generateUUID()}</otherParam>
+                           <otherParam name="oauth_timestamp" nogen="true">{floor(date:now() div 1000)}</otherParam>
+                           <otherParam name="parameter_string" nogen="true">{let $parameters :=
+
+        &lt;parameters&gt;
+                 
+                 &lt;param name="offset" value="{$offset }"/&gt;
+                 &lt;param name="limit" value="{$limit}"/&gt;
+ 			&lt;param name="oauth_consumer_key" value="{$consumer_key }"/&gt;
+            &lt;param name="oauth_nonce" value="{$oauth_nonce }"/&gt;
+            &lt;param name="oauth_signature_method" value="{$signature_method}"/&gt;
+            &lt;param name="oauth_timestamp" value="{$oauth_timestamp }"/&gt;
+            &lt;param name="oauth_token" value="{$access_token}"/&gt;
+            &lt;param name="oauth_version" value="{$version}"/&gt;        
+            
+        &lt;/parameters&gt;
+        
+let $separator :='&amp;amp;'  
+
+return fn:string-join(
+        for $param in $parameters/param
+        let $name := encode-for-uri($param/@name)
+        let $value := encode-for-uri($param/@value)
+        order by $name, $value
+        return
+            concat($name, '=', $value)
+        ,
+        $separator
+    )}</otherParam>
+                           <otherParam name="signature_base_string" nogen="true">{fn:string-join(
+                (
+                upper-case($method),
+                encode-for-uri($url),
+                encode-for-uri($parameter_string )
+                )
+                ,
+                '&amp;amp;'
+            )}</otherParam>
+                           <otherParam name="signing_key" nogen="true">{concat(encode-for-uri($consumer_secret), '&amp;amp;', encode-for-uri($access_token_secret))}</otherParam>
+                           <otherParam name="oauth_signature" nogen="true">{dsig:hmacSHA1signature($signature_base_string ,$signing_key)}</otherParam>
+                           <otherParam name="header_value">oauth_consumer_key="{$consumer_key}",oauth_nonce="{$oauth_nonce}",oauth_timestamp="{$oauth_timestamp}",oauth_token="{$access_token}",oauth_signature_method="{$signature_method}",oauth_version="{$version}",oauth_signature="{$oauth_signature}"</otherParam>
+                        </otherParams>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                           <header name="Accept">application/json</header>
+                           <header name="Authorization">{fn:concat('OAuth ', $header_value )}</header>
+                        </httpHeaders>
+                        <body>{$body}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" name="O_COUNT" type="reference">
+                        <options>
+                           <option name="referenceTo">metadata</option>
+                        </options>
+                        <xquery>{_metadata/count/text()}</xquery>
+                     </field>
+                     <field description="" name="O_Message" type="objectlist">
+                        <options>
+                           <option name="referenceTo">messageRecords</option>
+                        </options>
+                        <xquery>{for $x in //messageRecords
+return
+$x}</xquery>
+                     </field>
+                     <field description="" name="O_Phone" type="objectlist">
+                        <options>
+                           <option name="referenceTo">personalContact</option>
+                        </options>
+                        <xquery>{for $y in //personalContact
+return
+$y}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="root">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="conversationHistoryRecords" type="objectlist">
+                        <options>
+                           <option name="referenceTo">conversationHistoryRecords</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="metadata" type="reference">
+                        <options>
+                           <option name="referenceTo">metadata</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="conversationHistoryRecords">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="conversationSurveys" type="reference">
+                        <options>
+                           <option name="referenceTo">conversationSurveys</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="summary" type="reference">
+                        <options>
+                           <option name="referenceTo">summary</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="messageRecords" type="objectlist">
+                        <options>
+                           <option name="referenceTo">messageRecords</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="messageScores" type="objectlist">
+                        <options>
+                           <option name="referenceTo">messageScores</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="sdes" type="reference">
+                        <options>
+                           <option name="referenceTo">sdes</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="interactions" type="objectlist">
+                        <options>
+                           <option name="referenceTo">interactions</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="agentParticipants" type="objectlist">
+                        <options>
+                           <option name="referenceTo">agentParticipants</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="transfers" type="objectlist">
+                        <options>
+                           <option name="referenceTo">transfers</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="skillChanges" type="string"/>
+                     <field name="campaign" type="reference">
+                        <options>
+                           <option name="referenceTo">campaign</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="consumerParticipants" type="reference">
+                        <options>
+                           <option name="referenceTo">consumerParticipants</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="messageStatuses" type="objectlist">
+                        <options>
+                           <option name="referenceTo">messageStatuses</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="info" type="reference">
+                        <options>
+                           <option name="referenceTo">info</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="conversationSurveys">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="surveyType" type="string"/>
+                     <field name="surveyStatus" type="string"/>
+                     <field name="surveyId" type="int"/>
+                     <field name="surveyData" type="objectlist">
+                        <options>
+                           <option name="referenceTo">surveyData</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="dialogId" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="surveyData">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="answerId" type="string"/>
+                     <field name="questionId" type="string"/>
+                     <field name="question" type="string"/>
+                     <field name="answer" type="string"/>
+                     <field name="questionFormat" type="string"/>
+                     <field name="questionType" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="summary">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="lastUpdatedTime" type="double"/>
+                     <field name="text" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="messageRecords">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="participantId" type="string"/>
+                     <field name="messageId" type="string"/>
+                     <field name="timeL" type="double"/>
+                     <field name="time" type="string"/>
+                     <field name="type" type="string"/>
+                     <field name="dialogId" type="string"/>
+                     <field name="contextData" type="reference">
+                        <options>
+                           <option name="referenceTo">contextData</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="seq" type="int"/>
+                     <field name="sentBy" type="string"/>
+                     <field name="messageData" type="reference">
+                        <options>
+                           <option name="referenceTo">messageData</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="contextData">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="rawMetadata" type="string"/>
+                     <field name="structuredMetadata" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="messageData">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="msg" type="reference">
+                        <options>
+                           <option name="referenceTo">msg</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="quickReplies" type="reference">
+                        <options>
+                           <option name="referenceTo">quickReplies</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="msg">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="text" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="file">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="relativePath" type="string"/>
+                     <field name="caption" type="string"/>
+                     <field name="fileType" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="quickReplies">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="content" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="sdes">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="events" type="objectlist">
+                        <options>
+                           <option name="referenceTo">events</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="events">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="serverTimeStamp" type="double"/>
+                     <field name="sdeType" type="string"/>
+                     <field name="customerInfo" type="reference">
+                        <options>
+                           <option name="referenceTo">customerInfo</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="personalInfo" type="reference">
+                        <options>
+                           <option name="referenceTo">personalInfo</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="customerInfo">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="companyBranch" type="double"/>
+                     <field name="customerId" type="string"/>
+                     <field name="imei" type="double"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="personalInfo">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="serverTimeStamp" type="double"/>
+                     <field name="originalTimeStamp" type="double"/>
+                     <field name="personalInfo" type="reference">
+                        <options>
+                           <option name="referenceTo">$any</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="contacts">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="personalContact" type="reference">
+                        <options>
+                           <option name="referenceTo">personalContact</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="personalContact">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="phoneType" type="string"/>
+                     <field name="address" type="string"/>
+                     <field name="preferredContactMethod" type="string"/>
+                     <field name="phone" type="double"/>
+                     <field name="email" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="interactions">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="assignedAgentId" type="int"/>
+                     <field name="interactiveSequence" type="int"/>
+                     <field name="interactionTimeL" type="double"/>
+                     <field name="assignedAgentLoginName" type="string"/>
+                     <field name="interactionTime" type="string"/>
+                     <field name="assignedAgentFullName" type="string"/>
+                     <field name="dialogId" type="string"/>
+                     <field name="assignedAgentNickname" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="agentParticipants">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="agentId" type="int"/>
+                     <field name="role" type="string"/>
+                     <field name="agentGroupId" type="int"/>
+                     <field name="agentFullName" type="string"/>
+                     <field name="agentNickname" type="string"/>
+                     <field name="permission" type="string"/>
+                     <field name="agentGroupName" type="string"/>
+                     <field name="timeL" type="double"/>
+                     <field name="dialogId" type="string"/>
+                     <field name="agentDeleted" type="string"/>
+                     <field name="agentLoginName" type="string"/>
+                     <field name="agentPid" type="string"/>
+                     <field name="userTypeName" type="string"/>
+                     <field name="userType" type="int"/>
+                     <field name="time" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="transfers">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="sourceSkillName" type="string"/>
+                     <field name="sourceAgentId" type="int"/>
+                     <field name="reason" type="string"/>
+                     <field name="targetSkillName" type="string"/>
+                     <field name="timeL" type="double"/>
+                     <field name="targetSkillId" type="int"/>
+                     <field name="dialogId" type="string"/>
+                     <field name="sourceAgentNickname" type="string"/>
+                     <field name="sourceAgentFullName" type="string"/>
+                     <field name="sourceSkillId" type="int"/>
+                     <field name="assignedAgentId" type="string"/>
+                     <field name="by" type="int"/>
+                     <field name="sourceAgentLoginName" type="string"/>
+                     <field name="time" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="campaign">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="campaignEngagementName" type="string"/>
+                     <field name="goalName" type="string"/>
+                     <field name="campaignName" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="consumerParticipants">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="lastName" type="string"/>
+                     <field name="avatarURL" type="string"/>
+                     <field name="joinTime" type="string"/>
+                     <field name="timeL" type="double"/>
+                     <field name="dialogId" type="string"/>
+                     <field name="token" type="string"/>
+                     <field name="participantId" type="string"/>
+                     <field name="firstName" type="string"/>
+                     <field name="phone" type="string"/>
+                     <field name="joinTimeL" type="double"/>
+                     <field name="time" type="string"/>
+                     <field name="email" type="string"/>
+                     <field name="consumerName" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="messageStatuses">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="participantId" type="int"/>
+                     <field name="messageDeliveryStatus" type="string"/>
+                     <field name="participantType" type="string"/>
+                     <field name="messageId" type="string"/>
+                     <field name="timeL" type="double"/>
+                     <field name="time" type="string"/>
+                     <field name="dialogId" type="string"/>
+                     <field name="seq" type="int"/>
+                     <field name="contextData" type="reference">
+                        <options>
+                           <option name="referenceTo">contextData</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="info">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="closeReasonDescription" type="string"/>
+                     <field name="latestSkillName" type="string"/>
+                     <field name="startTimeL" type="double"/>
+                     <field name="latestAgentId" type="int"/>
+                     <field name="source" type="string"/>
+                     <field name="latestAgentGroupId" type="int"/>
+                     <field name="duration" type="int"/>
+                     <field name="latestAgentGroupName" type="string"/>
+                     <field name="features" type="string"/>
+                     <field name="appId" type="string"/>
+                     <field name="isPartial" type="boolean"/>
+                     <field name="startTime" type="string"/>
+                     <field name="pendingAgentSurvey" type="string"/>
+                     <field name="latestAgentNickname" type="string"/>
+                     <field name="closeReason" type="string"/>
+                     <field name="mcs" type="int"/>
+                     <field name="alertedMCS" type="int"/>
+                     <field name="conversationId" type="string"/>
+                     <field name="latestQueueState" type="string"/>
+                     <field name="latestSkillId" type="int"/>
+                     <field name="ipAddress" type="string"/>
+                     <field name="latestAgentFullName" type="string"/>
+                     <field name="fullDialogStatus" type="string"/>
+                     <field name="latestAgentLoginName" type="string"/>
+                     <field name="firstConversation" type="string"/>
+                     <field name="csatRate" type="int"/>
+                     <field name="agentDeleted" type="string"/>
+                     <field name="brandId" type="int"/>
+                     <field name="endTime" type="string"/>
+                     <field name="endTimeL" type="double"/>
+                     <field name="status" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="messageScores">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="messageRawScore" type="int"/>
+                     <field name="messageId" type="string"/>
+                     <field name="timeL" type="double"/>
+                     <field name="time" type="string"/>
+                     <field name="mcs" type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="metadata">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="count" type="int"/>
+                     <field name="shardsStatusResult" type="reference">
+                        <options>
+                           <option name="referenceTo">shardsStatusResult</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="self" type="reference">
+                        <options>
+                           <option name="referenceTo">self</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="shardsStatusResult">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="partialResult" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="self">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="rel" type="string"/>
+                     <field name="href" type="string"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>9IBz2EBKg6zcFuMFc7lIKO</types1:GUID>
+      <types1:DisplayName>Oauth-header-case-03125028</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:13.811Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

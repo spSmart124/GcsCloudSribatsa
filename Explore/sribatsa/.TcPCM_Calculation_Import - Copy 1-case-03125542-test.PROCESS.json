@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "gHp9CdVts2kf1OHZV0wTUE",
+    "name" : "TcPCM_Calculation_Import - Copy 1-case-03125542-test",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "G0MUdsnSDg8SOlA-gt-93901840-2021-07-07T12:54:24.519Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

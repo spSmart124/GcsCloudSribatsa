@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "1BgYBr0D1DFi7yDHv273Ov",
+    "name" : "Phone",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "KghuImXycotFgpK-gt-30753348-2021-08-22T01:55:18.592Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

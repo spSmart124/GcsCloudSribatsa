@@ -1,0 +1,83 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>8VuD2L5SeE1KoJB-gt-53216801-2021-09-09T16:27:50.95Z::svc.xml</types1:EntryId>
+      <types1:Name>serviceConnectorEnrollment</types1:Name>
+      <types1:ParentFlowIds>yNnQMMnGbciZBpD-gt-86507029-2021-09-09T16:53:18.395Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-09-09T16:27:51Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-09-09T16:48:39Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-09-09T16:48:50Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/serviceConnectorEnrollment/serviceConnectorEnrollment_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="serviceConnectorEnrollment"
+                            label=""
+                            name="serviceConnectorEnrollment"
+                            uuid="653bc6df-530f-49fe-ab8d-ab829e7a312c">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="url"
+                                    required="false"
+                                    testWith="https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/rt/4LIW2E9dmSefqixInUK4on/procAsApiCase03174417"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category="GetEmployee"
+                       failOnError="true"
+                       forSearch="false"
+                       label="getEmployeeById"
+                       maxRedirects="100"
+                       name="getEmployeeById"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="empId" required="true" testWith="1" type="string"/>
+                     <parameter name="empName"
+                                required="false"
+                                testWith="Sribatsa"
+                                type="string"/>
+                     <parameter name="apiName" required="false" testWith="empId" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$url}" verb="POST">
+                        <body/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            entireResponse="true"
+                            name="outEmp"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>9rtL7CDCyGkhANnpxYC1eq</types1:GUID>
+      <types1:DisplayName>serviceConnectorEnrollment</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.751Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

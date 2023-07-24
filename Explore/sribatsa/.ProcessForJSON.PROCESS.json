@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "ctZoHqyUy2siPkAsXSBOsM",
+    "name" : "ProcessForJSON",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5SRCU7uMydx2CGe-gt-192640-2021-07-16T14:53:17.909Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

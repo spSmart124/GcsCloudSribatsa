@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "8b8WOTWx103e6xBWjuYQwd",
+    "name" : "scRestApiVesion2PublishTestCase04262425",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "clFmVSciY3AxtPk-gt-3958400-2022-01-13T12:33:05.804Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

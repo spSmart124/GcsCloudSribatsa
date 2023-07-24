@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "7fKw9VYbH5olYA7x9Jliu1",
+    "name" : "Bottomline-PTX-REST-API-case-03132114",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "gp5OjG4abck0Kn7-gt-7308114-2021-07-16T11:15:01.611Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "PTX Payments API",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

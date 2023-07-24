@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "fzf1FKIFYONf80JNJKfd08",
+    "name" : "case-03164935",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "RtO3M4WwOC2XZPn-gt-15430903-2021-08-16T10:35:49.709Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "66H0NW10tNTfBVq7fUjGOD",
+    "name" : "pSalesforceObmMultiOrgPavan",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "kR1kUf2hwq9bdsr-gt-16696924-2023-03-14T12:45:09.516Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "98NamgKWyCflgBhOZyGcyD",
+    "name" : "tfTaskflowStatusAPICase04378592",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "MMnGbciZBpDUQbg-gt-15073120-2022-09-13T10:58:57.621Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "3SZ2aDqECiSgsumQZ3mNEH",
+    "name" : "tfWait",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "4hCHbf2XZPnE29E-gt-22049248-2022-09-13T10:59:28.889Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/taskflows"
+  } ]
+}

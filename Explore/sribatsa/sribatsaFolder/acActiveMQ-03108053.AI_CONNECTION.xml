@@ -1,0 +1,75 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>2tDC2XZPnE29Em2-gt-61264960-2021-06-08T09:28:36.856Z::conn.xml</types1:EntryId>
+      <types1:Name>acActiveMQ-03108053</types1:Name>
+      <types1:ParentFlowIds>SxIIJ1reK8ZAZf5-gt-216314567-2021-06-08T10:08:17.09Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-window</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-06-08T09:28:37Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-06-08T11:13:02Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acActiveMQ-03108053"
+                     label="acActiveMQ-03108053"
+                     name="acActiveMQ-03108053">
+            <description/>
+            <tags>.agent:sribatsa-window</tags>
+            <agent>sribatsa-window</agent>
+            <attributes>
+               <attribute encrypted="false" name="User Name" value=""/>
+               <attribute encrypted="true" name="Password" value=""/>
+               <attribute encrypted="false" name="Virtual Host" value=""/>
+               <attribute encrypted="false" name="Host" value="localhost"/>
+               <attribute encrypted="false" name="Port" value="61615"/>
+               <attribute encrypted="false" name="Use SSL" value="false"/>
+               <attribute encrypted="false" name="Query Parameters" value=""/>
+            </attributes>
+            <consumers>
+               <consumer enabled="true" name="AMQP-Source" typeName="AMQP Source">
+                  <attributes>
+                     <attribute encrypted="false" name="Destination Type" value="queue"/>
+                     <attribute encrypted="false" name="Destination" value="source"/>
+                     <attribute encrypted="false" name="Payload Format" value="Text"/>
+                     <attribute encrypted="false" name="Objectlist Field Name" value="object"/>
+                     <attribute encrypted="false" name="Dead Letter Queue Name" value="testQueue"/>
+                     <attribute encrypted="false" name="Other Attributes" value=""/>
+                  </attributes>
+               </consumer>
+            </consumers>
+            <producers>
+               <producer enabled="true" name="AMQP-Target" typeName="AMQP Target">
+                  <attributes>
+                     <attribute encrypted="false" name="Destination Type" value="queue"/>
+                     <attribute encrypted="false" name="Destination" value="target"/>
+                     <attribute encrypted="false" name="Payload Format" value="Xml"/>
+                     <attribute encrypted="false" name="Other Attributes" value=""/>
+                  </attributes>
+               </producer>
+            </producers>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           type="AMQP"
+                           uuid="59b13626-0180-4d48-a749-38f8f33f7b18">
+               <description>Provides connections to AMQP brokers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>6oTHviW72KVgaZWjHCxE6Y</types1:GUID>
+      <types1:DisplayName>acActiveMQ-03108053</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:14.927Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,46 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>UfTRgpDqotxGomU-gt-12116415-2022-07-18T19:02:37.742Z::conn.xml</types1:EntryId>
+      <types1:Name>apScDynamicElementValueExtractCase04349392</types1:Name>
+      <types1:ParentFlowIds>DxomUhGdwOLIFvu-gt-24070592-2022-07-18T19:05:12.483Z::pd.xml,sxhFdw8jIw8jIw8-gt-53577294-2023-05-29T16:27:35.306Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-07-18T19:02:38Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-07-18T19:02:57Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apScDynamicElementValueExtractCase04349392/apScDynamicElementValueExtractCase04349392.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apScDynamicElementValueExtractCase04349392"
+                     label="apScDynamicElementValueExtractCase04349392"
+                     name="apScDynamicElementValueExtractCase04349392">
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <agent>sribatsa-redhat.informatica.com</agent>
+            <attributes/>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scDynamicElementValueExtractCase04349392/scDynamicElementValueExtractCase04349392_svcDef.xml"
+                               guid="15l3htaTvCffGzUFlVPVcJ"
+                               name="scDynamicElementValueExtractCase04349392"
+                               supportsConnectionTest="false"
+                               uuid="110b8c7d-a2b7-4cc6-ab68-1d212bf65ab4">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>6g6xdzNGfBqiPmuYq30JgZ</types1:GUID>
+      <types1:DisplayName>apScDynamicElementValueExtractCase04349392</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.371Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

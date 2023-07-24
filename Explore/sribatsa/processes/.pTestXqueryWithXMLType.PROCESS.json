@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "17gvDiHiC4vheITYo11OgU",
+    "name" : "pTestXqueryWithXMLType",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "RjyCnNZPD4ARW8U-gt-42585697-2022-09-21T13:28:43.708Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

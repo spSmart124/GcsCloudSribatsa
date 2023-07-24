@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "0cdJYOVpI69gCUjJjwaU2P",
+    "name" : "pOutputWithoutNamespaceCase04328443",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "J0RKWa-gt-18574627-2022-06-03T15:48:22.574Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

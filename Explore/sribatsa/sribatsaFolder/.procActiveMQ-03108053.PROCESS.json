@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "k0PKb2ghVWxjtf6VcrVJU5",
+    "name" : "procActiveMQ-03108053",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "SxIIJ1reK8ZAZf5-gt-216314567-2021-06-08T10:08:17.09Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

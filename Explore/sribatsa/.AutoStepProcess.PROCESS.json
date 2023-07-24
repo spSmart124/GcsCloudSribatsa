@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "9y6AvnTe85Nf4SODyZYDSs",
+    "name" : "AutoStepProcess",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "G53nQciSrZMSPfX-gt-21457817-2022-12-08T18:07:10.518Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

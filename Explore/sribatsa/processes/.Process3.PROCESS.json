@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "3XMctUWJtIteCKE80FpY4C",
+    "name" : "Process3",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "uwSSp7aa-gt-49377170-2023-07-07T13:26:34.337Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

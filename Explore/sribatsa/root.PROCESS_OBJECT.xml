@@ -1,0 +1,41 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>V0OVGuDoWn2sqeE-gt-520790-2021-07-16T14:53:17.761Z::po.xml</types1:EntryId>
+      <types1:Name>root</types1:Name>
+      <types1:ParentFlowIds>zKWTzIf6riX2FNB-gt-15400296-2021-09-30T07:30:22.419Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-16T14:53:18Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="root"
+                        isByCopy="true"
+                        name="root">
+            <description/>
+            <tags/>
+            <detail>
+               <field label="User" name="User" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:ProcessObjectForJSONProcess</option>
+                     <option name="guid">0mygPpEjJMzhg91nMvM4K9</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>4bEwcWrw2J6i2ic35kVL2h</types1:GUID>
+      <types1:DisplayName>root</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:13.144Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "6oTHviW72KVgaZWjHCxE6Y",
+    "name" : "acActiveMQ-03108053",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "2tDC2XZPnE29Em2-gt-61264960-2021-06-08T09:28:36.856Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

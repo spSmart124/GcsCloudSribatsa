@@ -1,0 +1,70 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>uZfYEWNTrKkQIW3-gt-51793838-2023-06-30T12:24:32.329Z::conn.xml</types1:EntryId>
+      <types1:Name>acDASSqlServer</types1:Name>
+      <types1:ParentFlowIds>xWZvWMOxBchzt1Y-gt-35269062-2023-06-30T12:30:55.371Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-06-30T12:24:32Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-06-30T12:28:16Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-06-30T12:35:59Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/acDASSqlServer/acDASSqlServer.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acDASSqlServer"
+                     label="acDASSqlServer"
+                     name="acDASSqlServer">
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <agent>sribatsa-redhat.informatica.com</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="driver"
+                          value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+               <attribute encrypted="false"
+                          name="jdbcUrl"
+                          value="jdbc:sqlserver://eugcssql17:1433;databaseName=support;sendStringParametersAsUnicode=true"/>
+               <attribute encrypted="false" name="username" value="c03066279"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="initialSize" value="5"/>
+               <attribute encrypted="false" name="maxActive" value="10"/>
+               <attribute encrypted="false" name="minIdle" value="1"/>
+               <attribute encrypted="false" name="maxIdle" value="5"/>
+               <attribute encrypted="false" name="maxWait" value="10"/>
+               <attribute encrypted="false" name="defaultTransactionIsolation" value="0"/>
+               <attribute encrypted="false" name="minEvictableIdleTimeMillis" value="1000"/>
+               <attribute encrypted="false" name="numTestsPerEvictionRun" value="1"/>
+               <attribute encrypted="false" name="testOnBorrow" value="true"/>
+               <attribute encrypted="false" name="testOnReturn" value="true"/>
+               <attribute encrypted="false" name="testWhileIdle" value="true"/>
+               <attribute encrypted="false" name="validationQuery" value="SELECT 1"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="true"
+                               connectorPath="project:/rt.connector/DASSqlServer/DASSqlServer_svcDef.xml"
+                               guid="7BRmPozAOoafGsBRq6nmqQ"
+                               name="DASSqlServer"
+                               plugin="DAS"
+                               supportsConnectionTest="true"
+                               supportsOData="false"
+                               uuid="1724c102-ee95-4ed8-9d92-b803540595db">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>2GdJhUIi6ojjzDnZy0GM8R</types1:GUID>
+      <types1:DisplayName>acDASSqlServer</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.568Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

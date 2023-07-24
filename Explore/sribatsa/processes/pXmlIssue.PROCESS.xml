@@ -1,0 +1,124 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Wi8jIw8jIw8jIw8-gt-24047068-2023-05-24T10:52:47.775Z::pd.xml</types1:EntryId>
+      <types1:Name>pXmlIssue</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-05-24T10:52:48Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-05-24T12:57:01Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-05-24T12:57:13Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pXmlIssue/pXmlIssue.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pXmlIssue"
+                  name="pXmlIssue"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="inXml" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="output" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="outXml" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tmpXml" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="tmpString" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload inputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="li1l58sq" targetId="li1l58sp"/>
+               </start>
+               <assignment id="li1l58sp">
+                  <title>Assignment to tmpString, output</title>
+                  <operation source="formula" to="temp.tmpString">
+                     <expression language="XQuery">let $xml := $input.inXml//events/text()
+
+let $subString := fn:substring($xml, 39, fn:string-length($xml ))
+
+return replace($subString, '&amp;lt;', '&amp;amp;lt;')</expression>
+                  </operation>
+                  <operation source="formula" to="output.output">
+                     <expression language="XQuery">let $xml := $input.inXml//events/text()
+let $xmlString := fn:substring($xml, 39, fn:string-length($xml))
+return replace($xmlString, ' &amp;lt;', ' &amp;amp;lt;')</expression>
+                  </operation>
+                  <link id="li1l58sr" targetId="li1l58se"/>
+               </assignment>
+               <assignment id="li1l58se">
+                  <title>Assignment to outXml</title>
+                  <operation source="formula" to="output.outXml">
+                     <expression language="XQuery">util:parseXML($output.output )</expression>
+                  </operation>
+                  <link id="li1l58sg" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>fa5f1828-d7b9-493f-87db-212a5c9c9c0d</ns1:Id>
+               <ns1:Name>empty</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2023-05-24T11:47:11Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2023-05-24T11:47:11Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>9SzrC1GEPNgb0qM8uhgVSb</types1:GUID>
+      <types1:DisplayName>pXmlIssue</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:19.343Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

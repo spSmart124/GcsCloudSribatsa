@@ -1,0 +1,77 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>5bfOC2XZPnE29Em-gt-13795707-2021-08-16T15:21:44.911Z::pd.xml</types1:EntryId>
+      <types1:Name>procSecureAgent</types1:Name>
+      <types1:ParentFlowIds>TTpOzEkhK6LlRkP-gt-5613691-2021-08-16T15:20:51.726Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-16T15:21:45Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-08-02T04:04:15Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-08-18T14:37:18Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.procSecureAgent/procSecureAgent.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procSecureAgent"
+                  name="procSecureAgent"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="outSub" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsa-redhat.informatica.com</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="krou1nif" targetId="krou1nie"/>
+               </start>
+               <assignment id="krou1nie">
+                  <title>Assignment to outSub</title>
+                  <operation source="constant" to="output.outSub">ack</operation>
+                  <link id="krou1nig" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>4e32dbca-e163-42d7-80f0-cb04bb19e5ae</ns1:Id>
+               <ns1:Name>dummy</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-08-16T15:21:45Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-08-16T15:21:45Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>8tMli6wGyOXdxFm9KebfQF</types1:GUID>
+      <types1:DisplayName>procSecureAgent</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.199Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

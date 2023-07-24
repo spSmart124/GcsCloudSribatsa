@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "bZFSwnCQiuIbhAtvkFeMGK",
+    "name" : "pSalesforcPlatformEventProducerCase04236277",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ciSrZMSPfXBiVGk-gt-49148136-2021-11-24T06:25:39.036Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "3ZMNYbKVVYxcvNL8eKMs8a",
+    "name" : "acSalesforceOAuth",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Uuopz4KhPVEQrXh-gt-386008-2022-06-16T13:02:15.757Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/sribatsaFolder"
+  } ]
+}

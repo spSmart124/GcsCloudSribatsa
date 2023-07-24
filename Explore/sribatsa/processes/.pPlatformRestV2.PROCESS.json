@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "4smzK2KoeYxk6eV74MpTun",
+    "name" : "pPlatformRestV2",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "vNtLSVMTonQYWeI-gt-17156972-2022-11-15T16:14:36.341Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "INVALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

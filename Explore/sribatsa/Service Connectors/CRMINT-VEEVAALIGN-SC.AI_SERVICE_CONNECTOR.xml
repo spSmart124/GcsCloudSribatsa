@@ -1,0 +1,119 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>iaa-gt-6111272-2023-03-10T16:05:02.141Z::svc.xml</types1:EntryId>
+      <types1:Name>CRMINT-VEEVAALIGN-SC</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-03-10T16:05:02Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-03-10T16:09:31Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="CRMINT-VEEVAALIGN-SC"
+                            label=""
+                            name="CRMINT-VEEVAALIGN-SC"
+                            uuid="c1c6a4c2-0dd3-4950-8e58-6dc752590814">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="VEEVA_VAULT_Login"
+                       maxRedirects="100"
+                       name="VEEVA_VAULT_Login"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="username"
+                                required="false"
+                                testWith="bi.integration@bi-align-sbx.com"
+                                type="string"/>
+                     <parameter name="password"
+                                required="false"
+                                testWith="Zj5674K&amp;f67j2!EqCp@2020"
+                                type="string"/>
+                     <parameter name="LoginURL"
+                                required="false"
+                                testWith="https://bi-align-sbx-bi-full2-align-sbx.veevavault.com/api/v18.3/auth"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$LoginURL}" verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/x-www-form-urlencoded</header>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="URL"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="vault_SessionId"
+                            property="sessionId"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="VEEVA_VAULT_Query_Get_Data"
+                       maxRedirects="100"
+                       name="VEEVA_VAULT_Query_Get_Data"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="in_vault_SessionId"
+                                required="true"
+                                testWith="Bearer 9119D6490A990652B85CC736FD6B2BA4DBD91B822E566C22B3389E6B0778BED03E614B87387FE8AD107B2162FD19A37C31729D49341F7C97E949A0C80C5C2BE1"
+                                type="string"/>
+                     <parameter name="VQL"
+                                nogen="true"
+                                required="true"
+                                testWith="q=select+id,name__v,status__v,created_by__v,created_date__v,modified_by__v,modified_date__v,geography_type__aln,country__aln,external_id__aln,map_shape__aln,bi_attr1__c,bi_attr2__c,bi_attr3__c,bi_attr4__c,global_id__sys,link__sys,country_code_bi__c,administrative_area__aln+from+geography__aln"
+                                type="string"/>
+                     <parameter name="in_baseURL"
+                                required="true"
+                                testWith="https://bi-align-sbx-bi-full2-align-sbx.veevavault.com"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="{$in_baseURL}/api/v20.3/query?{$VQL}" verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Authorization">{$in_vault_SessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>6QlxtX85hfViFbiD95ghou</types1:GUID>
+      <types1:DisplayName>CRMINT-VEEVAALIGN-SC</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.529Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

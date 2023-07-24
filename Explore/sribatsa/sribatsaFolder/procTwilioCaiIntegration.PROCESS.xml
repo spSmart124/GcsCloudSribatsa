@@ -1,0 +1,153 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>2K3gk1AhrswVYx8-gt-2258992-2021-07-26T06:05:38.578Z::pd.xml</types1:EntryId>
+      <types1:Name>procTwilioCaiIntegration</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-26T06:05:39Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-07-26T07:40:18Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-07-26T07:40:22Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.procTwilioCaiIntegration/procTwilioCaiIntegration.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procTwilioCaiIntegration"
+                  name="procTwilioCaiIntegration"
+                  overrideAPIName="true">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="NumMedia" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="ProfileName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="SmsSid" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="WaId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="SmsStatus" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Body" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="To" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="NumSegments" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="MessageSid" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="AccountSid" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="From" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="ApiVersion" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="SmsMessageSid" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="out" type="attachment">
+                  <options>
+                     <option hide="true" name="count">1</option>
+                     <option name="maxsize">5242880</option>
+                     <option name="required">false</option>
+                     <option name="guid"/>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tempMsg" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload outputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kq9p02bp" targetId="kq9p02bo"/>
+               </start>
+               <assignment id="kq9p02bo">
+                  <title>Assignment to in</title>
+                  <operation source="constant" to="temp.tempMsg">&lt;Response&gt;&lt;Message&gt;The Robots are coming! Head for the hills from CAI!&lt;/Message&gt;&lt;/Response&gt;</operation>
+                  <link id="kq9p02bq" targetId="kq9dglfu"/>
+               </assignment>
+               <assignment id="kq9dglfu">
+                  <title>Assignment to out</title>
+                  <operation source="formula" to="output.out">
+                     <expression language="XQuery">sff:createAttachmentFromBase64('test.xml', util:base64Encode($temp.tempMsg , "UTF-8",true()), 'text/xml')</expression>
+                  </operation>
+                  <link id="kq9dglfw" targetId="c"/>
+               </assignment>
+               <end id="c">
+                  <operation source="formula" to="header.Accept">
+                     <expression language="XQuery">"Application/Xml"</expression>
+                  </operation>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>3dFSdyFAi6efcFosRBsAGp</types1:GUID>
+      <types1:DisplayName>procTwilioCaiIntegration</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.096Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

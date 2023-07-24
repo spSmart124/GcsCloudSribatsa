@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "fOinHgI7seyf4SHkRgnlkx",
+    "name" : "pFileFolderCase04437141",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "XAeN7Y3AxtPk7HN-gt-3380053-2023-01-25T10:46:35.796Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "0LGWZRtScDCh2MIrph8Sc3",
+    "name" : "apFileFolderInclude",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "QdrOvMBu8zbgdwU-gt-2000544-2023-01-25T10:32:03.669Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/taskflows"
+  } ]
+}

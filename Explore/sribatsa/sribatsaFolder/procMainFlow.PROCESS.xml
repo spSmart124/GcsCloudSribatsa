@@ -1,0 +1,105 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>f3fZPE4zlrMZgpD-gt-18752873-2021-06-18T15:43:20.093Z::pd.xml</types1:EntryId>
+      <types1:Name>procMainFlow</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-window,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-06-18T15:43:20Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-06-18T15:44:58Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-06-18T15:45:09Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.procMainFlow/procMainFlow.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procMainFlow"
+                  name="procMainFlow"
+                  overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-window,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="outRecordListOrders" type="objectlist">
+                  <options>
+                     <option name="referenceTo">oracleJDBC:ORDERS</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="guid">74x7rjkgh02cni3sg3xJ86</option>
+                  </options>
+               </field>
+               <field description="" name="outCustomerList" type="objectlist">
+                  <options>
+                     <option name="referenceTo">acMySqlServer1:Customer</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">5eGJ5YR2SWbhDCJNxsXZqm</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tempOrderList" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsa-window</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kq15ts5v" targetId="kq15ts5u"/>
+               </start>
+               <assignment id="kq15ts5u">
+                  <title>Assignment to outRecordListOrders</title>
+                  <operation source="list" to="output.outRecordListOrders">
+                     <query advanceQuery="false" from="oracleJDBC:ORDERS"/>
+                  </operation>
+                  <link id="kq27e58v" targetId="kq27e58u"/>
+               </assignment>
+               <assignment id="kq27e58u">
+                  <title>Assignment to outCustomerList</title>
+                  <operation source="list" to="output.outCustomerList">
+                     <query advanceQuery="false" from="acMySqlServer1:Customer">
+                        <where>test="test"</where>
+                     </query>
+                  </operation>
+                  <link id="kq27e58w" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>0f1bbe90-8226-4927-a7ae-2fd37841b1b6</ns1:Id>
+               <ns1:Name>dummy</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-06-18T15:43:20Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-06-18T15:43:20Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>05Bh0It88I6ggCXWlsHs2y</types1:GUID>
+      <types1:DisplayName>procMainFlow</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.178Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "jnGdPwN59YQj9Blso5lMQM",
+    "name" : "acOracleJDBC",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "8G45YLnzYLnzYLn-gt-64726658-2022-09-29T11:01:49.967Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : ".",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

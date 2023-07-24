@@ -1,0 +1,359 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Q9FkPaaaaaaaaa-gt-26539504-2022-07-27T10:54:08.968Z::svc.xml</types1:EntryId>
+      <types1:Name>dasDb2As400</types1:Name>
+      <types1:ParentFlowIds>354STu0kMVX3cjk-gt-51062738-2022-07-28T19:27:09.288Z::conn.xml,VsKKkhEuHWvJ4rs-gt-27216728-2022-07-27T13:05:59.763Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-07-27T10:54:09Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-08-04T13:05:24Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-08-04T13:06:32Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/dasDb2As400/dasDb2As400_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="true"
+                            debug="false"
+                            displayName="dasDb2As400"
+                            label=""
+                            name="dasDb2As400"
+                            plugin="DAS"
+                            uuid="fcbec58e-2c60-450a-be4d-ccee3e38dba6">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="The fully qualified Java class name of the JDBC driver to be used."
+                                    label="JDBC Driver"
+                                    masked="false"
+                                    name="driver"
+                                    required="true"
+                                    testWith="com.ibm.as400.access.AS400JDBCDriver"
+                                    type="string"/>
+               <connectionAttribute description="The connection URL passed to the JDBC driver when establishing a connection."
+                                    label="JDBC URL"
+                                    masked="false"
+                                    name="jdbcUrl"
+                                    required="true"
+                                    testWith="jdbc:as400://I5V7R4/GNU"
+                                    type="string"/>
+               <connectionAttribute description="The connection username passed to the JDBC driver when establishing a connection."
+                                    label="Username"
+                                    masked="false"
+                                    name="username"
+                                    required="true"
+                                    testWith="vmysore"
+                                    type="string"/>
+               <connectionAttribute description="The connection password passed to the JDBC driver when establishing a connection."
+                                    label="Password"
+                                    masked="true"
+                                    name="password"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description="The initial number of connections that are created when the pool is started."
+                                    group="Advanced"
+                                    label="Initial Size"
+                                    masked="false"
+                                    name="initialSize"
+                                    required="false"
+                                    testWith="5"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of active connections that can be allocated from this pool at the same time. If this value is negative, there is no limit."
+                                    group="Advanced"
+                                    label="Max Active"
+                                    masked="false"
+                                    name="maxActive"
+                                    required="false"
+                                    testWith="10"
+                                    type="number"/>
+               <connectionAttribute description="The minimum number of connections that can remain idle in the pool without extra ones being created. A value of zero means that none will be created."
+                                    group="Advanced"
+                                    label="Min Idle"
+                                    masked="false"
+                                    name="minIdle"
+                                    required="false"
+                                    testWith="1"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of connections that can remain idle in the pool without extra ones being released,. If this value is negative, there is no limit"
+                                    group="Advanced"
+                                    label="Max Idle"
+                                    masked="false"
+                                    name="maxIdle"
+                                    required="false"
+                                    testWith="5"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of milliseconds that the pool waits for a connection if there are none available. A value of -1 means to wait indefinitely."
+                                    group="Advanced"
+                                    label="Max Wait"
+                                    masked="false"
+                                    name="maxWait"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="The default state of connections created by this pool, which is one of the following:    0 - NONE    1 - READ_UNCOMMITTED    2 - READ_COMMITTED    4 - REPEATABLE_READ    8 - SERIALIZABLE"
+                                    group="Advanced"
+                                    label="Transaction Isolation Level"
+                                    masked="false"
+                                    name="defaultTransactionIsolation"
+                                    required="false"
+                                    testWith="0"
+                                    type="string"/>
+               <connectionAttribute description="The minimum amount of time (millis) an object may sit idle in the pool before it is eligible for eviction by the idle object evictor (if an evictor exists."
+                                    group="Advanced"
+                                    label="Min Evictable Idle Time"
+                                    masked="false"
+                                    name="minEvictableIdleTimeMillis"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="The number of objects to examine during each run of the idle object evictor thread (if it exists)."
+                                    group="Advanced"
+                                    label="Num Tests Per Eviction Run"
+                                    masked="false"
+                                    name="numTestsPerEvictionRun"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="When checked, objects are validated before being borrowed from the pool. If the object cannot be validated, it is dropped from the pool, and an attempt is made to borrow another."
+                                    group="Advanced"
+                                    label="Test On Borrow"
+                                    masked="false"
+                                    name="testOnBorrow"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="When checked, objects are validated before being returned to the pool."
+                                    group="Advanced"
+                                    label="Test On Return"
+                                    masked="false"
+                                    name="testOnReturn"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="When checked, objects are validated by the idle object evictor (if one exists). If the object cannot be validated, it is dropped from the pool."
+                                    group="Advanced"
+                                    label="Test While Idle"
+                                    masked="false"
+                                    name="testWhileIdle"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="The SQL query that will validate connections from this pool before returning them to the caller. If specified, this query must be an SQL SELECT statement that returns at least one row."
+                                    group="Advanced"
+                                    label="Validation Query"
+                                    masked="false"
+                                    name="validationQuery"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <dasActions>
+               <action category="" label="UPDATE" name="UPDATE">
+                  <description/>
+                  <input>
+                     <parameter label="TableName"
+                                name="TableName"
+                                required="true"
+                                testWith="TEST"
+                                type="string"/>
+                     <parameter label="Filter"
+                                name="Filter"
+                                required="true"
+                                testWith="ID=1"
+                                type="string"/>
+                     <parameter label="UpdateField"
+                                name="UpdateField"
+                                required="true"
+                                testWith="NAME"
+                                type="string"/>
+                     <parameter label="UpdateValue"
+                                name="UpdateValue"
+                                required="true"
+                                testWith="Service Connector"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <sqlStatement>
+                        <statement>UPDATE {$TableName} SET {$UpdateField}='{$UpdateValue}' WHERE {$Filter}</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="" name="Response" type="string">
+                        <xquery>OK</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category="" label="SELECT" name="SELECT">
+                  <description/>
+                  <input>
+                     <parameter label="TableName"
+                                name="TableName"
+                                required="true"
+                                testWith="TEST"
+                                type="string"/>
+                     <parameter label="FieldSelection"
+                                name="FieldSelection"
+                                required="true"
+                                testWith="NAME"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <sqlStatement>
+                        <statement>SELECT {$FieldSelection} FROM {$TableName}</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="" name="Resultset" type="reference" xmlElement=".">
+                        <options>
+                           <option name="referenceTo">$any</option>
+                        </options>
+                     </field>
+                     <field description="" name="ROWS" type="objectlist">
+                        <options>
+                           <option name="referenceTo">row</option>
+                        </options>
+                        <xquery>{$Resultset//row}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category="" label="SELECT WITH FILTER" name="SELECT WITH FILTER">
+                  <description/>
+                  <input>
+                     <parameter label="FieldSelection"
+                                name="FieldSelection"
+                                required="true"
+                                testWith="*"
+                                type="string"/>
+                     <parameter label="Filter"
+                                name="Filter"
+                                required="true"
+                                testWith="ID=1"
+                                type="string"/>
+                     <parameter label="TableName"
+                                name="TableName"
+                                required="true"
+                                testWith="TEST"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <sqlStatement>
+                        <statement>SELECT {$FieldSelection} FROM {$TableName} WHERE {$Filter}</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="" name="Resultset" type="reference" xmlElement=".">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                     <field description="" name="ROWS" type="objectlist">
+                        <options>
+                           <option name="referenceTo">row</option>
+                        </options>
+                        <xquery>{$Resultset//row}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category="" label="DELETE" name="DELETE">
+                  <description/>
+                  <input>
+                     <parameter label="TableName"
+                                name="TableName"
+                                required="true"
+                                testWith="TEST"
+                                type="string"/>
+                     <parameter label="Filter"
+                                name="Filter"
+                                required="true"
+                                testWith="ID=3"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <sqlStatement>
+                        <statement>DELETE FROM {$TableName} WHERE {$Filter}</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="" name="Response" type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{$Response}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category="" label="INSERT" name="INSERT">
+                  <description/>
+                  <input>
+                     <parameter label="TableName"
+                                name="TableName"
+                                required="true"
+                                testWith="TEST"
+                                type="string"/>
+                     <parameter label="AllValues"
+                                name="Fields"
+                                required="true"
+                                testWith="ID,NAME"
+                                type="string"/>
+                     <parameter label="Values"
+                                name="Values"
+                                required="true"
+                                testWith="4,'Service Connector'"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <sqlStatement>
+                        <statement>INSERT INTO {$TableName}({$Fields}) VALUES({$Values})</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="" name="Response" type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{$Response}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </dasActions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="row">
+                  <description/>
+                  <detail>
+                     <field name="ID" nullable="false" required="true" type="string"/>
+                     <field name="NAME" nullable="true" required="true" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="TEST">
+                  <description/>
+                  <detail>
+                     <field name="row" nullable="true" required="true" type="reference">
+                        <options>
+                           <option name="referenceTo">row</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>7bYfvAaTAUvgylWWj0o1eu</types1:GUID>
+      <types1:DisplayName>dasDb2As400</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.349Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

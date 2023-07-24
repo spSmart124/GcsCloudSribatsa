@@ -1,0 +1,59 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>N4r6CFquUHukfRL-gt-12315874-2021-08-22T01:55:16.639Z::po.xml</types1:EntryId>
+      <types1:Name>Animal</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-22T01:55:17Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-08-22T01:58:08Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                        isByCopy="true"
+                        name="Animal">
+            <description>This object was generated from [Animal complex type] located in the [claim-1.0.schema.json.xsd] source XML schema.</description>
+            <detail>
+               <field label="PublicID" name="PublicID" type="string"/>
+               <field label="ObjectStatus" name="ObjectStatus" type="string"/>
+               <field label="PhysicalPropertyInstance"
+                      name="PhysicalPropertyInstance"
+                      type="int"/>
+               <field label="PhysicalPropertyKey"
+                      name="PhysicalPropertyKey"
+                      type="string"/>
+               <field label="AnimalName" name="AnimalName" type="string"/>
+               <field label="Breed" name="Breed" type="string"/>
+               <field label="Sex" name="Sex" type="string"/>
+               <field label="AnimalUse" name="AnimalUse" type="string"/>
+               <field label="DateofBirth" name="DateofBirth" type="int"/>
+               <field label="BarnName" name="BarnName" type="string"/>
+               <field label="AnimalValue" name="AnimalValue" type="string"/>
+               <field label="VetBills" name="VetBills" type="string"/>
+               <field label="Boarding" name="Boarding" type="boolean"/>
+               <field label="Notes" name="Notes" type="string"/>
+               <field label="AnimalUse2" name="AnimalUse2" type="string"/>
+               <field label="AnimalAddressType" name="AnimalAddressType" type="string"/>
+               <field label="CreateTime" name="CreateTime" type="datetime"/>
+               <field label="CreateUserPublicID" name="CreateUserPublicID" type="string"/>
+               <field label="UpdateTime" name="UpdateTime" type="datetime"/>
+               <field label="UpdateUserPublicID" name="UpdateUserPublicID" type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>kAW6T9eXxcXiiHYHHSr0wp</types1:GUID>
+      <types1:DisplayName>Animal</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.415Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

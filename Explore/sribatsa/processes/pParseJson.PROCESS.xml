@@ -1,0 +1,461 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>AdsFsdsFsdsFsds-gt-39518975-2022-09-20T10:49:23.42Z::pd.xml</types1:EntryId>
+      <types1:Name>pParseJson</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-09-20T10:49:23Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-09-20T12:22:34Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-09-20T12:22:39Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pParseJson/pParseJson.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pParseJson"
+                  name="pParseJson"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="out" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="out2" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid"/>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tempJsonText" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tempKafkaMessage" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:Kafka</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">amjfQMQ4C9kfw8RUPovV6C</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l8a2owrv" targetId="l8a2owru"/>
+               </start>
+               <assignment id="l8a2owru">
+                  <title>Assignment to tempJsonText, tempKafkaMessage etc.</title>
+                  <operation source="formula" to="temp.tempJsonText">
+                     <expression language="XQuery">'{
+      "event": "MODIFY",
+      "changes": [
+        "/app_decisions",
+        "/app_payments"
+      ],
+      "old": {
+        "app_decisions": [
+          {
+            "releasedDate": "2022-09-15T21:24:34",
+            "code": "AC",
+            "createdDate": "2022-09-15T21:24:42.003",
+            "rankReleased": 1,
+            "decision": "Admit Conditional",
+            "export3": {
+              "bannerCode": "AM",
+              "nuStatus": "N",
+              "nuAppStatus": "N",
+              "isDrop": "N",
+              "setDecisionDate": "Y"
+            },
+            "rankConfirmed": 1,
+            "rank": 1,
+            "reasonExport5": null,
+            "updatedDate": "2022-09-15T21:24:42.003",
+            "confirmedDate": "2022-09-15T21:24:34"
+          }
+        ]
+      },
+      "latest": {
+        "pers_combPersId": "GR-E199E593-8E64-4B34-8A0B-51FD4D18EBD4",
+        "pers_slateInstance": "GR",
+        "pers_slatePersonGUID": "E199E593-8E64-4B34-8A0B-51FD4D18EBD4",
+        "pers_slatePersonId": "328832825",
+        "pers_status": "Applicant",
+        "pers_createdDate": "2022-07-19T09:15:55.183",
+        "pers_updatedDate": "2022-08-31T16:58:17.640",
+        "pers_name": {
+          "preferred": "JenniferTest",
+          "first": "JenniferTest",
+          "last": "DarveshTest"
+        },
+        "pers_biodemo": {
+          "birthdate": "1991-02-11",
+          "sex": "F",
+          "hispanic": "Yes",
+          "deceased": "No"
+        },
+        "pers_contact": {
+          "email": "Jnavaspo@gmail.com",
+          "mobile": "+1 617-938-9791"
+        },
+        "pers_slate": {
+          "username": "Jnavaspo@gmail.com",
+          "link": "https://enroll.northeastern.edu/?e=Jnavaspo%40gmail.com"
+        },
+        "pers_nation": {
+          "primaryCitizenship": "GT"
+        },
+        "pers_jobs": [
+          {
+            "id": "59CB54C1-6AC6-4663-85E6-2AF65CFFE594",
+            "from": "2016-04-01",
+            "employer": "northeastern university "
+          }
+        ],
+        "pers_schools": [
+          {
+            "name": "Boston University",
+            "key": "3087",
+            "rawSchoolType": "U",
+            "type": "Undergraduate",
+            "streetLine1": "Boston, MA",
+            "city": "Boston",
+            "slateStateCode": "MA",
+            "state": "MA",
+            "country": "US",
+            "countryName": "United States",
+            "isoCountryCode": "US",
+            "countryFIPSCode": "US",
+            "iso3Code": "USA",
+            "addInfo": [
+              {
+                "postalCode": "02215-1703",
+                "geoMarket": "MA-06 Boston &amp;amp; Cambridge",
+                "geoMarketIndex": "MA-06"
+              },
+              {
+                "postalCode": "02215-1714",
+                "geoMarket": "MA-06 Boston &amp;amp; Cambridge",
+                "geoMarketIndex": "MA-06"
+              }
+            ],
+            "attendedFrom": "2009-09-01",
+            "attendedTo": "2023-02-01",
+            "slateRank": 1,
+            "slateRankOverall": 1
+          }
+        ],
+        "pers_testMetadata": [
+          {
+            "testId": "GRE",
+            "testName": "GRE",
+            "score1": "Verbal",
+            "score2": "Quantitative",
+            "score3": "Analytical Writing"
+          }
+        ],
+        "pers_testScores": [
+          {
+            "testId": "18893A65-3013-4BD3-B800-E2CC95309FAF",
+            "testType": "GRE",
+            "testDate": "2022-02-03",
+            "optional": false,
+            "createdDate": "2022-08-03T10:02:22.147",
+            "updatedDate": "2022-08-03T10:02:22.147",
+            "rank": 1,
+            "rank_overall": 1
+          }
+        ],
+        "pers_addresses": [
+          {
+            "streetLine1": "1 Suffolk Ave",
+            "city": "Swampscott",
+            "slateStateCode": "BC",
+            "state": "BC",
+            "postalCode": "01907",
+            "country": "CA",
+            "countryName": "Canada",
+            "isoCountryCode": "CA",
+            "countryFIPSCode": "CA",
+            "iso3Code": "CAN",
+            "geoMarket": "INT-CA-BC Canada, British Columbia",
+            "geomarketIndex": "INT-CA-BC",
+            "addressType": "Mailing",
+            "createdDate": "2022-09-15T21:14:47.610",
+            "updatedDate": "2022-09-15T21:14:47.610",
+            "addressId": "F63675D8-06BD-4DD3-A866-F439A08A81BC",
+            "addressPriorityNumber": 0,
+            "addressesRank": 1,
+            "addressRankOverall": 1,
+            "isSeasonal": false
+          }
+        ],
+        "pers_fields": {
+          "birthnation": {
+            "value": "CJ"
+          },
+          "ca_cit_status": {
+            "value": "Foreign National",
+            "export5": {
+              "bannerCode": "N"
+            }
+          },
+          "hispanic": {
+            "value": "1"
+          },
+          "nuid": {
+            "value": "000000006"
+          },
+          "uk_cit_status": {
+            "value": "Foreign National",
+            "export5": {
+              "bannerCode": "N"
+            }
+          },
+          "us_cit_status": {
+            "value": "Foreign National",
+            "export5": {
+              "bannerCode": "N"
+            }
+          },
+          "race": [],
+          "gender_identity": [
+            {
+              "value": "Female"
+            }
+          ],
+          "sub_ethnicity": [],
+          "birth_country": {
+            "value": "CJ"
+          }
+        },
+        "pers_tags": [],
+        "pers_relations": null,
+        "pers_sports": null,
+        "app_bannerCodes": "{\"bannerCampusCode\":\"VAN\",\"bannerCollegeCode\":\"AM\",\"bannerDegreeCode\":\"MS\",\"bannerDeptCode\":\"ARTD\",\"bannerMajorCode\":\"IDDV\",\"bannerProgramCode\":\"MS-IDDV\",\"bannerTermCode\":\"202410\",\"bannerFullPartCode\":\"FT\",\"bannerModalityCode\":\"On Ground\",\"bannerLevelCode\":\"GR\"}",
+        "app_combPersId": "GR-E199E593-8E64-4B34-8A0B-51FD4D18EBD4",
+        "app_combAppId": "GR-AA811A1C-3054-4C76-A13F-2992E3BEC941",
+        "app_slateInstance": "GR",
+        "app_applicationId": "AA811A1C-3054-4C76-A13F-2992E3BEC941",
+        "app_applicationRound": "38115CDA-3375-4F4E-882F-72A3A9E857DA",
+        "app_slatePersonGUID": "E199E593-8E64-4B34-8A0B-51FD4D18EBD4",
+        "app_slatePersonId": "328832825",
+        "app_slateApplicationId": "313257170",
+        "app_submittedDate": "2022-09-15T21:16:15.033",
+        "app_createdDate": "2022-07-19T09:23:13.570",
+        "app_updatedDate": "2022-09-15T21:16:15.053",
+        "app_certifiedDate": "2022-07-19T09:47:00.283",
+        "app_status": "Awaiting App Fee",
+        "app_round": [
+          {
+            "name": "Northeastern University Application",
+            "export5": {
+              "attributesCode": "HHHH"
+            }
+          }
+        ],
+        "app_payments": [
+          {
+            "type": "Enrollment Deposit",
+            "paymentCode": "P",
+            "amount": "1000.00",
+            "date": "2022-09-15T21:26:14"
+          }
+        ],
+        "app_decisions": [
+          {
+            "code": "AC",
+            "decision": "Admit Conditional",
+            "createdDate": "2022-09-15T21:24:42.003",
+            "confirmedDate": "2022-09-15T21:24:34",
+            "releasedDate": "2022-09-15T21:24:34",
+            "updatedDate": "2022-09-15T21:24:42.003",
+            "rank": 2,
+            "rankConfirmed": 2,
+            "rankReleased": 2,
+            "export3": {
+              "bannerCode": "AM",
+              "isDrop": "N",
+              "nuAppStatus": "N",
+              "nuStatus": "N",
+              "setDecisionDate": "Y"
+            },
+            "reasonExport5": null
+          },
+          {
+            "code": "PD",
+            "decision": "Commit",
+            "createdDate": "2022-09-15T21:26:04.873",
+            "confirmedDate": "2022-09-15T21:25:58",
+            "releasedDate": "2022-09-15T21:25:58",
+            "updatedDate": "2022-09-15T21:26:04.873",
+            "rank": 1,
+            "rankConfirmed": 1,
+            "rankReleased": 1,
+            "export3": {
+              "bannerCode": "PD",
+              "isDrop": "N",
+              "nuAppStatus": "A",
+              "nuStatus": "A"
+            },
+            "reasonExport5": null
+          }
+        ],
+        "app_fields": {
+          "app_concentration": {
+            "value": "No Concentration",
+            "prompt": "86FCC06D-ECDA-4B1F-BCAB-65A18701B32F",
+            "category": "Other"
+          },
+          "app_degree": {
+            "value": "Master of Science",
+            "prompt": "4D87F4FE-1ABA-4ECB-898D-EA2D1388D22B",
+            "category": "Masters"
+          },
+          "app_enrollment_status": {
+            "value": "Full-time",
+            "prompt": "3E5BA5DF-B904-4005-AF62-A3C8CEFAE77C",
+            "export5": {
+              "bannerCode": "FT"
+            }
+          },
+          "app_grad_program": {
+            "value": "Information Design and Data Visualization",
+            "prompt": "4A2F1DAC-716B-4579-B90C-BA8408B022F2",
+            "category": "CAMD"
+          },
+          "app_primary_campus": {
+            "value": "Vancouver",
+            "prompt": "A92C0E18-DF9E-451B-A976-AEB4347BD438",
+            "category": "Canada",
+            "export5": {
+              "bannerCode": "VAN",
+              "citFieldPrefix": "ca",
+              "countryCode": "CA",
+              "attributesCode": "MVAN"
+            }
+          },
+          "app_program_modality": {
+            "value": "On Ground",
+            "prompt": "C7FDF801-B9CD-469F-81FB-1E7681036C1C"
+          },
+          "app_secondary_campus": {
+            "value": "Boston",
+            "prompt": "AD483496-51E1-417A-BD21-5AD16E53E835",
+            "category": "United States",
+            "export5": {
+              "bannerCode": "BOS",
+              "citFieldPrefix": "us",
+              "countryCode": "US",
+              "attributesCode": ""
+            }
+          },
+          "app_student_visa_ca": {
+            "value": "1"
+          },
+          "app_student_visa_uk": {
+            "value": "0"
+          },
+          "app_student_visa_us": {
+            "value": "0"
+          },
+          "app_term": {
+            "value": "Fall 2023",
+            "prompt": "B70A9170-6A32-46FE-B994-C09D1E0956D6"
+          },
+          "app_type": {
+            "value": "Regular",
+            "prompt": "74C3DA0B-CD6F-4FDF-8C92-14BDEECAF985"
+          },
+          "work_experience_total": {
+            "value": "More than 3 years, up to 4 years"
+          },
+          "advising_interest": [],
+          "fee_waiver_select": [],
+          "recognition_program": [],
+          "coded_banner_attributes": [],
+          "programRelatedData": {
+            "college": "AM",
+            "degree": "MS",
+            "program": "MS-IDDV",
+            "major": "IDDV",
+            "dept": "ARTD",
+            "full_part": "FT",
+            "campus": "VAN",
+            "level": "GR",
+            "modality": "On Ground",
+            "minor": ""
+          },
+          "campusCitizenshipStatus": {
+            "campusCountry": "CA",
+            "campusDesc": "Vancouver",
+            "citizenshipStatus": "N",
+            "inCampusCountry": null,
+            "nuAssistance": "1"
+          },
+          "app_entry_term": {
+            "value": "Fall 2023",
+            "prompt": "B70A9170-6A32-46FE-B994-C09D1E0956D6",
+            "export5": {
+              "bannerCode": "202410"
+            }
+          }
+        },
+        "personId": "GR-E199E593-8E64-4B34-8A0B-51FD4D18EBD4",
+        "applicationId": "GR-AA811A1C-3054-4C76-A13F-2992E3BEC941"
+      }
+    }
+'</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tempKafkaMessage">
+                     <expression language="XQuery">&lt;kafka&gt;{util:parseJSON($temp.tempJsonText/text())}&lt;/kafka&gt;</expression>
+                  </operation>
+                  <operation source="formula" to="output.out">
+                     <expression language="XQuery">let $changes := $temp.tempKafkaMessage/changes
+
+return &lt;root&gt;{
+for $change in $changes
+return &lt;changes&gt;{$change}&lt;/changes&gt;}&lt;/root&gt;</expression>
+                  </operation>
+                  <operation source="field" to="output.out2">temp.tempKafkaMessage[1]/old</operation>
+                  <link id="l8a2owrw" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>9XRPvcR1LNAfBUYZ0LNWsf</types1:GUID>
+      <types1:DisplayName>pParseJson</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.648Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

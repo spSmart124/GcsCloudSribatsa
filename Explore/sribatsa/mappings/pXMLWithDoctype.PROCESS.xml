@@ -1,0 +1,99 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ki2bfQnbf6riX2F-gt-81479856-2022-08-09T12:10:52.177Z::pd.xml</types1:EntryId>
+      <types1:Name>pXMLWithDoctype</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-08-09T12:10:52Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-08-09T12:12:35Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-08-09T12:12:39Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pXMLWithDoctype/pXMLWithDoctype.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pXMLWithDoctype"
+                  name="pXMLWithDoctype"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="outXML" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l6m52ndg" targetId="l6m52ndf"/>
+               </start>
+               <assignment id="l6m52ndf">
+                  <title>Assignment to outXML</title>
+                  <operation source="formula" to="output.outXML">
+                     <expression language="XQuery">'&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE SupplierERPNumberSyncMessage SYSTEM "https://uitint02.jaggaer.com/app_docs/dtd/supplier/TSMERPNumber.dtd"&gt;
+&lt;SupplierERPNumberSyncMessage version="1.0"&gt;
+	&lt;Header&gt;
+		&lt;MessageId&gt;
+			bd49bba1-0ca4-43e0-b327-0182825014ea
+		&lt;/MessageId&gt;
+		&lt;Timestamp&gt;
+			2022-08-09T11:14:22.570+00:00
+		&lt;/Timestamp&gt;
+	&lt;/Header&gt;
+	&lt;SupplierResponseMessage&gt;
+		&lt;Status&gt;
+			&lt;StatusCode&gt;
+				403
+			&lt;/StatusCode&gt;
+			&lt;StatusText&gt;
+				Unauthorized
+			&lt;/StatusText&gt;
+		&lt;/Status&gt;
+
+	&lt;/SupplierResponseMessage&gt;
+&lt;/SupplierERPNumberSyncMessage&gt;'</expression>
+                  </operation>
+                  <link id="l6m52ndh" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>1c85949c-e732-41b2-9940-b03e60d46b25</ns1:Id>
+               <ns1:Name>empty</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-08-09T12:11:33Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-08-09T12:11:33Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>51qcwOpwaUmkqbBdo0xiEw</types1:GUID>
+      <types1:DisplayName>pXMLWithDoctype</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.096Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

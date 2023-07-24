@@ -1,0 +1,150 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>7BwLjBeE1KoJBUh-gt-47887345-2021-06-23T11:10:29.95Z::pd.xml</types1:EntryId>
+      <types1:Name>procResponseHeade-Case-03118628</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-06-23T11:10:30Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-06-25T16:57:41Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-06-25T16:58:06Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.procResponseHeade-Case-03118628/procResponseHeade-Case-03118628.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procResponseHeade-Case-03118628"
+                  name="procResponseHeade-Case-03118628"
+                  overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="SmsMessageSid" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="NumMedia" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="ProfileName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="SmsSid" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="WaId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="SmsStatus" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="Body" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="To" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="NumSegments" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="MessageSid" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="AccountSid" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="From" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="ApiVersion" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="out" type="attachment">
+                  <options>
+                     <option hide="true" name="count">1</option>
+                     <option name="maxsize">5242880</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="in" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload outputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kq9p02bp" targetId="kq9p02bo"/>
+               </start>
+               <assignment id="kq9p02bo">
+                  <title>Assignment to in</title>
+                  <operation source="constant" to="temp.in">&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;Response&gt;&lt;Message&gt;The Robots are coming! Head for the hills from CAI!&lt;/Message&gt;&lt;/Response&gt;</operation>
+                  <link id="kq9p02bq" targetId="kq9dglfu"/>
+               </assignment>
+               <assignment id="kq9dglfu">
+                  <title>Assignment to out</title>
+                  <operation source="formula" to="output.out">
+                     <expression language="XQuery">sff:createAttachmentFromBase64('test.xml', util:base64Encode($temp.in , "UTF-8",true()), 'text/xml')</expression>
+                  </operation>
+                  <link id="kq9dglfw" targetId="c"/>
+               </assignment>
+               <end id="c">
+                  <operation source="formula" to="header.Accept">
+                     <expression language="XQuery">"Application/Xml"</expression>
+                  </operation>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>7EUsmYAa4cNjpQMFxGOPan</types1:GUID>
+      <types1:DisplayName>procResponseHeade-Case-03118628</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.599Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

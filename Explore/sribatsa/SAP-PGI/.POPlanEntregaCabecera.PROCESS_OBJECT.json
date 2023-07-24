@@ -1,0 +1,104 @@
+{
+  "objectInfo" : {
+    "id" : "2I8ms0ABNQcbcfZmXeziQy",
+    "name" : "POPlanEntregaCabecera",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "FEkWoKeERhKGXSh-gt-67631222-2021-12-01T13:07:54.514Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "hZDBlOTOIk1jqwLawzYjw5",
+    "name" : "POOES",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "vop81V4AdypKwKB-gt-67838111-2021-12-01T13:07:53.49Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/SAP-PGI"
+  }, {
+    "id" : "jQfrAwjCdKzgSRUxOxtlmL",
+    "name" : "POPlanEntregaRetenciones",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HCC6LlRkPUEbfV3-gt-67838119-2021-12-01T13:07:53.542Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/SAP-PGI"
+  }, {
+    "id" : "5tnqbEHMR87iNoRHGAGvUI",
+    "name" : "PORepartosOES",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "LQnbf6riX2FNBeN-gt-67838131-2021-12-01T13:07:53.605Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/SAP-PGI"
+  }, {
+    "id" : "8VGrndsK4DzfryhixKRhIt",
+    "name" : "POPlanEntregaDetalle",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "OhJWjzDt0x7bcoq-gt-67838150-2021-12-01T13:07:53.656Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : ".",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/SAP-PGI"
+  } ]
+}

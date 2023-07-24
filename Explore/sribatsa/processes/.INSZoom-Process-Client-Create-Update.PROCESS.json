@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "2OSngTu2lDUhiueSvc5QM8",
+    "name" : "INSZoom-Process-Client-Create-Update",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "O9pH8sVYx8R8WrY-gt-74758902-2023-07-07T15:56:03.665Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

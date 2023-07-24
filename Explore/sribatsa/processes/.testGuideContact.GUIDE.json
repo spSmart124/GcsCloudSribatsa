@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "bcu7uFM2uIEijcvGxBGWID",
+    "name" : "testGuideContact",
+    "type" : "GUIDE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "M1UAjllCYAOTMne-gt-5525724-2023-02-19T11:52:02.761Z::gt.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

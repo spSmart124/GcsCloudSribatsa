@@ -1,0 +1,109 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>SM8NciZBpDUQbgd-gt-31587936-2023-01-03T14:54:17.718Z::pd.xml</types1:EntryId>
+      <types1:Name>pTestAwsS3</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-01-03T14:54:18Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-01-03T14:55:50Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-01-06T11:22:04Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pTestAwsS3/pTestAwsS3.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pTestAwsS3"
+                  name="pTestAwsS3"
+                  overrideAPIName="true">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="fileEvent" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">AC-SFTP-Connection:AttachmentFileContent</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aXtSfVyETCEf187ca3tLei</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="tempStoreS3Request" type="reference">
+                  <options>
+                     <option name="referenceTo">acAmazonS3:StoreS3ObjectRequest</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">ijE0pQqz8wakRpRvzqrhys</option>
+                  </options>
+               </field>
+               <field description="" name="tempFileName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsa-redhat.informatica.com</targetLocation>
+               <event eventSource="AC-SFTP-Connection:FTPMonitor"/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l48mx02g" targetId="l48mx02f"/>
+               </start>
+               <assignment id="l48mx02f">
+                  <title>Assignment to tempStoreS3Request, Content Format etc.</title>
+                  <operation source="formula" to="temp.tempStoreS3Request">
+                     <expression language="XQuery">&lt;StoreS3ObjectRequest&gt;
+   &lt;s3ObjectParameters&gt;
+      &lt;awsS3Key&gt;sribatsa/tgt/wdCostCenterOutFile2.csv&lt;/awsS3Key&gt;
+      &lt;contentType&gt;&lt;/contentType&gt;
+      &lt;contentControl&gt;&lt;/contentControl&gt;
+      &lt;contentDisposition&gt;&lt;/contentDisposition&gt;
+      &lt;contentEncoding&gt;&lt;/contentEncoding&gt;
+      &lt;lastModified&gt;&lt;/lastModified&gt;
+      &lt;storageClass&gt;&lt;/storageClass&gt;
+      &lt;cannedAcl&gt;&lt;/cannedAcl&gt;
+      &lt;s3Acl&gt;&lt;/s3Acl&gt;
+   &lt;/s3ObjectParameters&gt;
+&lt;/StoreS3ObjectRequest&gt;</expression>
+                  </operation>
+                  <operation source="constant" to="temp.tempStoreS3Request[1]/format">Attachment</operation>
+                  <operation source="formula" to="temp.tempFileName">
+                     <expression language="XQuery">$input.fileEvent[1]/fileInfo[1]/fullName </expression>
+                  </operation>
+                  <link id="l48mx02h" targetId="l48mx01t"/>
+               </assignment>
+               <service id="l48mx01t">
+                  <title>TargetAwsS3Writer</title>
+                  <serviceName>acAmazonS3:TargetAwsS3Writer</serviceName>
+                  <serviceGUID>ijE0pQqz8wakRpRvzqrhys</serviceGUID>
+                  <serviceInput>
+                     <parameter name="storeS3ObjectRequest" source="field" updatable="true">temp.tempStoreS3Request</parameter>
+                     <parameter name="attachment" source="field" updatable="true">input.fileEvent[1]/attachment</parameter>
+                  </serviceInput>
+                  <link id="l48mx01v" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>2v307x77L1LdaCTrmF8PAO</types1:GUID>
+      <types1:DisplayName>pTestAwsS3</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.294Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

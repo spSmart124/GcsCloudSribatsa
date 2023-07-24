@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "2DLXe6MZNEXiA2ZGKl9Fs1",
+    "name" : "pPerfomanceTest",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "8jKBmeK3jhBjop8-gt-13590886-2022-10-14T16:24:36.965Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

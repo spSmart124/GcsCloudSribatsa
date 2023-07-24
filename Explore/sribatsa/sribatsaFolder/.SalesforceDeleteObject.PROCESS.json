@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "6D0St5KkxrQh4vOyGVRwOr",
+    "name" : "SalesforceDeleteObject",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "RLdqcgm8lnCmp6o-gt-49021185-2021-05-18T13:24:50.697Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

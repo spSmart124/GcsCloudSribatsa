@@ -1,0 +1,64 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>K9hCHbf2XZPnE29-gt-23614821-2021-08-25T14:14:35.9Z::conn.xml</types1:EntryId>
+      <types1:Name>Salesforce</types1:Name>
+      <types1:ParentFlowIds>1CHdqwx8R8WrY1S-gt-9309469-2023-02-19T12:35:46.845Z::gt.xml,BmeK3jhBjop81V4-gt-22458690-2021-11-24T05:28:55.438Z::pd.xml,eD3eIsoZduD2L5S-gt-102840455-2021-09-08T15:44:11.068Z::pd.xml,f17k4AdypKwKBqR-gt-16743741-2023-03-14T12:15:37.092Z::pd.xml,f2mmqm7O2htghGZ-gt-16453692-2021-10-11T10:25:04.509Z::gt.xml,JeDuYZ06NYcmYsG-gt-8962034-2023-02-19T12:30:14.566Z::gt.xml,M1UAjllCYAOTMne-gt-5525724-2023-02-19T11:52:02.761Z::gt.xml,NzUzeA8rJ4pbgch-gt-5371861-2023-02-19T11:57:17.643Z::gt.xml,QlvAhrswVYx8R8W-gt-8784514-2023-02-19T10:09:35.686Z::gt.xml,sRlvk0qZF3a-gt-16481817-2023-03-14T10:14:41.295Z::pd.xml,SUXL86zqzm5Y6tM-gt-8224082-2023-02-21T07:08:37.194Z::gt.xml,uuB3uopz4KhPVEQ-gt-16404676-2021-10-11T09:50:38.336Z::pd.xml,xoHY2KsJlv58pIO-gt-1801239-2022-05-12T09:35:49.377Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-25T14:14:36Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-07-06T11:34:02Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-07-04T14:13:32Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/Salesforce/Salesforce.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="Salesforce"
+                     label="Salesforce"
+                     name="Salesforce">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute name="objectFilter" value=""/>
+            </attributes>
+            <soaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                          connectorPath="project:/com.activevos.cumulus.cloud.extend.playbook.configuration/config/sfConnector.xml"
+                          name="Salesforce"
+                          supportsConnectionTest="true"
+                          supportsOData="true"
+                          supportsPublishSkipMetadataRefresh="true"
+                          uuid="05fc48f1-e6e1-441b-b700-bac396ca2ed1">
+               <description>Salesforce.com SOA based data connector.</description>
+            </soaConnector>
+            <authentication type="$infa_oauth2-authorization_code">
+               <attributes>
+                  <attribute encrypted="false"
+                             name="authUrl"
+                             value="https://login.salesforce.com/services/oauth2/authorize"/>
+                  <attribute encrypted="false"
+                             name="tokenUrl"
+                             value="https://login.salesforce.com/services/oauth2/token"/>
+                  <attribute encrypted="false"
+                             name="clientId"
+                             value="3MVG9xOCXq4ID1uGLcy3DpgY477aDNaEoBicuOmIXFK5e3RLtboke4OmR0RanYBcnnFTUbV4iEJ7BW9PdXODd"/>
+                  <attribute encrypted="true" name="clientSecret" value=""/>
+                  <attribute encrypted="false" name="sessionDuration" value="60"/>
+               </attributes>
+            </authentication>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>1mGgowICQqbeeQzKj9tXy2</types1:GUID>
+      <types1:DisplayName>Salesforce</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.255Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

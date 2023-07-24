@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "4waWyZtk7WEghtyShTes0P",
+    "name" : "scInvokeTest",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ox6Ru5V1FyuRZXD-gt-9502705-2022-06-22T17:18:03.723Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "7PoaEbsfm69lUlJtPiFQQ2",
+    "name" : "PO-Respuesta-STE",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HWOMzeHbcjqbdpI-gt-33225505-2021-12-01T13:07:53.545Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

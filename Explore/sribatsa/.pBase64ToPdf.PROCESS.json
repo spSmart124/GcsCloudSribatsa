@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "0Saa9k9rYfwiCQVcJg9zc5",
+    "name" : "pBase64ToPdf",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "DWeIssjqluQgabc-gt-51783772-2023-05-29T10:31:54.477Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

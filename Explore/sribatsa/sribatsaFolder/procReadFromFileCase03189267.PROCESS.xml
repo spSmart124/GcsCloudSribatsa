@@ -1,0 +1,79 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>dx6CjqFVNN5Kaaa-gt-25433286-2021-09-29T15:01:40.61Z::pd.xml</types1:EntryId>
+      <types1:Name>procReadFromFileCase03189267</types1:Name>
+      <types1:ParentFlowIds>i6xZ6or3rp3yD7t-gt-14246838-2021-09-29T16:12:14.139Z::pd.xml,yhBWJgki8MZgpDq-gt-13822990-2021-09-29T11:51:42.401Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-09-29T15:01:41Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-09-29T15:03:07Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-09-29T16:59:40Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.procReadFromFileCase03189267/procReadFromFileCase03189267.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procReadFromFileCase03189267"
+                  name="procReadFromFileCase03189267"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-redhat,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="outEndTime" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsa-redhat</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ku5my6vv" targetId="ku5my6vu"/>
+               </start>
+               <assignment id="ku5my6vu">
+                  <title>Assignment to outEndTime</title>
+                  <operation source="formula" to="output.outEndTime">
+                     <expression language="XQuery">fn:unparsed-text('file:////home1/sribatsa/tgt/lastEndTime.txt')</expression>
+                  </operation>
+                  <link id="ku5my6vw" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>5780e6fa-38f6-496a-99b1-efe36bbb04fc</ns1:Id>
+               <ns1:Name>dummy</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-09-29T15:02:26Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-09-29T15:02:26Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>1HMtfKK2Fg6etOjT9Q7LsK</types1:GUID>
+      <types1:DisplayName>procReadFromFileCase03189267</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.709Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

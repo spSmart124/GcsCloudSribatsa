@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "96cHpUbIlGhk2yN98VbMyL",
+    "name" : "p_test_xml_case_04291132",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "9JiTk08jIw8jIw8-gt-18876-2022-03-10T12:57:17.972Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

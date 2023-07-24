@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "5f6Jghh43oUcJtrBOMFxSK",
+    "name" : "pNoInputAgent",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "P5Q9FkPaaaaaaaa-gt-65101212-2023-06-02T14:26:08.666Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

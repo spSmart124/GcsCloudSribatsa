@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "ktdDREa2wE6g4a5KSw3O8L",
+    "name" : "RaveUser",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Ku8QhxOSM8NciZB-gt-30907571-2022-12-26T10:44:16.594Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [raveUser complex type] located in the [serviceSchema.xml] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

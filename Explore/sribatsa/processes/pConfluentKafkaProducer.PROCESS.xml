@@ -1,0 +1,81 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>pET1cnFKi9zhFty-gt-5358988-2023-04-12T14:49:04.425Z::pd.xml</types1:EntryId>
+      <types1:Name>pConfluentKafkaProducer</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-04-12T14:49:04Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-04-12T15:52:05Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pConfluentKafkaProducer"
+                  name="pConfluentKafkaProducer"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="inJsonMessage" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="tmpKafkaEvent" type="reference">
+                  <options>
+                     <option name="referenceTo">apConfluentKafka:KafkaMessage</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">8ueE7m2dfiSfSLp6QVsRWO</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload inputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lgdszwnw" targetId="lgdszwnv"/>
+               </start>
+               <service id="lgdszwnv">
+                  <title>KafkaProducer</title>
+                  <serviceName>apConfluentKafka:KafkaProducer</serviceName>
+                  <serviceGUID>8ueE7m2dfiSfSLp6QVsRWO</serviceGUID>
+                  <serviceInput>
+                     <parameter name="event" source="formula">
+                        <expression language="XQuery">&lt;KafkaMessage&gt;
+   &lt;body&gt;{{"name":"Sribatsa"}}&lt;/body&gt;
+&lt;/KafkaMessage&gt;
+</expression>
+                     </parameter>
+                  </serviceInput>
+                  <link id="lgdszwnx" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>6TyXAnD3ukFhonzOe08QMa</types1:GUID>
+      <types1:DisplayName>pConfluentKafkaProducer</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.653Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

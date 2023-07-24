@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "5sWVxw0XJ26joZE6vNJkC0",
+    "name" : "pAgentWithBasicAuth",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "W9VYxWPQE8jIw8j-gt-48044950-2022-09-23T08:22:11.787Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

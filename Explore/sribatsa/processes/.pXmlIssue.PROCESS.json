@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "9SzrC1GEPNgb0qM8uhgVSb",
+    "name" : "pXmlIssue",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Wi8jIw8jIw8jIw8-gt-24047068-2023-05-24T10:52:47.775Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

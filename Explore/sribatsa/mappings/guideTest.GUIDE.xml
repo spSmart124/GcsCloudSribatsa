@@ -1,0 +1,175 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>3RKWa-gt-27011895-2023-03-03T14:52:14.881Z::gt.xml</types1:EntryId>
+      <types1:Name>guideTest</types1:Name>
+      <types1:MimeType>application/xml+screenflow</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-03-03T14:52:15Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-03-03T15:07:17Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-03-03T15:07:20Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/sf.guideTest/guideTest.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <avosScreenflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                         xmlns:list="urn:activevos:spi:list:functions"
+                         allowRestart="true"
+                         displayName="guideTest"
+                         doneOnEndStep="false"
+                         name="guideTest"
+                         runAsUser="$current">
+            <description/>
+            <appliesTo/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="tmpPO" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:root</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">4bEwcWrw2J6i2ic35kVL2h</option>
+                  </options>
+               </field>
+               <field description="" name="tmpPickList" type="multipicklist">
+                  <options>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="guid"/>
+                  </options>
+               </field>
+               <field description="" name="untitled1" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <runOn target="desktop"/>
+            <notes/>
+            <deployment/>
+            <sendFeedback>
+               <emailTo/>
+            </sendFeedback>
+            <flow>
+               <startScreen id="jd300kk3">
+                  <title>Start</title>
+                  <body contentType="text/html"/>
+                  <actions>
+                     <action alt="null" id="jd300kk3_lesnfbbu" targetScreen="lesnfbbu">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="true"/>
+               </startScreen>
+               <screen id="lesnfbb6">
+                  <title>Screen 1</title>
+                  <body contentType="text/html">&lt;p&gt;tmpPO&amp;gt;User&amp;gt;email &lt;input class="" name="temp.tmpPO[1]/User[1]/email" type="text" value="tmpPO&gt;User&gt;email"&gt;&amp;nbsp;tmpPO &lt;input class="" name="temp.tmpPO" type="text" value="tmpPO (temporary)"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;tmpPickList &lt;input title="tmpPickList (temporary)" name="temp.tmpPickList" type="text" value="tmpPickList (temporary)"&gt;&amp;nbsp;&lt;/p&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="lesnfbb6_jd4cwa59" targetScreen="jd4cwa59">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="false">
+                     <screenDataItem name="temp.tmpPO"
+                                     readonly="false"
+                                     renderingType="table"
+                                     required="false"
+                                     type="reference">
+                        <options>
+                           <option name="display-options">{"display-options":{"columns":{"column":[{"name":"User[1]/email","type":"string","label":"User &gt; email","renderingType":"string"},{"name":"User[1]/last_name","type":"string","label":"User &gt; last_name","renderingType":"string"},{"name":"User","type":"reference","label":"User","renderingType":"reference","options":{"option":[{"name":"referenceTo","$t":"$po:ProcessObjectForJSONProcess"}]}}]},"rendering-type":{"table-style":null,"height":null},"allow_pagination":true,"allow_filtering":true,"allow_sorting":true}}</option>
+                           <option name="referenceTo">$po:root</option>
+                           <option name="required">false</option>
+                           <option name="isCopy">true</option>
+                           <option name="guid">4bEwcWrw2J6i2ic35kVL2h</option>
+                           <option name="values">[{"label":"user1","value":"user1"},{"label":"user2","value":"user2"}]</option>
+                           <option hide="true" name="valuelist.source">searchservice</option>
+                           <option hide="true" name="searchservice.name">service:/avosObjectQuerySearchService</option>
+                           <option name="searchservice.parameters">
+                              <serviceInput/>
+                           </option>
+                        </options>
+                     </screenDataItem>
+                     <screenDataItem name="temp.tmpPickList"
+                                     readonly="false"
+                                     required="false"
+                                     type="multipicklist">
+                        <options>
+                           <option hide="true" name="multiSelect">true</option>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                     <screenDataItem name="temp.tmpPO[1]/User[1]/email"
+                                     readonly="false"
+                                     renderingType="picklist"
+                                     required="false"
+                                     type="string">
+                        <options>
+                           <option name="required">false</option>
+                           <option hide="true" name="valuelist.source">csv</option>
+                           <option hide="true" name="valuelist.csvdata">sribatsa,Isam</option>
+                           <option name="values">[{"label":"sribatsa","value":"sribatsa"},{"label":"Isam","value":"Isam"}]</option>
+                        </options>
+                     </screenDataItem>
+                  </screenData>
+               </screen>
+               <endScreen id="jd4cwa59">
+                  <title>End</title>
+                  <body contentType="text/html"/>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text/>
+                  </screenActionLabel>
+               </endScreen>
+               <assignment id="lesnfbbu">
+                  <title>Assignment to tmpPickList, tmpPO</title>
+                  <operation source="formula" to="temp.tmpPickList">
+                     <expression language="XQuery">'Mango','Apple'</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tmpPO">
+                     <expression language="XQuery">&lt;root&gt;
+   &lt;User&gt;
+      &lt;first_name&gt;Issam&lt;/first_name&gt;
+      &lt;last_name&gt;Ibad&lt;/last_name&gt;
+      &lt;email&gt;something@test.com&lt;/email&gt;
+      &lt;password&gt;&lt;/password&gt;
+      &lt;user_type&gt;asda&lt;/user_type&gt;
+      &lt;language&gt;asfa&lt;/language&gt;
+      &lt;enabled&gt;adsfs&lt;/enabled&gt;
+   &lt;/User&gt;&lt;User&gt;
+      &lt;first_name&gt;Issam&lt;/first_name&gt;
+      &lt;last_name&gt;Ibad&lt;/last_name&gt;
+      &lt;email&gt;something@test.com&lt;/email&gt;
+      &lt;password&gt;&lt;/password&gt;
+      &lt;user_type&gt;asda&lt;/user_type&gt;
+      &lt;language&gt;asfa&lt;/language&gt;
+      &lt;enabled&gt;adsfs&lt;/enabled&gt;
+   &lt;/User&gt;
+&lt;/root&gt;
+</expression>
+                  </operation>
+                  <actions>
+                     <action alt="null" id="lesnfbbu_lesnfbb6" targetScreen="lesnfbb6">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </assignment>
+            </flow>
+         </avosScreenflow>
+      </types1:Entry>
+      <types1:GUID>fS5XSBcOj4Vj8ddM2obyGr</types1:GUID>
+      <types1:DisplayName>guideTest</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:19.452Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

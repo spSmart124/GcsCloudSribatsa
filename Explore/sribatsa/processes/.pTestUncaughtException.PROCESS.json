@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "4Wb8V06eYFQhJLiUwmUySs",
+    "name" : "pTestUncaughtException",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "yfWoAXUCZ4nzYLn-gt-18077-2022-10-27T11:14:24.401Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

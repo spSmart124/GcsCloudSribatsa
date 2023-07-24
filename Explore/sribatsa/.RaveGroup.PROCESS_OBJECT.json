@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "3hu1mzYI065hynQbJcM6yu",
+    "name" : "RaveGroup",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "GlBghNf4TsrT2ht-gt-30907555-2022-12-26T10:44:16.521Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [raveGroup complex type] located in the [serviceSchema.xml] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

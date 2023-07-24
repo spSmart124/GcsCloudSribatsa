@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "9jiOk6Msa68goIgW0pZXQz",
+    "name" : "pTemplateInputParent",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "rRsjqluQgabcjk9-gt-42389338-2023-04-05T13:42:49.277Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "8rO7CgmNbFBlGfLxQyb5Oi",
+    "name" : "pTemplateInput",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "KghuImXycotFgpK-gt-26820251-2023-04-05T13:40:33.58Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa"
+  } ]
+}

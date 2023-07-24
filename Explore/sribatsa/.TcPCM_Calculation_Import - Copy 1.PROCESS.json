@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "9MDtZINrqsJdCvy4MgBwQ1",
+    "name" : "TcPCM_Calculation_Import - Copy 1",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "UjIw8jIw8jIw8jI-gt-94080793-2021-07-07T13:49:28.749Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "8VALgmzQ8YMfX3MFoeBBAC",
+    "name" : "conn-TcPCM",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "IGSM8NciZBpDUQb-gt-94054881-2021-07-07T13:49:28.561Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa"
+  } ]
+}

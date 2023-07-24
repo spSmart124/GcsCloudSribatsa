@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "aXtSfVyETCEf187ca3tLei",
+    "name" : "AC-SFTP-Connection",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "cnNZPD4ARW8UBM7-gt-41103823-2021-06-21T13:41:16.046Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Application Connector that used to work with SFTP.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,147 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>5Ku8QhxOSM8NciZ-gt-44748086-2021-06-22T14:31:31.914Z::conn.xml</types1:EntryId>
+      <types1:Name>AC-SFTP-Connection-Case-03147366</types1:Name>
+      <types1:ParentFlowIds>7pgneO0fXs3C6Ll-gt-18764564-2021-08-03T10:44:16.939Z::pd.xml,Q6g0mdz9Iqy3eHR-gt-44900232-2021-06-22T14:34:26.692Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>Application Connector that used to work with SFTP</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-window</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-06-22T14:31:32Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-08-12T18:49:39Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-08-13T09:03:14Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/AC-SFTP-Connection-Case-03147366/AC-SFTP-Connection-Case-03147366.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="AC-SFTP-Connection-Case-03147366"
+                     label="AC-SFTP-Connection-Case-03147366"
+                     name="AC-SFTP-Connection-Case-03147366">
+            <description>Application Connector that used to work with SFTP</description>
+            <tags>.agent:sribatsa-window</tags>
+            <agent>sribatsa-window</agent>
+            <attributes>
+               <attribute encrypted="false" name="ftpProtocol" value="SFTP"/>
+               <attribute encrypted="false" name="hostname" value="10.75.158.21"/>
+               <attribute encrypted="false" name="port" value="22"/>
+               <attribute encrypted="false" name="knownHostsFile" value=""/>
+               <attribute encrypted="false" name="strictHostKeyChecking" value="false"/>
+               <attribute encrypted="false" name="username" value="sftpuser"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="privateKeyFile" value=""/>
+               <attribute encrypted="true" name="privateKeyPassphrase" value=""/>
+               <attribute encrypted="false" name="proxyEnabled" value="false"/>
+               <attribute encrypted="false" name="proxyHost" value=""/>
+               <attribute encrypted="false" name="proxyPort" value="80"/>
+               <attribute encrypted="false" name="proxyUserName" value=""/>
+               <attribute encrypted="true" name="proxyPassword" value=""/>
+               <attribute encrypted="false" name="binary" value="Binary"/>
+               <attribute encrypted="false" name="compression" value="0"/>
+               <attribute encrypted="false" name="passiveMode" value="false"/>
+               <attribute encrypted="false" name="stepwise" value="true"/>
+               <attribute encrypted="false" name="fastExistsCheck" value="false"/>
+               <attribute encrypted="false" name="serverAliveInterval" value="0"/>
+               <attribute encrypted="false" name="serverAliveCountMax" value="1"/>
+               <attribute encrypted="false" name="connectTimeout" value="10"/>
+               <attribute encrypted="false" name="timeout" value="30"/>
+               <attribute encrypted="false" name="soTimeout" value="300"/>
+               <attribute encrypted="false" name="maximumReconnectAttempts" value="3"/>
+               <attribute encrypted="false" name="reconnectDelay" value="1"/>
+               <attribute encrypted="false" name="ciphers" value=""/>
+               <attribute encrypted="false"
+                          name="throwExceptionOnConnectFailed"
+                          value="false"/>
+               <attribute encrypted="false" name="idempotentReposituryFolder" value=""/>
+               <attribute encrypted="false"
+                          name="clearIdempotentRepositoryOnStart"
+                          value="false"/>
+            </attributes>
+            <consumers>
+               <consumer enabled="true" name="FTPMonitor" typeName="FTPMonitor">
+                  <description>Use this event source to monitor FTP directories for new files and process them.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="disconnect" value="false"/>
+                     <attribute encrypted="false" name="directoryName" value="new"/>
+                     <attribute encrypted="false" name="recursive" value="true"/>
+                     <attribute encrypted="false" name="include" value=""/>
+                     <attribute encrypted="false"
+                                name="exclude"
+                                value="(.*\.exe)|(.*\.ini)|(.*\.vs)"/>
+                     <attribute encrypted="false" name="noop" value="false"/>
+                     <attribute encrypted="false" name="delete" value="false"/>
+                     <attribute encrypted="false" name="preMove" value=""/>
+                     <attribute encrypted="false" name="move" value=""/>
+                     <attribute encrypted="false" name="moveFailed" value=""/>
+                     <attribute encrypted="false" name="initialDelay" value="1"/>
+                     <attribute encrypted="false" name="delay" value="20"/>
+                     <attribute encrypted="false" name="maxMessagesPerPoll" value=""/>
+                     <attribute encrypted="false" name="readLock" value="rename"/>
+                     <attribute encrypted="false" name="readLockTimeout" value=""/>
+                     <attribute encrypted="false" name="readLockCheckInterval" value=""/>
+                     <attribute encrypted="false" name="readLockMinLength" value=""/>
+                     <attribute encrypted="false" name="readLockLoggingLevel" value="WARN"/>
+                     <attribute encrypted="false" name="charset" value=""/>
+                     <attribute encrypted="false" name="otherAttributes" value=""/>
+                     <attribute encrypted="false" name="contentFormat" value="Attachment"/>
+                     <attribute encrypted="false" name="simplifyContent" value="false"/>
+                     <attribute encrypted="false" name="singleObjectContent" value="false"/>
+                  </attributes>
+               </consumer>
+            </consumers>
+            <producers>
+               <producer enabled="true" name="FTPWriter" typeName="FTPWriter">
+                  <description>This event target can be used to write content to files via FTP/SFTP.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="directoryName" value="CONNECT"/>
+                     <attribute encrypted="false" name="fileExist" value="Ignore"/>
+                     <attribute encrypted="false" name="moveExisting" value=""/>
+                     <attribute encrypted="false" name="eagerDeleteTargetFile" value="true"/>
+                     <attribute encrypted="false" name="tempPrefix" value=""/>
+                     <attribute encrypted="false" name="tempFileName" value=""/>
+                     <attribute encrypted="false" name="bufferSize" value=""/>
+                     <attribute encrypted="false" name="charset" value=""/>
+                     <attribute encrypted="false" name="otherAttributes" value=""/>
+                  </attributes>
+               </producer>
+               <producer enabled="true"
+                         name="FTPWriter-Move-file-to-err"
+                         typeName="FTPWriter">
+                  <description>This event target can be used to write content to files via FTP/SFTP.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="directoryName" value="CONNECT/TEMP/error"/>
+                     <attribute encrypted="false" name="fileExist" value="Override"/>
+                     <attribute encrypted="false" name="moveExisting" value=""/>
+                     <attribute encrypted="false" name="eagerDeleteTargetFile" value="true"/>
+                     <attribute encrypted="false" name="tempPrefix" value=""/>
+                     <attribute encrypted="false" name="tempFileName" value=""/>
+                     <attribute encrypted="false" name="bufferSize" value=""/>
+                     <attribute encrypted="false" name="charset" value=""/>
+                     <attribute encrypted="false" name="otherAttributes" value=""/>
+                  </attributes>
+               </producer>
+            </producers>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           type="FTP"
+                           uuid="49a3e8d4-71b5-4fbc-b5ad-0774a850e01d">
+               <description>Provides connections to FTP and SFTP operation brokers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>jCU6FRR126Dhs4gYSKNt4A</types1:GUID>
+      <types1:DisplayName>AC-SFTP-Connection-Case-03147366</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.632Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

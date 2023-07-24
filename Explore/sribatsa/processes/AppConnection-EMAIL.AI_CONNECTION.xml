@@ -1,0 +1,46 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>NoC2g0aaaaaaaaa-gt-58672150-2023-06-09T21:32:28.634Z::conn.xml</types1:EntryId>
+      <types1:Name>AppConnection-EMAIL</types1:Name>
+      <types1:ParentFlowIds>uWG6UtLnzYLnzYL-gt-55495370-2022-03-31T14:35:10.328Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-06-09T21:32:29Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-06-15T15:53:54Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/AppConnection-EMAIL/AppConnection-EMAIL.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="AppConnection-EMAIL"
+                     label="AppConnection-EMAIL"
+                     name="AppConnection-EMAIL">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes/>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/SC_EMAIL_1/SC_EMAIL_1_svcDef.xml"
+                               guid="4tya68on5aZeVuXmKwVG6p"
+                               name="SC_EMAIL-1"
+                               supportsConnectionTest="false"
+                               uuid="84bbcefa-c358-47ad-9039-0b3c9388689a">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>6NE9EWaIGp4jORc9M4bQCt</types1:GUID>
+      <types1:DisplayName>AppConnection-EMAIL</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:23.279Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

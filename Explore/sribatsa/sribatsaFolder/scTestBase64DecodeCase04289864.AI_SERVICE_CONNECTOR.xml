@@ -1,0 +1,74 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>H2i2B7O2htghGZ5-gt-36451504-2022-03-10T10:41:28.546Z::svc.xml</types1:EntryId>
+      <types1:Name>scTestBase64DecodeCase04289864</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-03-10T10:41:29Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-03-10T10:46:38Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scTestBase64DecodeCase04289864"
+                            label=""
+                            name="scTestBase64DecodeCase04289864"
+                            uuid="9d53d1f3-6519-4a05-b9ee-e21f92f8faa0">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="TestBase64Decode"
+                       maxRedirects="100"
+                       name="TestBase64Decode"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="data"
+                                name="data"
+                                required="false"
+                                testWith="testData"
+                                type="string"/>
+                     <parameter label="key"
+                                name="key"
+                                required="false"
+                                testWith="keyData"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://www.google.com"
+                                        verb="GET"/>
+                  </binding>
+                  <output>
+                     <field description="" name="hmacEncode" type="string">
+                        <xquery>{dsig:hmacSHA1signature($data, $key)}</xquery>
+                     </field>
+                     <field description="" name="base64Decode" type="string">
+                        <xquery>{util:base64Decode($hmacEncode, "UTF-8")}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>9lFqfAyZuVabZCzTIN62iS</types1:GUID>
+      <types1:DisplayName>scTestBase64DecodeCase04289864</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:14.835Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

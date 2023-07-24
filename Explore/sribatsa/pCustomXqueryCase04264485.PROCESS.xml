@@ -1,0 +1,133 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>K0XabeAzu2JQhtG-gt-11310251-2022-01-19T14:06:12.591Z::pd.xml</types1:EntryId>
+      <types1:Name>pCustomXqueryCase04264485</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-01-19T14:06:13Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-01-19T14:27:24Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-01-19T14:27:29Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pCustomXqueryCase04264485/pCustomXqueryCase04264485.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pCustomXqueryCase04264485"
+                  name="pCustomXqueryCase04264485"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description=""
+                      name="outputFormattedTextInOneLineQuestion1"
+                      type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description=""
+                      name="outputFormattedTextInMultiLineQuestion2"
+                      type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tempXML" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kylm782b" targetId="kylm782a"/>
+               </start>
+               <assignment id="kylm782a">
+                  <title>Assignment to tempXML</title>
+                  <operation source="formula" to="temp.tempXML">
+                     <expression language="XQuery">&lt;inspection&gt;
+    &lt;status&gt;parentStatus&lt;/status&gt;
+    &lt;idlers&gt;
+        &lt;status&gt;status1&lt;/status&gt;
+        &lt;status&gt;status2&lt;/status&gt;
+        &lt;partNumber&gt;part1&lt;/partNumber&gt;
+        &lt;partNumber&gt;part2&lt;/partNumber&gt;
+    &lt;/idlers&gt;
+&lt;/inspection&gt;</expression>
+                  </operation>
+                  <link id="kylm782r" targetId="kylm782q"/>
+               </assignment>
+               <assignment id="kylm782q">
+                  <title>FormattedTextOneLineQuestion1 1</title>
+                  <operation source="formula" to="output.outputFormattedTextInOneLineQuestion1">
+                     <expression language="XQuery">let $delimiter := ","
+let $xml := $temp.tempXML 
+let $statuses := $xml/idlers//status
+let $partNumbers := $xml/idlers/partNumber
+
+return fn:string-join(for $i in 1 to count($statuses)
+return ($statuses[$i]/text(), $partNumbers[$i]/(text())), $delimiter)</expression>
+                  </operation>
+                  <link id="kylm782s" targetId="kylm782h"/>
+               </assignment>
+               <assignment id="kylm782h">
+                  <title>FormattedTextMultiLineQuestion2</title>
+                  <operation source="formula" to="output.outputFormattedTextInOneLineQuestion1">
+                     <expression language="XQuery">let $delimiter := ","
+let $xml := $temp.tempXML 
+
+let $parentStatus := $xml/status
+let $statuses := $xml/idlers//status
+let $partNumbers := $xml/idlers/partNumber
+let $newlineChar := "\n"
+
+return fn:string-join(for $i in 1 to count($statuses)
+return fn:string-join(($parentStatus, $statuses[$i]/text(), $partNumbers[$i]/(text())), $delimiter), $newlineChar)</expression>
+                  </operation>
+                  <link id="kylm782j" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>c096d099-c6e9-4a95-8421-8eb971afa6cc</ns1:Id>
+               <ns1:Name>dummy</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-01-19T14:06:31Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-01-19T14:27:54Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>hZKsdarfWsjlTtlJwgNPGE</types1:GUID>
+      <types1:DisplayName>pCustomXqueryCase04264485</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:13.041Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

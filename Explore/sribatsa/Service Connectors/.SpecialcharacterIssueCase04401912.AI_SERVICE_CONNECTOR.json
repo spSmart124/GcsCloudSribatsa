@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "0rNxz6X1z4fk68oDIIIKqo",
+    "name" : "SpecialcharacterIssueCase04401912",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "u4JsJGD4ARW8UBM-gt-6920507-2022-11-15T04:08:33.302Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

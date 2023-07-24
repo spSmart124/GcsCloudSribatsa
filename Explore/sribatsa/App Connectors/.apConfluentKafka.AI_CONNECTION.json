@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "8ueE7m2dfiSfSLp6QVsRWO",
+    "name" : "apConfluentKafka",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "chwAQlBWlD2pHAL-gt-8266043-2023-04-12T14:27:12.034Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

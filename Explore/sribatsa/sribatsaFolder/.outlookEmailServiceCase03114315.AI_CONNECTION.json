@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "6eq3wMa7JaDewHWezF9VGE",
+    "name" : "outlookEmailServiceCase03114315",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "T53nQciSrZMSPfX-gt-32637128-2021-06-18T12:02:22.734Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

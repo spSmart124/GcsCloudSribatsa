@@ -1,0 +1,52 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>oFxWZvWMOxBchzt-gt-19846256-2021-10-25T11:46:13.23Z::conn.xml</types1:EntryId>
+      <types1:Name>apRestApiVesion2Case04207931</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T11:46:13Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-10-25T11:46:17Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apRestApiVesion2Case04207931/apRestApiVesion2Case04207931.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apRestApiVesion2Case04207931"
+                     label="apRestApiVesion2Case04207931"
+                     name="apRestApiVesion2Case04207931">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false"
+                          name="loginUrl"
+                          value="https://dm-us.informaticacloud.com/ma/api/v2/user/login"/>
+               <attribute encrypted="false"
+                          name="activityLogUri"
+                          value="/api/v2/activity/activityLog"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scRestApiVesion2Case04207931/scRestApiVesion2Case04207931_svcDef.xml"
+                               guid="40qdP1gnuahf45ZCYhOFoG"
+                               name="scRestApiVesion2Case04207931"
+                               supportsConnectionTest="false"
+                               uuid="936be01d-b8d0-42f5-9b37-f330aadc67f9">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>hlNwCncr7wVfbOnhXhKS0A</types1:GUID>
+      <types1:DisplayName>apRestApiVesion2Case04207931</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.464Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

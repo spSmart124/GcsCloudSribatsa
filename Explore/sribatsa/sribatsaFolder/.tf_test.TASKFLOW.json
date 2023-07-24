@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "btR3W1n41ivkmXxn56DRok",
+    "name" : "tf_test",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5qdsQR6kbeJHQjA-gt-111490742-2022-03-22T11:05:00.912Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

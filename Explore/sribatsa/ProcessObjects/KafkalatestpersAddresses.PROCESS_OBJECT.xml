@@ -1,0 +1,102 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>4kbf6riX2FNBeNT-gt-39475067-2022-09-20T11:54:08.789Z::po.xml</types1:EntryId>
+      <types1:Name>KafkalatestpersAddresses</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-09-20T11:54:09Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                        isByCopy="true"
+                        name="KafkalatestpersAddresses">
+            <description>This object was generated from [Kafkalatestpers_addresses complex type] located in the [Kafka.json.xsd] source XML schema.</description>
+            <detail>
+               <field label="streetLine1"
+                      name="streetLine1"
+                      nullable="false"
+                      type="string"/>
+               <field label="country" name="country" nullable="false" type="string"/>
+               <field label="city" name="city" nullable="false" type="string"/>
+               <field label="addressType"
+                      name="addressType"
+                      nullable="false"
+                      type="string"/>
+               <field label="postalCode"
+                      name="postalCode"
+                      nullable="false"
+                      type="string"/>
+               <field label="isoCountryCode"
+                      name="isoCountryCode"
+                      nullable="false"
+                      type="string"/>
+               <field label="geoMarket"
+                      name="geoMarket"
+                      nullable="false"
+                      type="string"/>
+               <field label="updatedDate"
+                      name="updatedDate"
+                      nullable="false"
+                      type="string"/>
+               <field label="slateStateCode"
+                      name="slateStateCode"
+                      nullable="false"
+                      type="string"/>
+               <field label="addressId"
+                      name="addressId"
+                      nullable="false"
+                      type="string"/>
+               <field label="addressRankOverall"
+                      name="addressRankOverall"
+                      nullable="false"
+                      type="string"/>
+               <field label="addressesRank"
+                      name="addressesRank"
+                      nullable="false"
+                      type="string"/>
+               <field label="createdDate"
+                      name="createdDate"
+                      nullable="false"
+                      type="string"/>
+               <field label="addressPriorityNumber"
+                      name="addressPriorityNumber"
+                      nullable="false"
+                      type="string"/>
+               <field label="geomarketIndex"
+                      name="geomarketIndex"
+                      nullable="false"
+                      type="string"/>
+               <field label="isSeasonal"
+                      name="isSeasonal"
+                      nullable="false"
+                      type="string"/>
+               <field label="state" name="state" nullable="false" type="string"/>
+               <field label="countryName"
+                      name="countryName"
+                      nullable="false"
+                      type="string"/>
+               <field label="iso3Code" name="iso3Code" nullable="false" type="string"/>
+               <field label="countryFIPSCode"
+                      name="countryFIPSCode"
+                      nullable="false"
+                      type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>bedpwXFZT48eUIWU0QKDI3</types1:GUID>
+      <types1:DisplayName>KafkalatestpersAddresses</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.556Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

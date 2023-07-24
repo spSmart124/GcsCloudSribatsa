@@ -1,0 +1,104 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>EBNjDg8SOlA1vyo-gt-8944994-2021-12-16T11:46:14.494Z::pd.xml</types1:EntryId>
+      <types1:Name>pDateTimeCase04250263</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-16T11:46:14Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-12-16T12:15:55Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-12-16T12:17:24Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pDateTimeCase04250263/pDateTimeCase04250263.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pDateTimeCase04250263"
+                  name="pDateTimeCase04250263"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="output" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tempTest" type="objectlist">
+                  <options>
+                     <option name="referenceTo">acMySqlServerCase03151095:Test</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">1GtQkmXWu6Vlpvaou3Un8k</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kx8w85bq" targetId="kx8w85bp"/>
+               </start>
+               <assignment id="kx8w85bp">
+                  <title>Assignment to tempTest</title>
+                  <operation source="list" to="temp.tempTest">
+                     <query advanceQuery="false" from="acMySqlServerCase03151095:Test">
+                        <where>Name='Sribatsa'</where>
+                     </query>
+                  </operation>
+                  <link id="kx8w85c5" targetId="kx8w85c4"/>
+               </assignment>
+               <assignment id="kx8w85c4">
+                  <title>Assignment to output</title>
+                  <operation source="formula" to="output.output">
+                     <expression language="XQuery">&lt;outTest&gt;
+{ for $date in $temp.tempTest/updatedDate
+return &lt;date&gt;{fn:adjust-dateTime-to-timezone($date, xs:dayTimeDuration("PT8H"))}
+&lt;/date&gt;
+}
+&lt;/outTest&gt;</expression>
+                  </operation>
+                  <link id="kx8w85c6" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>1e2aa26e-59e8-410e-9728-275dd359c218</ns1:Id>
+               <ns1:Name>dummy</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-12-16T11:47:54Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-12-16T11:47:54Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>9LnWYumkE06cc1o5LlXHGX</types1:GUID>
+      <types1:DisplayName>pDateTimeCase04250263</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:23.337Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

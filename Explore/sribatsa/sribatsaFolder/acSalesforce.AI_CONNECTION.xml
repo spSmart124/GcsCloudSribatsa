@@ -1,0 +1,84 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>wOQohJvsGRvDINc-gt-28995077-2022-06-25T12:44:29.369Z::conn.xml</types1:EntryId>
+      <types1:Name>acSalesforce</types1:Name>
+      <types1:ParentFlowIds>75fRZoSRnCKwKBq-gt-45806225-2022-12-12T11:29:02.194Z::pd.xml,DKYsGuDoWn2sqeE-gt-17932114-2022-11-02T05:21:25.475Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:g01_agent_01</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-06-25T12:44:29Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-07-20T10:40:18Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-07-20T10:52:12Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/acSalesforce/acSalesforce.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acSalesforce"
+                     label="acSalesforce"
+                     name="acSalesforce">
+            <description/>
+            <tags>.agent:g01_agent_01</tags>
+            <agent>g01_agent_01</agent>
+            <attributes>
+               <attribute name="objectFilter" value=""/>
+            </attributes>
+            <consumers>
+               <consumer enabled="true" name="Source" typeName="Source">
+                  <description>Use this event source to consume events from Salesforce streaming channels.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="loadBalance" value="false"/>
+                     <attribute encrypted="false"
+                                name="Destination"
+                                value="/data/AccountChangeEvent"/>
+                     <attribute encrypted="false" name="Filter" value=""/>
+                  </attributes>
+               </consumer>
+            </consumers>
+            <soaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                          connectorPath="project:/com.activevos.cumulus.cloud.extend.playbook.configuration/config/sfConnector.xml"
+                          name="Salesforce"
+                          supportsConnectionTest="true"
+                          supportsOData="true"
+                          supportsPublishSkipMetadataRefresh="true"
+                          uuid="05fc48f1-e6e1-441b-b700-bac396ca2ed1">
+               <description>Salesforce.com SOA based data connector.</description>
+            </soaConnector>
+            <authentication type="$infa_oauth2-authorization_code">
+               <attributes>
+                  <attribute encrypted="false" name="authProviderName" value="Salesforce"/>
+                  <attribute encrypted="false"
+                             name="authUrl"
+                             value="https://login.salesforce.com/services/oauth2/authorize"/>
+                  <attribute encrypted="false"
+                             name="tokenUrl"
+                             value="https://login.salesforce.com/services/oauth2/token"/>
+                  <attribute encrypted="false"
+                             name="clientId"
+                             value="3MVG9xOCXq4ID1uGLcy3DpgY477aDNaEoBicuOmIXFK5e3RLtboke4OmR0RanYBcnnFTUbV4iEJ7BW9PdXODd"/>
+                  <attribute encrypted="true" name="clientSecret" value=""/>
+                  <attribute encrypted="false"
+                             name="redirectUri"
+                             value="https://oauthcallback.rt.informaticacloud.com/oauthcallback/"/>
+                  <attribute encrypted="false" name="responseType" value="code"/>
+                  <attribute encrypted="false"
+                             name="otherParameters"
+                             value="display=popup; prompt=login consent"/>
+                  <attribute encrypted="false" name="sessionDuration" value="60"/>
+               </attributes>
+            </authentication>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>kAC42bLCuCqkZc95rdhScJ</types1:GUID>
+      <types1:DisplayName>acSalesforce</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.605Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

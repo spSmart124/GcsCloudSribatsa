@@ -1,0 +1,67 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>SxIIJ1reK8ZAZf5-gt-216314567-2021-06-08T10:08:17.09Z::pd.xml</types1:EntryId>
+      <types1:Name>procActiveMQ-03108053</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-window</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-06-08T10:08:17Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-06-08T11:15:29Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procActiveMQ-03108053"
+                  name="procActiveMQ-03108053"
+                  overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-window</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="event" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">acActiveMQ-03108053:AMQPMessage</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="outMessage" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsa-window</targetLocation>
+               <event eventSource="acActiveMQ-03108053:AMQP-Source"/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kpnvqd23" targetId="kpnvqd22"/>
+               </start>
+               <assignment id="kpnvqd22">
+                  <title>Assignment to outMessage</title>
+                  <operation source="field" to="output.outMessage">input.event[1]/body</operation>
+                  <link id="kpnvqd3f" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>k0PKb2ghVWxjtf6VcrVJU5</types1:GUID>
+      <types1:DisplayName>procActiveMQ-03108053</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.648Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

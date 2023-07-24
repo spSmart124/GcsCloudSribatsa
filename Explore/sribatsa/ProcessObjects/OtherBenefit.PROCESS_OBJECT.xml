@@ -1,0 +1,50 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>BbeAzu2JQhtGci3-gt-35825066-2021-08-22T01:55:13.447Z::po.xml</types1:EntryId>
+      <types1:Name>OtherBenefit</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-22T01:55:13Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-08-22T01:58:06Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                        isByCopy="true"
+                        name="OtherBenefit">
+            <description>This object was generated from [OtherBenefit complex type] located in the [claim-1.0.schema.json.xsd] source XML schema.</description>
+            <detail>
+               <field label="PublicID" name="PublicID" type="string"/>
+               <field label="ObjectStatus" name="ObjectStatus" type="string"/>
+               <field label="CreateTime" name="CreateTime" type="datetime"/>
+               <field label="UpdateTime" name="UpdateTime" type="datetime"/>
+               <field label="CreateUserPublicID" name="CreateUserPublicID" type="string"/>
+               <field label="UpdateUserPublicID" name="UpdateUserPublicID" type="string"/>
+               <field label="OtherBenefitsRefNum"
+                      name="OtherBenefitsRefNum"
+                      type="string"/>
+               <field label="OtherBenefitsAmount"
+                      name="OtherBenefitsAmount"
+                      type="string"/>
+               <field label="StartDate" name="StartDate" type="date"/>
+               <field label="EndDate" name="EndDate" type="date"/>
+               <field label="InitialContact" name="InitialContact" type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>35htGpScVuYbaF19kneDuH</types1:GUID>
+      <types1:DisplayName>OtherBenefit</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:19.52Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

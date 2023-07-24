@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "1Wzqdd298bXfDIObrKGC2F",
+    "name" : "Salesforce-CI-IntegrationUser",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "fRabbfTQbdxWq9b-gt-41103831-2021-06-21T13:41:16.08Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

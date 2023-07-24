@@ -1,0 +1,114 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Pk7HNCnchKGXShO-gt-26931962-2022-06-06T12:15:44.672Z::pd.xml</types1:EntryId>
+      <types1:Name>pPipeDelimitedContentWriteCase04332747</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-06-06T12:15:45Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-06-13T10:50:33Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pPipeDelimitedContentWriteCase04332747"
+                  name="pPipeDelimitedContentWriteCase04332747"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="fileEvent" type="reference">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="referenceTo">AC-SFTP-Connection:AttachmentFileContent</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aXtSfVyETCEf187ca3tLei</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="output" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tempDelimitedContentWriter" type="reference">
+                  <options>
+                     <option name="referenceTo">AC-SFTP-Connection:SerializeToDelimitedContentTask</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aXtSfVyETCEf187ca3tLei</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsa-redhat.informatica.com</targetLocation>
+               <event eventSource="AC-SFTP-Connection:FTPMonitor"/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l42p4l2e" targetId="l42p4l2d"/>
+               </start>
+               <assignment id="l42p4l2d">
+                  <title>Assignment to tempDelimitedContentWriter</title>
+                  <operation source="formula" to="temp.tempDelimitedContentWriter">
+                     <expression language="XQuery">let $content := $input.delimitedContent 
+return &lt;SerializeToDelimitedContentTask&gt;
+    &lt;fileName&gt;test.pipe&lt;/fileName&gt;
+    &lt;delimitedContentObject&gt;
+      {$content/header}
+      &lt;totalRowsCount&gt;{count($content/record)}&lt;/totalRowsCount&gt;
+      {for $record in $content/record
+      return &lt;record&gt;
+      {$record/index}
+      {for $index in 1 to count($record/field)
+            return if ($index eq 7) then (&lt;field&gt;
+                &lt;value&gt;Hard coded value&lt;/value&gt;
+            &lt;/field&gt;)
+            else if ($index eq 10) then (&lt;field&gt;
+                &lt;value&gt;null&lt;/value&gt;
+            &lt;/field&gt;)
+            else $record/field[$index]
+            }      
+        &lt;/record&gt;
+        }
+    &lt;/delimitedContentObject&gt;
+&lt;/SerializeToDelimitedContentTask&gt;</expression>
+                  </operation>
+                  <link id="l42s8gjk" targetId="l42s8gjj"/>
+               </assignment>
+               <service id="l42s8gjj">
+                  <title>FTPDelimitedContentWriter</title>
+                  <serviceName>AC-SFTP-Connection:FTPDelimitedContentWriter</serviceName>
+                  <serviceGUID>aXtSfVyETCEf187ca3tLei</serviceGUID>
+                  <serviceInput>
+                     <parameter name="serializationTask" source="field" updatable="true">temp.tempDelimitedContentWriter</parameter>
+                  </serviceInput>
+                  <link id="l42s8gjl" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>aLl7IH6DOYofOdF6l8j08H</types1:GUID>
+      <types1:DisplayName>pPipeDelimitedContentWriteCase04332747</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.276Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

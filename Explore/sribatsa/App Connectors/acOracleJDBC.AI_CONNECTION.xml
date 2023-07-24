@@ -1,0 +1,77 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>8G45YLnzYLnzYLn-gt-64726658-2022-09-29T11:01:49.967Z::conn.xml</types1:EntryId>
+      <types1:Name>acOracleJDBC</types1:Name>
+      <types1:ParentFlowIds>75fRZoSRnCKwKBq-gt-45806225-2022-12-12T11:29:02.194Z::pd.xml,8ZGqpfZJdqVIKch-gt-16683604-2023-01-30T09:37:22.958Z::pd.xml,UxQ2Tp5OjG4abck-gt-1977632-2022-11-11T13:26:30.744Z::pd.xml,ZigdpIO3M4WwOC2-gt-64577634-2022-09-29T10:57:10.825Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-09-29T11:01:50Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-03-17T10:36:24Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-12-12T12:40:40Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/acOracleJDBC/acOracleJDBC.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acOracleJDBC"
+                     label="acOracleJDBC"
+                     name="acOracleJDBC">
+            <description>.</description>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <agent>sribatsa-redhat.informatica.com</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="JDBC Connection URL"
+                          value="jdbc:oracle:thin:@TSORA12C/PDB01"/>
+               <attribute encrypted="false"
+                          name="JDBC Jar Directory"
+                          value="/apps/infaagent/apps/process-engine/ext"/>
+               <attribute encrypted="false"
+                          name="JDBC Driver Class Name"
+                          value="oracle.jdbc.driver.OracleDriver"/>
+               <attribute encrypted="false" name="Schema" value="c03144200"/>
+               <attribute encrypted="false" name="Username" value="c03144200"/>
+               <attribute encrypted="true" name="Password" value=""/>
+               <attribute encrypted="false" name="Object Filter" value="TEST_INTEGER"/>
+               <attribute encrypted="false" name="TimeZone" value="Default"/>
+               <attribute encrypted="false" name="$read-Isolation Level" value="None"/>
+               <attribute encrypted="false"
+                          name="$read-Override Isolation Level"
+                          value="false"/>
+               <attribute encrypted="false" name="$write-Number of retries" value="5"/>
+               <attribute encrypted="false" name="$write-Retry wait period" value="3"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="ICS"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="true"
+                           supportsOData="true"
+                           supportsPublishSkipMetadataRefresh="true"
+                           type="GenericJDBCAdapter"
+                           uuid="33ec8fc7-dc6d-4d2e-9f6f-a950669a62d1">
+               <description>JDBC  Generic Cloud Adapter</description>
+            </javaConnector>
+            <odata>
+               <enabled>true</enabled>
+               <cloudAccessEnabled>true</cloudAccessEnabled>
+               <allowedUsers>
+                  <user>GcsCloudAdminSri</user>
+               </allowedUsers>
+            </odata>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>jnGdPwN59YQj9Blso5lMQM</types1:GUID>
+      <types1:DisplayName>acOracleJDBC</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:16.796Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

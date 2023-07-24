@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "fK9xrBlrdSQflf9j2KxLoN",
+    "name" : "UnderlyingCoverage",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "x2iUFpr1Iw8jIw8-gt-35825271-2021-08-22T01:55:17.385Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

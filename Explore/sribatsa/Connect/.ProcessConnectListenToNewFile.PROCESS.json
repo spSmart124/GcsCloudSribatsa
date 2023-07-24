@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "b90qQ6AcpYyc12GxGOeDkH",
+    "name" : "ProcessConnectListenToNewFile",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "TGyJFfYLnzYLnzY-gt-41105367-2021-06-21T13:41:45.738Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

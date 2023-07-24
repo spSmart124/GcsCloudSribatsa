@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "43AvhUJl68kkDwGasNrAAJ",
+    "name" : "KafkalatestappFieldsappEnrollmentStatusexport5",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jhsgk0m0zFMi4tc-gt-39475075-2022-09-20T11:54:08.814Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [Kafkalatestapp_fieldsapp_enrollment_statusexport5 complex type] located in the [Kafka.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

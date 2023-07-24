@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "7u2VRBDYaJVk8OV1LkT3aJ",
+    "name" : "ProcessForJSONCase03196412",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "YDn5Smbduaa-gt-28206049-2021-09-30T07:30:50.815Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

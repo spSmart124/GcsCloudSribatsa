@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "16nnItpjgExknQLT9axJaX",
+    "name" : "DASConnector1",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5v8SQDn5Smbduaa-gt-13678700-2022-09-13T15:49:48.918Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

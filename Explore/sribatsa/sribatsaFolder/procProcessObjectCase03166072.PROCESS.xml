@@ -1,0 +1,70 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>jznKKvvNtLSVMTo-gt-6591024-2021-08-17T11:54:05.715Z::pd.xml</types1:EntryId>
+      <types1:Name>procProcessObjectCase03166072</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-17T11:54:06Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-08-17T11:54:46Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procProcessObjectCase03166072"
+                  name="procProcessObjectCase03166072"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="Root" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:Root-1</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">8gPLnNkCGDghNxGKa1a8qS</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="tempClaimEvent" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ksg0apjb" targetId="ksg0apja"/>
+               </start>
+               <assignment id="ksg0apja">
+                  <title>Assignment to TransactionTime</title>
+                  <operation source="constant"
+                             to="input.Root[1]/Claim[1]/Metadata[1]/TransactionTime"/>
+                  <link id="ksg0apjc" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>61eGl5qdJkhdDTLqDwRdae</types1:GUID>
+      <types1:DisplayName>procProcessObjectCase03166072</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:16.668Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

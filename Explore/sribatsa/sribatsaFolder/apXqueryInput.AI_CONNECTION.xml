@@ -1,0 +1,47 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>VOJ2oTVMTonQYWe-gt-29143700-2022-05-10T15:24:27.77Z::conn.xml</types1:EntryId>
+      <types1:Name>apXqueryInput</types1:Name>
+      <types1:ParentFlowIds>abckPaaaaaaaaa-gt-30006992-2022-05-10T15:26:40.014Z::pd.xml,q78OHDvGFaaaaaa-gt-35571872-2022-05-10T15:57:55.263Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>Dummy</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-05-10T15:24:28Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-05-10T15:50:47Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-05-10T16:05:50Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apXqueryInput/apXqueryInput.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apXqueryInput"
+                     label="apXqueryInput"
+                     name="apXqueryInput">
+            <description>Dummy</description>
+            <tags/>
+            <agent/>
+            <attributes/>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scXqueryInput/scXqueryInput_svcDef.xml"
+                               guid="4ZYeSNmXK0JgkffVtpuJyZ"
+                               name="scXqueryInput"
+                               supportsConnectionTest="false"
+                               uuid="c75b864a-f97b-4f51-b289-59327d62c65a">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>90MkveCVy6acdOIz0AQWo6</types1:GUID>
+      <types1:DisplayName>apXqueryInput</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:21.99Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

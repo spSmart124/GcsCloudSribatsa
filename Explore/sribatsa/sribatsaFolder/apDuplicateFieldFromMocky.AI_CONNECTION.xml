@@ -1,0 +1,50 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>gjrwXtqdsQR6kbe-gt-35019465-2022-01-07T06:32:11.107Z::conn.xml</types1:EntryId>
+      <types1:Name>apDuplicateFieldFromMocky</types1:Name>
+      <types1:ParentFlowIds>2kVNKSmvD4teIss-gt-6942012-2022-01-14T08:22:19.861Z::pd.xml,FuR55aaabdqpw0V-gt-35006537-2022-01-07T06:17:54.513Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-01-07T06:32:11Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-01-07T06:39:38Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apDuplicateFieldFromMocky/apDuplicateFieldFromMocky.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apDuplicateFieldFromMocky"
+                     label="apDuplicateFieldFromMocky"
+                     name="apDuplicateFieldFromMocky">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false"
+                          name="url"
+                          value="https://run.mocky.io/v3/401606a3-e514-4c89-917d-d7eda5fba1ef"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scDuplicateFieldFromMocky/scDuplicateFieldFromMocky_svcDef.xml"
+                               guid="jzmEeiP3raFkGMRCF89mM9"
+                               name="scDuplicateFieldFromMocky"
+                               supportsConnectionTest="false"
+                               uuid="660ab246-f463-4795-814c-39e4b1eee846">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>8mEs0Q77uUWdIWg5QU0IYd</types1:GUID>
+      <types1:DisplayName>apDuplicateFieldFromMocky</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:23.149Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

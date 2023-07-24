@@ -1,0 +1,173 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>OhJWjzDt0x7bcoq-gt-67838150-2021-12-01T13:07:53.656Z::po.xml</types1:EntryId>
+      <types1:Name>POPlanEntregaDetalle</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description>.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-01T13:07:54Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="POPlanEntregaDetalle"
+                        isByCopy="true"
+                        name="POPlanEntregaDetalle">
+            <description>.</description>
+            <tags/>
+            <detail>
+               <field label="PO_ITEM"
+                      name="PO_ITEM"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="MATERIAL"
+                      name="MATERIAL"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="SHORT_TEXT"
+                      name="SHORT_TEXT"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="PREQ_NO"
+                      name="PREQ_NO"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="AGREEMEN"
+                      name="AGREEMEN"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="QUANTITY"
+                      name="QUANTITY"
+                      nullable="true"
+                      required="false"
+                      type="double"/>
+               <field label="PO_UNIT"
+                      name="PO_UNIT"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="ORDERPR_UN"
+                      name="ORDERPR_UN"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="CONV_NUM1"
+                      name="CONV_NUM1"
+                      nullable="true"
+                      required="false"
+                      type="double"/>
+               <field label="CONV_DEN1"
+                      name="CONV_DEN1"
+                      nullable="true"
+                      required="false"
+                      type="double"/>
+               <field label="NET_PRIC"
+                      name="NET_PRIC"
+                      nullable="true"
+                      required="false"
+                      type="double"/>
+               <field label="PRICE_UNIT"
+                      name="PRICE_UNIT"
+                      nullable="true"
+                      required="false"
+                      type="double"/>
+               <field label="TAX_CODE"
+                      name="TAX_CODE"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="PAVAL"
+                      name="PAVAL"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="STCD1"
+                      name="STCD1"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="VEND_MAT"
+                      name="VEND_MAT"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="GR_IND"
+                      name="GR_IND"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="NO_MORE_GR"
+                      name="NO_MORE_GR"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="FINAL_INV"
+                      name="FINAL_INV"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="PREQ_NAME"
+                      name="PREQ_NAME"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="EMAIL"
+                      name="EMAIL"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="ITEM_NO"
+                      name="ITEM_NO"
+                      nullable="true"
+                      required="false"
+                      type="int"/>
+               <field label="SCHED_LINE"
+                      name="SCHED_LINE"
+                      nullable="true"
+                      required="false"
+                      type="int"/>
+               <field label="DELETE_IND"
+                      name="DELETE_IND"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="DELIVERY_DATE"
+                      name="DELIVERY_DATE"
+                      nullable="true"
+                      required="false"
+                      type="date"/>
+               <field label="QUANTITY_REPARTO"
+                      name="QUANTITY_REPARTO"
+                      nullable="true"
+                      required="false"
+                      type="double"/>
+               <field label="Name_Sol"
+                      name="Name_Sol"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="CONF_CTRL"
+                      name="CONF_CTRL"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>8VGrndsK4DzfryhixKRhIt</types1:GUID>
+      <types1:DisplayName>POPlanEntregaDetalle</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.583Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

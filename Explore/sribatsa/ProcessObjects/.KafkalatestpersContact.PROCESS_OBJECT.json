@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "4mbbcsuGUrecDbiqzcVwKb",
+    "name" : "KafkalatestpersContact",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Nx6CjqFVNN5Kaaa-gt-39791684-2022-09-20T11:54:09.463Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [Kafkalatestpers_contact complex type] located in the [Kafka.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

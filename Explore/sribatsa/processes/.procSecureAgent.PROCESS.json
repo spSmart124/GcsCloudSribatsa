@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "lEM4AA9mkGOiywOin65AQ4",
+    "name" : "procSecureAgent",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "AQlBWlD2pHALVYx-gt-13537367-2022-09-13T14:24:34.432Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

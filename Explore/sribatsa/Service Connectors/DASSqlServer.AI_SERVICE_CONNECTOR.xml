@@ -1,0 +1,247 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ZNZoSRnCKwKBqRi-gt-21059411-2022-12-08T17:45:07.983Z::svc.xml</types1:EntryId>
+      <types1:Name>DASSqlServer</types1:Name>
+      <types1:ParentFlowIds>uZfYEWNTrKkQIW3-gt-51793838-2023-06-30T12:24:32.329Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-12-08T17:45:08Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-06-30T12:35:39Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-06-30T12:35:42Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/DASSqlServer/DASSqlServer_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="true"
+                            debug="false"
+                            displayName="DASSqlServer"
+                            label=""
+                            name="DASSqlServer"
+                            plugin="DAS"
+                            supportsOData="false"
+                            uuid="1724c102-ee95-4ed8-9d92-b803540595db">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="The fully qualified Java class name of the JDBC driver to be used."
+                                    label="JDBC Driver"
+                                    masked="false"
+                                    name="driver"
+                                    required="true"
+                                    testWith="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                                    type="string"/>
+               <connectionAttribute description="The connection URL passed to the JDBC driver when establishing a connection."
+                                    label="JDBC URL"
+                                    masked="false"
+                                    name="jdbcUrl"
+                                    required="true"
+                                    testWith="jdbc:sqlserver://eugcssql17:1433;databaseName=support;sendStringParametersAsUnicode=true"
+                                    type="string"/>
+               <connectionAttribute description="The connection username passed to the JDBC driver when establishing a connection."
+                                    label="Username"
+                                    masked="false"
+                                    name="username"
+                                    required="true"
+                                    testWith="c03066279"
+                                    type="string"/>
+               <connectionAttribute description="The connection password passed to the JDBC driver when establishing a connection."
+                                    label="Password"
+                                    masked="true"
+                                    name="password"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description="The initial number of connections that are created when the pool is started."
+                                    group="Advanced"
+                                    label="Initial Size"
+                                    masked="false"
+                                    name="initialSize"
+                                    required="false"
+                                    testWith="5"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of active connections that can be allocated from this pool at the same time. If this value is negative, there is no limit."
+                                    group="Advanced"
+                                    label="Max Active"
+                                    masked="false"
+                                    name="maxActive"
+                                    required="false"
+                                    testWith="10"
+                                    type="number"/>
+               <connectionAttribute description="The minimum number of connections that can remain idle in the pool without extra ones being created. A value of zero means that none will be created."
+                                    group="Advanced"
+                                    label="Min Idle"
+                                    masked="false"
+                                    name="minIdle"
+                                    required="false"
+                                    testWith="1"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of connections that can remain idle in the pool without extra ones being released,. If this value is negative, there is no limit"
+                                    group="Advanced"
+                                    label="Max Idle"
+                                    masked="false"
+                                    name="maxIdle"
+                                    required="false"
+                                    testWith="5"
+                                    type="number"/>
+               <connectionAttribute description="The maximum number of milliseconds that the pool waits for a connection if there are none available. A value of -1 means to wait indefinitely."
+                                    group="Advanced"
+                                    label="Max Wait"
+                                    masked="false"
+                                    name="maxWait"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="The default state of connections created by this pool, which is one of the following:    0 - NONE    1 - READ_UNCOMMITTED    2 - READ_COMMITTED    4 - REPEATABLE_READ    8 - SERIALIZABLE"
+                                    group="Advanced"
+                                    label="Transaction Isolation Level"
+                                    masked="false"
+                                    name="defaultTransactionIsolation"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description="The minimum amount of time (millis) an object may sit idle in the pool before it is eligible for eviction by the idle object evictor (if an evictor exists."
+                                    group="Advanced"
+                                    label="Min Evictable Idle Time"
+                                    masked="false"
+                                    name="minEvictableIdleTimeMillis"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="The number of objects to examine during each run of the idle object evictor thread (if it exists)."
+                                    group="Advanced"
+                                    label="Num Tests Per Eviction Run"
+                                    masked="false"
+                                    name="numTestsPerEvictionRun"
+                                    required="false"
+                                    testWith=""
+                                    type="number"/>
+               <connectionAttribute description="When checked, objects are validated before being borrowed from the pool. If the object cannot be validated, it is dropped from the pool, and an attempt is made to borrow another."
+                                    group="Advanced"
+                                    label="Test On Borrow"
+                                    masked="false"
+                                    name="testOnBorrow"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="When checked, objects are validated before being returned to the pool."
+                                    group="Advanced"
+                                    label="Test On Return"
+                                    masked="false"
+                                    name="testOnReturn"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="When checked, objects are validated by the idle object evictor (if one exists). If the object cannot be validated, it is dropped from the pool."
+                                    group="Advanced"
+                                    label="Test While Idle"
+                                    masked="false"
+                                    name="testWhileIdle"
+                                    required="false"
+                                    testWith="false"
+                                    type="boolean"/>
+               <connectionAttribute description="The SQL query that will validate connections from this pool before returning them to the caller. If specified, this query must be an SQL SELECT statement that returns at least one row."
+                                    group="Advanced"
+                                    label="Validation Query"
+                                    masked="false"
+                                    name="validationQuery"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <dasActions>
+               <action category=""
+                       label="InvokeStoredProcedure"
+                       name="InvokeStoredProcedure">
+                  <description/>
+                  <input>
+                     <parameter label="first_name"
+                                name="first_name"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter label="last_name"
+                                name="last_name"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter label="city"
+                                name="city"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter label="country"
+                                name="country"
+                                required="false"
+                                testWith=""
+                                type="string"/>
+                     <parameter label="tutorial_id"
+                                name="tutorial_id"
+                                required="false"
+                                testWith="1"
+                                type="int"/>
+                  </input>
+                  <binding>
+                     <sqlStatement>
+                        <statement>DECLARE @first_name VARCHAR(45)='', @p_last_name VARCHAR(45)='', @p_city VARCHAR(50)='', @p_country VARCHAR(50)='';
+EXEC supportcaseid 1, @first_name OUTPUT, @p_last_name OUTPUT, @p_city OUTPUT, @p_country OUTPUT;
+SELECT @first_name, @p_last_name, @p_city, @p_country;</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="" name="OUTPUT" type="string" xmlElement="."/>
+                  </output>
+               </action>
+               <action category="" label="INSERT" name="INSERT">
+                  <description/>
+                  <input>
+                     <parameter name="input"
+                                required="false"
+                                testWith="&lt;row&gt;&#xA;    &lt;CREW_NAME&gt;SANTOS GONZALEZ NIÃƒÂ&lt;/CREW_NAME&gt;&#xA;    &lt;TRN_SCHD_SEQ_NBR&gt;500&lt;/TRN_SCHD_SEQ_NBR&gt;&#xA;&lt;/row&gt;"
+                                type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </parameter>
+                  </input>
+                  <binding>
+                     <sqlStatement>
+                        <statement>INSERT INTO CREW VALUES({$input/TRN_SCHD_SEQ_NBR/text()}, '{$input/CREW_NAME/text()}', '{$input/CREW_NAME/text()}')</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output/>
+               </action>
+               <action category="" label="SELECT" name="SELECT">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <sqlStatement>
+                        <statement>SELECT * FROM CREW WHERE TRN_SCHD_SEQ_NBR=500</statement>
+                     </sqlStatement>
+                  </binding>
+                  <output>
+                     <field description="" name="records" type="objectlist" xmlElement=".">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </dasActions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>7BRmPozAOoafGsBRq6nmqQ</types1:GUID>
+      <types1:DisplayName>DASSqlServer</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.833Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

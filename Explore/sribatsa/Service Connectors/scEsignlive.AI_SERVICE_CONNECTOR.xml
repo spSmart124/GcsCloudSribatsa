@@ -1,0 +1,91 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>6YFqXL86zqzm5Y6-gt-14290882-2023-02-14T06:45:37.926Z::svc.xml</types1:EntryId>
+      <types1:Name>scEsignlive</types1:Name>
+      <types1:ParentFlowIds>JVxYi0Nmumf6S3w-gt-14412152-2023-02-14T06:49:19.572Z::conn.xml,PVFJ2oTVMTonQYW-gt-12867343-2023-07-14T14:16:06.166Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-02-14T06:45:38Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-02-14T06:48:21Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-02-14T06:48:23Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scEsignlive/scEsignlive_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scEsignlive"
+                            label=""
+                            name="scEsignlive"
+                            uuid="20ccf7af-9b92-4ec3-a4ac-0c9538f83b6e">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="Authorization"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SendPackages"
+                       maxRedirects="100"
+                       name="SendPackages"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="payload"
+                                required="true"
+                                testWith="{&#34;roles&#34;:[{&#34;id&#34;:&#34;Role1&#34;,&#34;signers&#34;:[{&#34;email&#34;:&#34;ashok.kumar@onespannn.com&#34;,&#34;firstName&#34;:&#34;1.firstname&#34;,&#34;lastName&#34;:&#34;1.lastname&#34;,&#34;company&#34;:&#34;OneSpanSign&#34;}]},{&#34;id&#34;:&#34;Role2&#34;,&#34;signers&#34;:[{&#34;email&#34;:&#34;signer2@example.com&#34;,&#34;firstName&#34;:&#34;2.firstname&#34;,&#34;lastName&#34;:&#34;2.lastname&#34;,&#34;company&#34;:&#34;OneSpanSign&#34;}]}],&#34;documents&#34;:[{&#34;approvals&#34;:[{&#34;role&#34;:&#34;Role1&#34;,&#34;fields&#34;:[{&#34;page&#34;:0,&#34;top&#34;:100,&#34;subtype&#34;:&#34;FULLNAME&#34;,&#34;height&#34;:50,&#34;left&#34;:100,&#34;width&#34;:200,&#34;type&#34;:&#34;SIGNATURE&#34;}]},{&#34;role&#34;:&#34;Role2&#34;,&#34;fields&#34;:[{&#34;page&#34;:0,&#34;top&#34;:300,&#34;subtype&#34;:&#34;FULLNAME&#34;,&#34;height&#34;:50,&#34;left&#34;:100,&#34;width&#34;:200,&#34;type&#34;:&#34;SIGNATURE&#34;}]}],&#34;name&#34;:&#34;TestDocument&#34;}],&#34;name&#34;:&#34;ExamplePackage&#34;,&#34;type&#34;:&#34;PACKAGE&#34;,&#34;language&#34;:&#34;en&#34;,&#34;emailMessage&#34;:&#34;&#34;,&#34;description&#34;:&#34;NewPackage&#34;,&#34;autocomplete&#34;:true,&#34;status&#34;:&#34;SENT&#34;}"
+                                type="string"/>
+                     <parameter name="file" required="false" testWith="" type="attachments"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://sandbox.esignlive.com/api/packages"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Authorization">{$Authorization}</header>
+                        </httpHeaders>
+                        <body generateUsing="Form"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            entireResponse="true"
+                            name="entireResponse"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>gQkzM9W6peogkS4z1doCmP</types1:GUID>
+      <types1:DisplayName>scEsignlive</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.541Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

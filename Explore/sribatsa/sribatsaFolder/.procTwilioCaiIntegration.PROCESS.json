@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "3dFSdyFAi6efcFosRBsAGp",
+    "name" : "procTwilioCaiIntegration",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "2K3gk1AhrswVYx8-gt-2258992-2021-07-26T06:05:38.578Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

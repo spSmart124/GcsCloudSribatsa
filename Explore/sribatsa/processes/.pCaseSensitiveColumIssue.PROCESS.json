@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "1TNuwTBbhO1ku3vST2taIj",
+    "name" : "pCaseSensitiveColumIssue",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ci9zhFtybduaa-gt-44825132-2022-12-11T14:59:38.037Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "39FUaHDgqONdbX1x6OQ524",
+    "name" : "poCaseSensitiveColumn",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "KELaabclvAhrswV-gt-44194331-2022-12-11T14:57:10.59Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  } ]
+}

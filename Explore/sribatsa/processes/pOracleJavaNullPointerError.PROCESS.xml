@@ -1,0 +1,106 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ZigdpIO3M4WwOC2-gt-64577634-2022-09-29T10:57:10.825Z::pd.xml</types1:EntryId>
+      <types1:Name>pOracleJavaNullPointerError</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-09-29T10:57:11Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-09-29T12:41:18Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-09-29T12:41:25Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pOracleJavaNullPointerError/pOracleJavaNullPointerError.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pOracleJavaNullPointerError"
+                  name="pOracleJavaNullPointerError"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="v_rcl_surveyId" type="reference">
+                  <options>
+                     <option name="referenceTo">acOracleJDBC:APP_CODES</option>
+                     <option name="required">false</option>
+                     <option name="guid">jnGdPwN59YQj9Blso5lMQM</option>
+                  </options>
+               </field>
+               <field description="" name="v_surveyIds" type="objectlist">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+               <field description="" name="v_surveyId" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l8n0dx35" targetId="l8n0dx34"/>
+               </start>
+               <assignment id="l8n0dx34">
+                  <title>Assignment to Tgt_TRAIN_SCHD_CONSIST</title>
+                  <operation source="query" to="temp.v_rcl_surveyId">
+                     <query advanceQuery="false" from="acOracleJDBC:APP_CODES">
+                        <where>PROGRAM='Informatica Cloud' and CODE_TYPE='CONSTANT'  and TEXT_VALUE='IC101'</where>
+                     </query>
+                  </operation>
+                  <link id="l8n0dx3h" targetId="l8n0dx3g"/>
+               </assignment>
+               <assignment id="l8n0dx3g">
+                  <title>Assignment to v_surveyIds, v_surveyId</title>
+                  <operation source="formula" to="temp.v_surveyIds">
+                     <expression language="XQuery">$temp.v_rcl_surveyId.TEXT_VALUE </expression>
+                  </operation>
+                  <operation source="formula" to="temp.v_surveyId">
+                     <expression language="XQuery">$temp.v_rcl_surveyId.TEXT_VALUE </expression>
+                  </operation>
+                  <link id="l8n0dx3i" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>7bc669d6-db35-43c1-80e1-7de17b3ed1e6</ns1:Id>
+               <ns1:Name>empty</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-09-29T12:07:34Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-09-29T12:07:34Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>5PaXFowDPJKlz6BtCx3EU2</types1:GUID>
+      <types1:DisplayName>pOracleJavaNullPointerError</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.236Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

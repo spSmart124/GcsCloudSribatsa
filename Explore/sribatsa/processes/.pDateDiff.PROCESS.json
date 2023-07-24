@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "98Owpf2XCkijHiZRVl8rWX",
+    "name" : "pDateDiff",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "xVeIXycotFgpKi9-gt-42425425-2023-05-25T17:33:38.384Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

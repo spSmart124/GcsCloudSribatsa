@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "0PmIxZPn98SbDyd0PTal2X",
+    "name" : "GenesysSnowflake",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "6XEQT53nQciSrZM-gt-27090201-2023-04-19T10:03:59.926Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "kGTy9xf16uPhM0I7VjdouC",
+    "name" : "pFilterUserByRoleCase04455339",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "2UUOC074Rpf6JfO-gt-52210512-2023-03-06T12:46:34.86Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "3RfN0T4uN6fkUb5hXr0IWW",
+    "name" : "apRestApiVesion2",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "EFpGY2KsJlv58pI-gt-8577248-2023-02-21T13:16:57.495Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Default"
+  } ]
+}

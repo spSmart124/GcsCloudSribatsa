@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "5u3aQaHmWAWf0sMraxUbgX",
+    "name" : "ICDCodes",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "n0clmbcjIw8jIw8-gt-31335689-2021-08-22T01:55:18.223Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

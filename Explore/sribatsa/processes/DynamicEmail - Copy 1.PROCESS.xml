@@ -1,0 +1,138 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>5YqTNkSmbduaa-gt-7694674-2023-07-20T08:53:51.915Z::pd.xml</types1:EntryId>
+      <types1:Name>DynamicEmail_-_Copy_1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-07-20T08:53:52Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="DynamicEmail - Copy 1"
+                  name="DynamicEmail_-_Copy_1"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="email" type="reference">
+                  <options>
+                     <option name="referenceTo">acOutlookEmailService:EmailTaskInput</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">6RnqhiL58CRehCryxDJaSk</option>
+                  </options>
+               </field>
+               <field description="" name="temp1" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="temp2" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ljs4vyz7" targetId="ljs4vyz6"/>
+               </start>
+               <assignment id="ljs4vyz6">
+                  <title>Assignment to temp1, temp2</title>
+                  <operation source="formula" to="temp.temp1">
+                     <expression language="XQuery">let $x:= &lt;rootmain&gt;
+&lt;dataAccessResponse statementId="d18f8fd9-440d-42d3-8e70-9ef7c31d8108"&gt;
+   &lt;row&gt;
+      &lt;audienceid&gt;6348800614807&lt;/audienceid&gt;
+      &lt;CustomAudienceName&gt;ITC_Testing_20230615_175916460&lt;/CustomAudienceName&gt;
+      &lt;segmentsize&gt;20000&lt;/segmentsize&gt;
+   &lt;/row&gt;
+   &lt;row&gt;
+      &lt;audienceid&gt;6355398988007&lt;/audienceid&gt;
+      &lt;CustomAudienceName&gt;ITC_Testing_20230621_155235420&lt;/CustomAudienceName&gt;
+      &lt;segmentsize&gt;100000&lt;/segmentsize&gt;
+   &lt;/row&gt;
+&lt;/dataAccessResponse&gt;
+&lt;/rootmain&gt;
+
+for $i in $x//row
+
+return   &lt;tr&gt;
+    &lt;td&gt;{$i//audienceid/data()}&lt;/td&gt;
+    &lt;td&gt;{$i//CustomAudienceName/data()}&lt;/td&gt;
+    &lt;td&gt;{$i//segmentsize/data()}&lt;/td&gt;
+  &lt;/tr&gt;
+ 
+  
+  
+</expression>
+                  </operation>
+                  <operation source="formula" to="temp.temp2">
+                     <expression language="XQuery">&lt;html&gt;
+&lt;style&gt;
+table, th, td {{border:1px solid black;}}
+&lt;/style&gt;
+&lt;body&gt;
+&lt;p&gt;Greeting, &lt;/p&gt;
+&lt;p&gt;CA List:&lt;/p&gt;
+&lt;table style="width:100%"&gt;
+	&lt;tr&gt;
+    	&lt;th&gt;Audience ID&lt;/th&gt;
+        &lt;th&gt;Custom Audience Name&lt;/th&gt;
+		&lt;th&gt;Segemnt Size&lt;/th&gt;
+    &lt;/tr&gt;
+{$temp.temp1}
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</expression>
+                  </operation>
+                  <link id="ljs4vz1n" targetId="ljs4vyxz"/>
+               </assignment>
+               <assignment id="ljs4vyxz">
+                  <title>Assignment to Recipient Addresses, Subject etc.</title>
+                  <operation source="constant" to="temp.email[1]/to">ppolakam@informatica.com,pavansaipolakam20@gmail.com,pverma@informatica.com</operation>
+                  <operation source="constant" to="temp.email[1]/subject">HTML_TEST</operation>
+                  <operation source="formula" to="temp.email[1]/body">
+                     <expression language="XQuery">util:toXML($temp.temp2 )</expression>
+                  </operation>
+                  <operation source="constant" to="temp.email[1]/contentType">text/html</operation>
+                  <link id="ljs4vyy5" targetId="ljs4vyy4"/>
+               </assignment>
+               <service id="ljs4vyy4">
+                  <title>sendEmailService</title>
+                  <serviceName>acOutlookEmailService:sendEmailService</serviceName>
+                  <serviceGUID>6RnqhiL58CRehCryxDJaSk</serviceGUID>
+                  <serviceInput>
+                     <parameter name="emailTaskInput" source="field" updatable="true">temp.email</parameter>
+                  </serviceInput>
+                  <link id="ljs4vyy6" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>2pcZTEWAIBLfFplUicnvye</types1:GUID>
+      <types1:DisplayName>DynamicEmail - Copy 1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.649Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

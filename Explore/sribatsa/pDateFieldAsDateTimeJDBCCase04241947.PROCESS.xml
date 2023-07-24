@@ -1,0 +1,117 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>D6I1dq2ME9paabd-gt-34841696-2021-12-02T08:35:01.468Z::pd.xml</types1:EntryId>
+      <types1:Name>pDateFieldAsDateTimeJDBCCase04241947</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-02T08:35:01Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-12-30T07:03:07Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-12-30T07:03:22Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pDateFieldAsDateTimeJDBCCase04241947/pDateFieldAsDateTimeJDBCCase04241947.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pDateFieldAsDateTimeJDBCCase04241947"
+                  name="pDateFieldAsDateTimeJDBCCase04241947"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-redhat,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="name" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="date" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="tempCreatedDate" type="datetime">
+                  <options>
+                     <option name="thirtyMinutesIncrement">true</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tempUpdatedDate" type="datetime">
+                  <options>
+                     <option name="thirtyMinutesIncrement">true</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsa-redhat</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kxskyy1t" targetId="kxskyy1s"/>
+               </start>
+               <assignment id="kxskyy1s">
+                  <title>Assignment to tempCreatedDate, tempUpdatedDate</title>
+                  <operation source="formula" to="temp.tempCreatedDate">
+                     <expression language="XQuery">fn:adjust-dateTime-to-timezone(xs:dateTime($input.date) , xs:dayTimeDuration("PT4H30M"))</expression>
+                  </operation>
+                  <operation source="formula" to="temp.tempUpdatedDate">
+                     <expression language="XQuery">fn:adjust-dateTime-to-timezone(xs:dateTime($input.date) , xs:dayTimeDuration("PT4H30M"))</expression>
+                  </operation>
+                  <link id="kxskyy1u" targetId="kwooz6o7"/>
+               </assignment>
+               <create id="kwooz6o7">
+                  <title>Test</title>
+                  <entityName>acMySqlServerCase03151095:Test</entityName>
+                  <createInput>
+                     <parameter name="Name" source="field" updatable="true">input.name</parameter>
+                     <parameter name="CreatedDate" source="formula" updatable="true">
+                        <expression language="XQuery">$temp.tempCreatedDate </expression>
+                     </parameter>
+                     <parameter name="updatedDate" source="formula" updatable="true">
+                        <expression language="XQuery">$temp.tempUpdatedDate </expression>
+                     </parameter>
+                  </createInput>
+                  <link id="kwooz6o9" targetId="c"/>
+               </create>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>bf08ae55-3bee-425b-9f88-0bec8f8bd64d</ns1:Id>
+               <ns1:Name>test_input</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-12-02T09:29:05Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-12-30T07:14:07Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "name": "Sribatsa28_5",
+	 "date": "2021-12-28T00:00:00Z"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>09sOPQLAtvScbRvxZ5qwAS</types1:GUID>
+      <types1:DisplayName>pDateFieldAsDateTimeJDBCCase04241947</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:13.113Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "0PUBKs2Pa8MlFCDNWKAMin",
+    "name" : "procCheckTimeoutCase03204802",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "iZ4i61KoJBUhtyc-gt-3952110-2021-10-05T15:55:32.13Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

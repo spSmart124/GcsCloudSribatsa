@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "lW6KCpdsS4ffwThjgHgpSX",
+    "name" : "RaveGroupMembership",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "OOWIuOSSHCwkNmu-gt-30907587-2022-12-26T10:44:16.645Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [raveGroupMembership complex type] located in the [serviceSchema.xml] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

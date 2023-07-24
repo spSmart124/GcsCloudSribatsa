@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "5PaXFowDPJKlz6BtCx3EU2",
+    "name" : "pOracleJavaNullPointerError",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ZigdpIO3M4WwOC2-gt-64577634-2022-09-29T10:57:10.825Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "jnGdPwN59YQj9Blso5lMQM",
+    "name" : "acOracleJDBC",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "8G45YLnzYLnzYLn-gt-64726658-2022-09-29T11:01:49.967Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : ".",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/App Connectors"
+  } ]
+}

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "75HnKLxsECwlMDEjALU66a",
+    "name" : "pEmailIdWithSingleQuote",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "2PKDC0hCHbf2XZP-gt-336591-2023-03-21T17:03:43.858Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

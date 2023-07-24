@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "9Su7gpmxtsEhuRoUyOZgO8",
+    "name" : "p_organizationId_UserSystem_UserName_case_04281550",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "KD83eHRi92qBbbe-gt-33829683-2022-02-21T09:18:27.587Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

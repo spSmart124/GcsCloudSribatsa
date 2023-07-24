@@ -1,0 +1,158 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>O3vASaaaaa-gt-18156409-2021-07-22T16:19:54.647Z::pd.xml</types1:EntryId>
+      <types1:Name>proc-case-03127686</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-22T16:19:55Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-07-22T16:51:28Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-07-22T16:51:35Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.proc-case-03127686/proc-case-03127686.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="proc-case-03127686"
+                  name="proc-case-03127686"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="input" required="true" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="output" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowedUsers>
+                     <user>GcsCloudAdminSri</user>
+                  </allowedUsers>
+                  <wholePayload inputWholePayload="true" outputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="krf4ckcy" targetId="krf4ckcx"/>
+               </start>
+               <assignment id="krf4ckcx">
+                  <title>Assignment to output</title>
+                  <operation source="formula" to="output.output">
+                     <expression language="XQuery">&lt;E2ETraceEvent xmlns="https://urldefense.com/v3/__http://schemas.microsoft.com/2004/06/E2ETraceEvent__;!!KpaPruflFCEp!3dCTVyuDR4RWLmGojr7r1YfQw-Ppw4yRU2dxs6iOPHzuoXnT5qvaSmjS0T6pv1EYJQ$ "&gt;
+	&lt;System xmlns="https://urldefense.com/v3/__http://schemas.microsoft.com/2004/06/windows/eventlog/system__;!!KpaPruflFCEp!3dCTVyuDR4RWLmGojr7r1YfQw-Ppw4yRU2dxs6iOPHzuoXnT5qvaSmjS0T7UGVz_4A$ "&gt;
+		&lt;EventID&gt;262156&lt;/EventID&gt;
+		&lt;Type&gt;3&lt;/Type&gt;
+		&lt;SubType Name="Error"&gt;0&lt;/SubType&gt;
+		&lt;Level&gt;2&lt;/Level&gt;
+		&lt;TimeCreated SystemTime="2021-07-01T20:15:52.9813552Z"/&gt;
+		&lt;Source Name="System.ServiceModel"/&gt;
+		&lt;Correlation ActivityID="63281de3-d098-4de7-b8b8-73dafece855e"/&gt;
+		&lt;Execution ProcessName="w3wp" ProcessID="5212" ThreadID="22"/&gt;
+		&lt;Channel/&gt;
+		&lt;Computer&gt;CLDJXDAPP01P&lt;/Computer&gt;
+	&lt;/System&gt;
+	&lt;ApplicationData&gt;
+		&lt;TraceData&gt;
+			&lt;DataItem&gt;
+				&lt;TraceRecord xmlns="https://urldefense.com/v3/__http://schemas.microsoft.com/2004/10/E2ETraceEvent/TraceRecord__;!!KpaPruflFCEp!3dCTVyuDR4RWLmGojr7r1YfQw-Ppw4yRU2dxs6iOPHzuoXnT5qvaSmjS0T6fcI4FVA$ " Severity="Error"&gt;
+					&lt;TraceIdentifier&gt;https://urldefense.com/v3/__https://docs.microsoft.com/dotnet/framework/wcf/diagnostics/tracing/System-ServiceModel-Channels-HttpChannelUnexpectedResponse__;!!KpaPruflFCEp!3dCTVyuDR4RWLmGojr7r1YfQw-Ppw4yRU2dxs6iOPHzuoXnT5qvaSmjS0T5YbMDeHg$ &lt;/TraceIdentifier&gt;
+					&lt;Description&gt;Received bad HTTP response&lt;/Description&gt;
+					&lt;AppDomain&gt;/LM/W3SVC/1/ROOT/jXchange/2008/EnterpriseEvent-1-132696440874485994&lt;/AppDomain&gt;
+					&lt;Exception&gt;
+						&lt;ExceptionType&gt;System.ServiceModel.Security.MessageSecurityException, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/ExceptionType&gt;
+						&lt;Message&gt;The HTTP request is unauthorized with client authentication scheme 'Anonymous'. The authentication header received from the server was 'Basic realm="IICS Application Integration Security Realm"'.&lt;/Message&gt;
+						&lt;StackTrace&gt;
+at System.ServiceModel.Channels.HttpChannelUtilities.TraceResponseException(Exception exception)
+at System.ServiceModel.Channels.HttpChannelUtilities.ValidateAuthentication(HttpWebRequest request, HttpWebResponse response, WebException responseException, HttpChannelFactory`1 factory)
+at System.ServiceModel.Channels.HttpChannelUtilities.ValidateRequestReplyResponse(HttpWebRequest request, HttpWebResponse response, HttpChannelFactory`1 factory, WebException responseException, ChannelBinding channelBinding)
+at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.ProcessResponse(HttpWebResponse response, WebException responseException)
+at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)
+at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.OnGetResponse(IAsyncResult result)
+at System.Runtime.Fx.AsyncThunk.UnhandledExceptionFrame(IAsyncResult result)
+at System.Net.LazyAsyncResult.Complete(IntPtr userToken)
+at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+at System.Net.ContextAwareResult.Complete(IntPtr userToken)
+at System.Net.LazyAsyncResult.ProtectedInvokeCallback(Object result, IntPtr userToken)
+at System.Net.HttpWebRequest.ProcessResponse()
+at System.Net.HttpWebRequest.SetResponse(CoreResponseData coreResponseData)
+at System.Net.ConnectionReturnResult.SetResponses(ConnectionReturnResult returnResult)
+at System.Net.Connection.ReadComplete(Int32 bytesRead, WebExceptionStatus errorStatus)
+at System.Net.LazyAsyncResult.Complete(IntPtr userToken)
+at System.Net.LazyAsyncResult.ProtectedInvokeCallback(Object result, IntPtr userToken)
+at System.Net.Security._SslStream.ProcessFrameBody(Int32 readBytes, Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+at System.Net.Security._SslStream.ReadFrameCallback(AsyncProtocolRequest asyncRequest)
+at System.Net.AsyncProtocolRequest.CompleteRequest(Int32 result)
+at System.Net.FixedSizeReader.CheckCompletionBeforeNextRead(Int32 bytes)
+at System.Net.FixedSizeReader.ReadCallback(IAsyncResult transportResult)
+at System.Net.LazyAsyncResult.Complete(IntPtr userToken)
+at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+at System.Net.ContextAwareResult.Complete(IntPtr userToken)
+at System.Net.LazyAsyncResult.ProtectedInvokeCallback(Object result, IntPtr userToken)
+at System.Net.Sockets.BaseOverlappedAsyncResult.CompletionPortCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)
+&lt;/StackTrace&gt;
+						&lt;ExceptionString&gt;System.ServiceModel.Security.MessageSecurityException: The HTTP request is unauthorized with client authentication scheme 'Anonymous'. The authentication header received from the server was 'Basic realm="IICS Application Integration Security Realm"'. ---&amp;gt; System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)
+   --- End of inner exception stack trace ---&lt;/ExceptionString&gt;
+						&lt;InnerException&gt;
+							&lt;ExceptionType&gt;System.Net.WebException, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&lt;/ExceptionType&gt;
+							&lt;Message&gt;The remote server returned an error: (401) Unauthorized.&lt;/Message&gt;
+							&lt;StackTrace&gt;
+at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)
+&lt;/StackTrace&gt;
+							&lt;ExceptionString&gt;System.Net.WebException: The remote server returned an error: (401) Unauthorized.
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)&lt;/ExceptionString&gt;
+						&lt;/InnerException&gt;
+					&lt;/Exception&gt;
+				&lt;/TraceRecord&gt;
+			&lt;/DataItem&gt;
+		&lt;/TraceData&gt;
+	&lt;/ApplicationData&gt;
+&lt;/E2ETraceEvent&gt;
+</expression>
+                  </operation>
+                  <link id="krf4ckcz" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>8ks0tsLo4C5kbcl4UFoRcs</types1:GUID>
+      <types1:DisplayName>proc-case-03127686</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.625Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "6leedTi9wRIjofWjVJCP8h",
+    "name" : "pKafkaProducer",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "YZcjKsJlv58pIO3-gt-52780688-2023-04-09T06:49:08.11Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "eAEdREqpUQ0kGsnTwkULua",
+    "name" : "apKafka",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "IMmlMickgpbdoPV-gt-53313389-2023-04-09T06:33:11.562Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/App Connectors"
+  } ]
+}

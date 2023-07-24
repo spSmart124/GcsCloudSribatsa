@@ -1,0 +1,64 @@
+{
+  "objectInfo" : {
+    "id" : "amjfQMQ4C9kfw8RUPovV6C",
+    "name" : "Kafka",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "EUvIw8jIw8jIw8j-gt-39791850-2022-09-20T11:54:12.497Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [Kafka complex type] located in the [Kafka.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "fS2rCdGfAGngL7yvZ6a3al",
+    "name" : "Kafkalatest",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "uOKx6I1dq2ME9pa-gt-25289721-2022-09-20T11:54:12.326Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [Kafkalatest complex type] located in the [Kafka.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "2qTwukA6RfdbdChfaWdyEv",
+    "name" : "Kafkaold",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "5Y6tMFyglsO7RY6-gt-25289673-2022-09-20T11:54:11.904Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [Kafkaold complex type] located in the [Kafka.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  } ]
+}

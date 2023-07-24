@@ -1,0 +1,52 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>M9Gjw4ARW8UBM7z-gt-33611005-2021-10-22T06:37:16.16Z::conn.xml</types1:EntryId>
+      <types1:Name>ap-serviceconn-edTail-Case-4220899</types1:Name>
+      <types1:ParentFlowIds>PdzfYtjCtbdsreK-gt-33608040-2021-10-22T06:35:01.671Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-10-22T06:37:16Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-10-22T06:37:26Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/ap-serviceconn-edTail-Case-4220899/ap-serviceconn-edTail-Case-4220899.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="ap-serviceconn-edTail-Case-4220899"
+                     label="ap-serviceconn-edTail-Case-4220899"
+                     name="ap-serviceconn-edTail-Case-4220899">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false"
+                          name="APIKEY"
+                          value="f75e1e30-e104-4de5-933f-f4c36059af8e"/>
+               <attribute encrypted="false" name="Username" value="joeqdecudev"/>
+               <attribute encrypted="false" name="Password" value="J@qrott8"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/serviceconn_RedTail_Case_4220899/serviceconn_RedTail_Case_4220899_svcDef.xml"
+                               guid="cjkgTZ7mLy8d9ICtxWA4WM"
+                               name="serviceconn_RedTail_Case_4220899"
+                               supportsConnectionTest="false"
+                               uuid="6b4bbeec-0254-43f1-b241-9545bd50b33e">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>cxjRyGi5XKDbmZCuzaTH68</types1:GUID>
+      <types1:DisplayName>ap-serviceconn-edTail-Case-4220899</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:23.262Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

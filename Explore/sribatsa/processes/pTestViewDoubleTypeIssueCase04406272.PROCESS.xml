@@ -1,0 +1,98 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>UxQ2Tp5OjG4abck-gt-1977632-2022-11-11T13:26:30.744Z::pd.xml</types1:EntryId>
+      <types1:Name>pTestViewDoubleTypeIssueCase04406272</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-11-11T13:26:31Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-11-11T16:48:03Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-11-11T16:48:07Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pTestViewDoubleTypeIssueCase04406272/pTestViewDoubleTypeIssueCase04406272.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pTestViewDoubleTypeIssueCase04406272"
+                  name="pTestViewDoubleTypeIssueCase04406272"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="tempRows" type="objectlist">
+                  <options>
+                     <option name="referenceTo">acOracleJDBC:SANDC_SFDC_DECIMAL_TESTING</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">jnGdPwN59YQj9Blso5lMQM</option>
+                  </options>
+               </field>
+               <field description="" name="tempRowsDas" type="reference">
+                  <options>
+                     <option name="referenceTo">apDasOracle:dataRow</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">9FbSf99OMc8dNVvBdIfDYI</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lacjfn00" targetId="lacjfmzz"/>
+               </start>
+               <assignment id="lacjfmzz">
+                  <title>Assignment to tempRows</title>
+                  <operation source="list" to="temp.tempRows">
+                     <query advanceQuery="false" from="acOracleJDBC:SANDC_SFDC_DECIMAL_TESTING"/>
+                  </operation>
+                  <link id="lacq544p" targetId="lacq544o"/>
+               </assignment>
+               <service id="lacq544o">
+                  <title>EXECUTE QUERY</title>
+                  <serviceName>apDasOracle:EXECUTE QUERY</serviceName>
+                  <serviceGUID>9FbSf99OMc8dNVvBdIfDYI</serviceGUID>
+                  <serviceInput>
+                     <parameter name="query" source="constant">SELECT * FROM SANDC_SFDC_DECIMAL_TESTING</parameter>
+                  </serviceInput>
+                  <link id="lacq544q" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>adb733ce-9453-4022-bee2-9b55f0af32f9</ns1:Id>
+               <ns1:Name>test</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-11-11T13:32:55Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-11-11T13:32:55Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>5bhja5cA44ojPBBudTMjs5</types1:GUID>
+      <types1:DisplayName>pTestViewDoubleTypeIssueCase04406272</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:26.807Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

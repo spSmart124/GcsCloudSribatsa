@@ -1,0 +1,58 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>LFu8zbgdwUiQLnz-gt-60768999-2021-07-08T15:44:46.612Z::svc.xml</types1:EntryId>
+      <types1:Name>Oauth-simple-case-03125028</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-08T15:44:47Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-07-08T15:54:15Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="Oauth-simple-case-03125028"
+                            label=""
+                            name="Oauth-simple-case-03125028"
+                            uuid="08155f3d-c6b2-45b2-b350-948d853857c4">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="oauth"
+                       maxRedirects="100"
+                       name="oauth"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://www.tnb.com/p/api/pa/check/01149509/D-201D/1?oauth_consumer_key=REXEL&amp;amp;oauth_signature_method=HMAC-SHA1&amp;amp;oauth_timestamp=1625741682&amp;amp;oauth_nonce=IiMTv0Q8BuZ&amp;amp;oauth_version=1.0&amp;amp;oauth_signature=36BbrYfg8AMeLiNp27HZ9JkcPVc%3D"
+                                        verb="POST">
+                        <body/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>lb6BFlRBN69ijlZVq528YH</types1:GUID>
+      <types1:DisplayName>Oauth-simple-case-03125028</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:14.923Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

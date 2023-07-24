@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "f2ertfXzBAqfryXtAKMX6p",
+    "name" : "pOutputXmlIncompleteCase04418009",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "y7LjLYqBGZkL0jm-gt-36645598-2022-12-08T11:02:31.399Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

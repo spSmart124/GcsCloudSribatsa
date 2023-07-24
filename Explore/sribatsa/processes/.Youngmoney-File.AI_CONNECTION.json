@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "18ARF8KhcuDdmMtlSSkR01",
+    "name" : "Youngmoney-File",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "7dvB8aabbgdoGsF-gt-88590930-2023-06-09T20:49:48.938Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

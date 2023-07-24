@@ -1,0 +1,4 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.72Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

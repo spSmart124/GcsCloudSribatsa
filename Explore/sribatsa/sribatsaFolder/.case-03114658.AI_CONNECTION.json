@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "e8wIryGuawKeYBLGBTpMqM",
+    "name" : "case-03114658",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "dsreK8ZAZf5kck8-gt-29041853-2021-06-17T11:52:04.805Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Test",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

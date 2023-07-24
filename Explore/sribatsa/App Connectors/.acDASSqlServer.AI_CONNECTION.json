@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "2GdJhUIi6ojjzDnZy0GM8R",
+    "name" : "acDASSqlServer",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "uZfYEWNTrKkQIW3-gt-51793838-2023-06-30T12:24:32.329Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "7BRmPozAOoafGsBRq6nmqQ",
+    "name" : "DASSqlServer",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ZNZoSRnCKwKBqRi-gt-21059411-2022-12-08T17:45:07.983Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/Service Connectors"
+  } ]
+}

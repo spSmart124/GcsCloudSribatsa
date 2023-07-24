@@ -1,0 +1,182 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>dxsnCmp6oIuQaaa-gt-31335659-2021-08-22T01:55:18.061Z::po.xml</types1:EntryId>
+      <types1:Name>EmploymentData</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-22T01:55:18Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-08-22T01:58:09Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        isByCopy="true"
+                        name="EmploymentData">
+            <description xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd">This object was generated from [EmploymentData complex type] located in the [claim-1.0.schema.json.xsd] source XML schema.</description>
+            <detail>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="PublicID"
+                      name="PublicID"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="ObjectStatus"
+                      name="ObjectStatus"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="CreateTime"
+                      name="CreateTime"
+                      type="datetime"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="UpdateTime"
+                      name="UpdateTime"
+                      type="datetime"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="CreateUserPublicID"
+                      name="CreateUserPublicID"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="UpdateUserPublicID"
+                      name="UpdateUserPublicID"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="DepartmentCode"
+                      name="DepartmentCode"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="HireDate"
+                      name="HireDate"
+                      type="date"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="HireState"
+                      name="HireState"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="Code"
+                      name="Code"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="Description"
+                      name="Description"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="MilesToWork"
+                      name="MilesToWork"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="ListName"
+                      name="ListName"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="NumDaysWeek"
+                      name="NumDaysWeek"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="DaysWorkedString"
+                      name="DaysWorkedString"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="IncomeAmountOffset"
+                      name="IncomeAmountOffset"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="FirstFullDayMissed"
+                      name="FirstFullDayMissed"
+                      type="date"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="PaidFull"
+                      name="PaidFull"
+                      type="boolean"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="EmploymentStatus"
+                      name="EmploymentStatus"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="EmployStatusDate"
+                      name="EmployStatusDate"
+                      type="date"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="WageAmount"
+                      name="WageAmount"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="WageAmountPostInjury"
+                      name="WageAmountPostInjury"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="WageAmountPreInjury"
+                      name="WageAmountPreInjury"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="WagePaymentContinued"
+                      name="WagePaymentContinued"
+                      type="boolean"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="NoWorkFullDay"
+                      name="NoWorkFullDay"
+                      type="boolean"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="PhysicalRestrictions"
+                      name="PhysicalRestrictions"
+                      type="boolean"/>
+               <field label="WorkStatuses" name="WorkStatuses" type="objectlist">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:WorkStatusChanges</option>
+                     <option name="guid">l1QdNhAaHcIlnf6OicexO1</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="SecondInjuryFund"
+                      name="SecondInjuryFund"
+                      type="boolean"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="EmployerUnemploymentID"
+                      name="EmployerUnemploymentID"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="PayPeriod"
+                      name="PayPeriod"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="NumDaysWorked"
+                      name="NumDaysWorked"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="LastYearIncome"
+                      name="LastYearIncome"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="OvertimeRate"
+                      name="OvertimeRate"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="DaysWorkedWeek"
+                      name="DaysWorkedWeek"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="HoursWorkedDay"
+                      name="HoursWorkedDay"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="ScheduledDaysOff"
+                      name="ScheduledDaysOff"
+                      type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>lVKYOQDm0y0inRELgSaG8N</types1:GUID>
+      <types1:DisplayName>EmploymentData</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.988Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

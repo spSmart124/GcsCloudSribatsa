@@ -1,0 +1,153 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>f5i4rswVYx8R8Wr-gt-53203065-2021-09-09T16:21:25.095Z::pd.xml</types1:EntryId>
+      <types1:Name>procAsApiCase03174417</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-09-09T16:21:25Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-09-09T16:23:38Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-09-09T16:23:43Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.procAsApiCase03174417/procAsApiCase03174417.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procAsApiCase03174417"
+                  name="procAsApiCase03174417"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="empId" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="empName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="apiName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="outEmp" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ktd4tpbw" targetId="ktd4tpbv"/>
+               </start>
+               <container id="ktd4tpbv" type="exclusive">
+                  <title>apiName</title>
+                  <flow id="ktd4tpbz">
+                     <assignment id="ktd4tpd4">
+                        <title>Assignment to outEmp</title>
+                        <operation source="formula" to="output.outEmp">
+                           <expression language="XQuery">&lt;person&gt;
+&lt;id&gt;{$input.empId }&lt;/id&gt;
+&lt;name&gt;Default Name&lt;/name&gt;
+&lt;addr&gt;Default Addr&lt;/addr&gt;
+&lt;/person&gt;</expression>
+                        </operation>
+                     </assignment>
+                     <link id="ktd4tpc0" targetId="ktd4tpbv" type="containerLink"/>
+                  </flow>
+                  <flow id="ktd4tpc2">
+                     <assignment id="ktd4tpdu">
+                        <title>Assignment to outEmp</title>
+                        <operation source="formula" to="output.outEmp">
+                           <expression language="XQuery">&lt;person&gt;
+&lt;id&gt;default empid&lt;/id&gt;
+&lt;name&gt;{$input.empName }&lt;/name&gt;
+&lt;addr&gt;Default Addr&lt;/addr&gt;
+&lt;/person&gt;</expression>
+                        </operation>
+                     </assignment>
+                     <link id="ktd4tpc3" targetId="ktd4tpbv" type="containerLink"/>
+                  </flow>
+                  <flow id="ktd4tpcx">
+                     <assignment id="ktd4tpf2">
+                        <title>Assignment to outEmp</title>
+                        <operation source="formula" to="output.outEmp">
+                           <expression language="XQuery">&lt;person&gt;
+&lt;id&gt;default Id&lt;/id&gt;
+&lt;name&gt;Default Name&lt;/name&gt;
+&lt;addr&gt;Default Addr&lt;/addr&gt;
+&lt;/person&gt;</expression>
+                        </operation>
+                     </assignment>
+                     <link id="ktd4tpcy" targetId="ktd4tpbv" type="containerLink"/>
+                  </flow>
+                  <link id="ktd4tpby" targetId="ktd4tpbz" type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$input.apiName}</arg>
+                           <arg name="right">empId</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="ktd4tpc1" targetId="ktd4tpc2" type="containerLink">
+                     <condition source="formula">
+                        <function name="string-equals">
+                           <arg name="left">{$input.apiName}</arg>
+                           <arg name="right">empName</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="ktd4tpcw" targetId="ktd4tpcx" type="containerLink"/>
+                  <link id="ktd4tpbx" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>97ff124e-8db6-47e3-8ebf-58f523f531c8</ns1:Id>
+               <ns1:Name>empId</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-09-09T16:24:10Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-09-09T16:24:10Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "empId": "1",
+	 "empName": "",
+	 "apiName": "empId"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>cVoewm8d8WsffZFyEzs2Cd</types1:GUID>
+      <types1:DisplayName>procAsApiCase03174417</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:16.777Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

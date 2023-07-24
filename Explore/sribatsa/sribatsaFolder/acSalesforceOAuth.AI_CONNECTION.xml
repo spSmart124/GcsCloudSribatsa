@@ -1,0 +1,82 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Uuopz4KhPVEQrXh-gt-386008-2022-06-16T13:02:15.757Z::conn.xml</types1:EntryId>
+      <types1:Name>acSalesforceOAuth</types1:Name>
+      <types1:ParentFlowIds>4YNqRi92qBbbeJO-gt-69804928-2023-01-11T03:44:36.893Z::pd.xml,ciSrZMSPfXBiVGk-gt-49148136-2021-11-24T06:25:39.036Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:_AGENTGROUP1</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-06-16T13:02:16Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-02-01T05:40:37Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-02-01T05:42:20Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/acSalesforceOAuth/acSalesforceOAuth.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acSalesforceOAuth"
+                     label="acSalesforceOAuth"
+                     name="acSalesforceOAuth">
+            <description/>
+            <tags>.agent:_AGENTGROUP1</tags>
+            <agent>_AGENTGROUP1</agent>
+            <attributes>
+               <attribute name="objectFilter" value=""/>
+            </attributes>
+            <consumers>
+               <consumer enabled="true" name="Source" typeName="Source">
+                  <description>Use this event source to consume events from Salesforce streaming channels.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="loadBalance" value="false"/>
+                     <attribute encrypted="false" name="Destination" value="/event/Notification__e"/>
+                     <attribute encrypted="false" name="Filter" value=""/>
+                  </attributes>
+               </consumer>
+            </consumers>
+            <producers>
+               <producer enabled="true" name="PlatformEventNotification" typeName="Target">
+                  <description>Use this event target to publish messages to Salesforce streaming channels.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="Destination" value="/event/Notification__e"/>
+                  </attributes>
+               </producer>
+            </producers>
+            <soaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                          connectorPath="project:/com.activevos.cumulus.cloud.extend.playbook.configuration/config/sfConnector.xml"
+                          name="Salesforce"
+                          supportsConnectionTest="true"
+                          supportsOData="true"
+                          supportsPublishSkipMetadataRefresh="true"
+                          uuid="05fc48f1-e6e1-441b-b700-bac396ca2ed1">
+               <description>Salesforce.com SOA based data connector.</description>
+            </soaConnector>
+            <authentication type="$infa_oauth2-authorization_code">
+               <attributes>
+                  <attribute encrypted="false"
+                             name="authUrl"
+                             value="https://login.salesforce.com/services/oauth2/authorize"/>
+                  <attribute encrypted="false"
+                             name="tokenUrl"
+                             value="https://login.salesforce.com/services/oauth2/token"/>
+                  <attribute encrypted="false"
+                             name="clientId"
+                             value="3MVG9xOCXq4ID1uGLcy3DpgY477aDNaEoBicuOmIXFK5e3RLtboke4OmR0RanYBcnnFTUbV4iEJ7BW9PdXODd"/>
+                  <attribute encrypted="true" name="clientSecret" value=""/>
+                  <attribute encrypted="false" name="sessionDuration" value="60"/>
+               </attributes>
+            </authentication>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>3ZMNYbKVVYxcvNL8eKMs8a</types1:GUID>
+      <types1:DisplayName>acSalesforceOAuth</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.99Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

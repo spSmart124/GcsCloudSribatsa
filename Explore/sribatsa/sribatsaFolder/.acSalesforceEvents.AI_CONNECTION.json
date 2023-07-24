@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "6r1DpF1SDshcfSEHl3k6uR",
+    "name" : "acSalesforceEvents",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "LU6S6fPAreFRqXp-gt-49021169-2021-05-18T13:24:50.606Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

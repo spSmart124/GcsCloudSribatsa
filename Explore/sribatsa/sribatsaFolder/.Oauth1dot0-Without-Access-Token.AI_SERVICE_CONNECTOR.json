@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "kZwilyr9DsUfAp6nCcAvCg",
+    "name" : "Oauth1dot0-Without-Access-Token",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "DQeH2PKDC0hCHbf-gt-35128182-2021-08-09T06:08:44.763Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "OAuth1.0",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "iZibqbkbRILe2AN5sAlgMh",
+    "name" : "CountryInfoServiceProcess-1",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "YsGuDoWn2sqeErh-gt-29827240-2023-04-26T09:29:38.14Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "3BEs9POFiVtgDmn37ORYoJ",
+    "name" : "pTestMaxHttpConnection",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lChGY2KsJlv58pI-gt-758578-2023-02-09T11:00:18.186Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "7aYtxBmEFaRhcf6lK0PG4a",
+    "name" : "apAttachments",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "VNUdyOoMdtlI20h-gt-61971877-2022-09-03T07:23:03.759Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/App Connectors"
+  } ]
+}

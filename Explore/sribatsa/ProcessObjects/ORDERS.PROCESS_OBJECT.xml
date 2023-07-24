@@ -1,0 +1,136 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>drHMUvIw8jIw8jI-gt-18175826-2023-06-19T10:40:21.052Z::po.xml</types1:EntryId>
+      <types1:Name>ORDERS-1</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-06-19T10:40:21Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        isByCopy="true"
+                        name="ORDERS-1">
+            <description xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd">This object was generated from [ORDERS complex type] located in the [input_test.xsd] source XML schema.</description>
+            <detail>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="CURRENCY_CODE"
+                      name="CURRENCY_CODE"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="EAN_LOCATION_DELIVERY_ADDRESS"
+                      name="EAN_LOCATION_DELIVERY_ADDRESS"
+                      nullable="false"
+                      required="true"
+                      type="int">
+                  <options>
+                     <option name="min">0</option>
+                     <option name="max">4294967295</option>
+                  </options>
+               </field>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="EAN_LOCATION_DOCUMENT_ADDRESS"
+                      name="EAN_LOCATION_DOCUMENT_ADDRESS"
+                      nullable="false"
+                      required="true"
+                      type="int">
+                  <options>
+                     <option name="min">0</option>
+                     <option name="max">4294967295</option>
+                  </options>
+               </field>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="EAN_SUPPLIER_DOCUMENT_ADDRESS"
+                      name="EAN_SUPPLIER_DOCUMENT_ADDRESS"
+                      nullable="false"
+                      required="true"
+                      type="int">
+                  <options>
+                     <option name="min">0</option>
+                     <option name="max">18446744073709551615</option>
+                  </options>
+               </field>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="ORDER_DATE"
+                      name="ORDER_DATE"
+                      nullable="false"
+                      required="true"
+                      type="datetime"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="RECEIVER_COMMUNICATION_ID"
+                      name="RECEIVER_COMMUNICATION_ID"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="WANTED_DELIVERY_DATE"
+                      name="WANTED_DELIVERY_DATE"
+                      nullable="false"
+                      required="true"
+                      type="datetime"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="ACTIONTYPE"
+                      name="ACTIONTYPE"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="SENDER_COMMUNICATION_ID"
+                      name="SENDER_COMMUNICATION_ID"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="CUSTOMER_PO_NO"
+                      name="CUSTOMER_PO_NO"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="EXTERNAL_REF"
+                      name="EXTERNAL_REF"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field label="DELIVER_TO"
+                      name="DELIVER_TO"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:DELIVERTO-1</option>
+                     <option name="guid">43sfO67DIzLcHOgg38dC6x</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="ORDER_LINES"
+                      name="ORDER_LINES"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:ORDERLINES-1</option>
+                     <option name="guid">dsgTkIX96UBlCHRAKl2WgP</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>3PeSVqMmZkAhTRTNL8U0qA</types1:GUID>
+      <types1:DisplayName>ORDERS</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.541Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

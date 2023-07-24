@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "5nqDID555aalkirepxOcEw",
+    "name" : "KafkalatestappFieldsappStudentVisaUk",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "xf2mmqm7O2htghG-gt-39645832-2022-09-20T11:54:09.537Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [Kafkalatestapp_fieldsapp_student_visa_uk complex type] located in the [Kafka.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

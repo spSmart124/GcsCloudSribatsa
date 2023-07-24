@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "le60EVFqxiujxhvxoArcsk",
+    "name" : "BIDataService-case-03126254 - Copy 1",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Dmhwq9bdsreK8ZA-gt-60559927-2021-07-08T14:02:57.471Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Report-as-a-Service API",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

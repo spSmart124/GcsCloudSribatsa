@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "1YXHskLzkQ7bJlfWozuOaW",
+    "name" : "DASSqlServer - Ravi",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "v9UQAHzSZkL0jmu-gt-45825466-2023-06-28T12:01:11.346Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

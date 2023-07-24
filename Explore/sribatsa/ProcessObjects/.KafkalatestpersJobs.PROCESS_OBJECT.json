@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "a60aOtGGNUubQsPg6edzOG",
+    "name" : "KafkalatestpersJobs",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "XqfOZ3NjDg8SOlA-gt-39751493-2022-09-20T11:54:07.679Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "This object was generated from [Kafkalatestpers_jobs complex type] located in the [Kafka.json.xsd] source XML schema.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

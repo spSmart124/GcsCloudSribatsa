@@ -1,0 +1,46 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>gq695kchzt1Y6tM-gt-2813652-2023-07-10T14:04:45.112Z::conn.xml</types1:EntryId>
+      <types1:Name>AppConnscTestXquery</types1:Name>
+      <types1:ParentFlowIds>jhwLdqcgm8lnCmp-gt-2816139-2023-07-10T14:05:26.145Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>asdf</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-07-10T14:04:45Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-07-10T14:10:21Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-07-10T14:10:34Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/AppConnscTestXquery/AppConnscTestXquery.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="AppConnscTestXquery"
+                     label="AppConnscTestXquery"
+                     name="AppConnscTestXquery">
+            <description>asdf</description>
+            <tags/>
+            <agent/>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scTestXquery/scTestXquery_svcDef.xml"
+                               guid="0gomVB3rhIVcLvkjKLJ30g"
+                               name="scTestXquery"
+                               supportsConnectionTest="false"
+                               uuid="5b1199b3-bd09-46ba-a861-6bb48fa227ff">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>gKlKXpsJlsdcxbTxn2jr2V</types1:GUID>
+      <types1:DisplayName>AppConnscTestXquery</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.288Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

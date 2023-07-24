@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "2UOEJb4XAG3ihaJFcGewwW",
+    "name" : "ProcessConnectListenToNewFile-Case-03114658-Copy",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "BjrabcmWR7hsAVR-gt-44404290-2021-06-22T12:09:05.448Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

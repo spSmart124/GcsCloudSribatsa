@@ -1,0 +1,554 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>rKkQIW3Ni7A7vNl-gt-20163207-2022-03-18T09:42:38.275Z::svc.xml</types1:EntryId>
+      <types1:Name>scRESTConnectionAndRuntimeEnvironmentCase04292862</types1:Name>
+      <types1:ParentFlowIds>7Dun7wporzYLnzY-gt-28390918-2022-03-21T16:09:25.945Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-03-18T09:42:38Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-03-22T11:17:53Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-03-22T11:17:56Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scRESTConnectionAndRuntimeEnvironmentCase04292862/scRESTConnectionAndRuntimeEnvironmentCase04292862_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scRESTConnectionAndRuntimeEnvironmentCase04292862"
+                            label=""
+                            name="scRESTConnectionAndRuntimeEnvironmentCase04292862"
+                            uuid="936be01d-b8d0-42f5-9b37-f330aadc67f9">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="loginUrl"
+                                    required="true"
+                                    testWith="https://dm-us.informaticacloud.com/ma/api/v2/user/login"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="username"
+                                    required="true"
+                                    testWith="GcsCloudAdminSri"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="password"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="LoginV2"
+                       maxRedirects="100"
+                       name="LoginV2"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$loginUrl}" verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                        <body>{{"@type": "login",
+"username": "{$username}",
+"password": "{$password}"}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="serverUrl"
+                            property="serverUrl"
+                            type="string"/>
+                     <field description=""
+                            name="icSessionId"
+                            property="icSessionId"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="true"
+                       label="AbstractGetApiSkeleton"
+                       maxRedirects="100"
+                       name="AbstractGetApiSkeleton"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="serverUrl"
+                                name="serverUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="icSessionId"
+                                name="icSessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="5lFWnAD0yQhjzvZOIGSrwD"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$serverUrl}" verb="GET">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="Content-Type">application/json</header>
+                           <header name="icSessionId">{$icSessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            entireResponse="true"
+                            name="outEntireResponse"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       inherits="AbstractGetApiSkeleton"
+                       label="GetEnvironmentByName"
+                       maxRedirects="100"
+                       name="GetEnvironmentByName"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <inheritanceMetadata>
+                     <section type="input">
+                        <section type="inputParameters">
+                           <attribute inherit="inherit" name="serverUrl" type="parameter"/>
+                           <attribute inherit="inherit" name="icSessionId" type="parameter"/>
+                        </section>
+                     </section>
+                     <section type="output">
+                        <section type="outputFields">
+                           <attribute inherit="inherit" name="outEntireResponse" type="field"/>
+                        </section>
+                     </section>
+                     <section type="restSimpleBinding">
+                        <attribute inherit="extend" name="url" type="url"/>
+                        <section type="httpHeaders">
+                           <attribute inherit="inherit" name="Accept" type="header"/>
+                           <attribute inherit="inherit" name="Content-Type" type="header"/>
+                           <attribute inherit="inherit" name="icSessionId" type="header"/>
+                        </section>
+                        <section type="otherParams"/>
+                     </section>
+                  </inheritanceMetadata>
+                  <input>
+                     <parameter label="secureAgentName"
+                                name="secureAgentName"
+                                nogen="true"
+                                required="true"
+                                testWith="TEST"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="/api/v2/runtimeEnvironment/name/{$secureAgentName}" verb="GET"/>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="runtimeEnvironmentId"
+                            property="id"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       inherits="AbstractGetApiSkeleton"
+                       label="GetEnvironmentById"
+                       maxRedirects="100"
+                       name="GetEnvironmentById"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <inheritanceMetadata>
+                     <section type="input">
+                        <section type="inputParameters">
+                           <attribute inherit="inherit" name="serverUrl" type="parameter"/>
+                           <attribute inherit="inherit" name="icSessionId" type="parameter"/>
+                        </section>
+                     </section>
+                     <section type="output">
+                        <section type="outputFields">
+                           <attribute inherit="inherit" name="outEntireResponse" type="field"/>
+                        </section>
+                     </section>
+                     <section type="restSimpleBinding">
+                        <attribute inherit="extend" name="url" type="url"/>
+                        <section type="httpHeaders">
+                           <attribute inherit="inherit" name="Accept" type="header"/>
+                           <attribute inherit="inherit" name="Content-Type" type="header"/>
+                           <attribute inherit="inherit" name="icSessionId" type="header"/>
+                        </section>
+                        <section type="otherParams"/>
+                     </section>
+                  </inheritanceMetadata>
+                  <input>
+                     <parameter label="runtimeEnvironmentId"
+                                name="runtimeEnvironmentId"
+                                nogen="true"
+                                required="true"
+                                testWith="018Z0B25000000000005"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="/api/v2/runtimeEnvironment/{$runtimeEnvironmentId}" verb="GET"/>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="runtimeEnvironmentId"
+                            property="agentGroupId"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       inherits="AbstractGetApiSkeleton"
+                       label="GetAllRuntimeEnvironments"
+                       maxRedirects="100"
+                       name="GetAllRuntimeEnvironments"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <inheritanceMetadata>
+                     <section type="input">
+                        <section type="inputParameters">
+                           <attribute inherit="inherit" name="serverUrl" type="parameter"/>
+                           <attribute inherit="inherit" name="icSessionId" type="parameter"/>
+                        </section>
+                     </section>
+                     <section type="output">
+                        <section type="outputFields">
+                           <attribute inherit="inherit" name="outEntireResponse" type="field"/>
+                        </section>
+                     </section>
+                     <section type="restSimpleBinding">
+                        <attribute inherit="extend" name="url" type="url"/>
+                        <section type="httpHeaders">
+                           <attribute inherit="inherit" name="Accept" type="header"/>
+                           <attribute inherit="inherit" name="Content-Type" type="header"/>
+                           <attribute inherit="inherit" name="icSessionId" type="header"/>
+                        </section>
+                        <section type="otherParams"/>
+                     </section>
+                  </inheritanceMetadata>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding url="/api/v2/runtimeEnvironment" verb="GET"/>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="runtimeEnvironmentShortDetails"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{for $ele in $outEntireResponse/*
+return &lt;agent&gt;
+{$ele/name}
+{$ele/id}
+&lt;/agent&gt;}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       inherits="AbstractGetApiSkeleton"
+                       label="ListConnectionByRuntimeEnvironment"
+                       maxRedirects="100"
+                       name="ListConnectionByRuntimeEnvironment"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <inheritanceMetadata>
+                     <section type="input">
+                        <section type="inputParameters">
+                           <attribute inherit="inherit" name="serverUrl" type="parameter"/>
+                           <attribute inherit="inherit" name="icSessionId" type="parameter"/>
+                        </section>
+                     </section>
+                     <section type="output">
+                        <section type="outputFields">
+                           <attribute inherit="inherit" name="outEntireResponse" type="field"/>
+                        </section>
+                     </section>
+                     <section type="restSimpleBinding">
+                        <attribute inherit="extend" name="url" type="url"/>
+                        <section type="httpHeaders">
+                           <attribute inherit="inherit" name="Accept" type="header"/>
+                           <attribute inherit="inherit" name="Content-Type" type="header"/>
+                           <attribute inherit="inherit" name="icSessionId" type="header"/>
+                        </section>
+                        <section type="otherParams"/>
+                     </section>
+                  </inheritanceMetadata>
+                  <input>
+                     <parameter label="runtimeEnvironmentId"
+                                name="runtimeEnvironmentId"
+                                nogen="true"
+                                required="true"
+                                testWith="018Z0B25000000000005"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="/api/v2/connection/search?runtimeEnvironmentId={$runtimeEnvironmentId}"
+                                        verb="GET"/>
+                  </binding>
+                  <output>
+                     <field description="" name="shortConnectionDetails" type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{for $ele in $outEntireResponse/*
+return &lt;connection&gt;
+{$ele/id}
+{$ele/name}
+{$ele/type}
+&lt;/connection&gt;}</xquery>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="true"
+                       label="AbstractPostApiSkeleton"
+                       maxRedirects="100"
+                       name="AbstractPostApiSkeleton"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="serverUrl"
+                                name="serverUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="icSessionId"
+                                name="icSessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="7Q6r2NFj3aadvLbxKzxBYI"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$serverUrl}" verb="POST">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="Content-Type">application/json</header>
+                           <header name="icSessionId">{$icSessionId}</header>
+                        </httpHeaders>
+                        <body/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            entireResponse="true"
+                            name="outEntireResponse"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       inherits="AbstractPostApiSkeleton"
+                       label="UpdateConnection"
+                       maxRedirects="100"
+                       name="UpdateConnection"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <inheritanceMetadata>
+                     <section type="input">
+                        <section type="inputParameters">
+                           <attribute inherit="inherit" name="serverUrl" type="parameter"/>
+                           <attribute inherit="inherit" name="icSessionId" type="parameter"/>
+                        </section>
+                     </section>
+                     <section type="output">
+                        <section type="outputFields">
+                           <attribute inherit="inherit" name="outEntireResponse" type="field"/>
+                        </section>
+                     </section>
+                     <section type="restSimpleBinding">
+                        <attribute inherit="extend" name="url" type="url"/>
+                        <section type="body">
+                           <attribute inherit="overwrite" name="content" type="content"/>
+                        </section>
+                        <section type="httpHeaders">
+                           <attribute inherit="inherit" name="Accept" type="header"/>
+                           <attribute inherit="inherit" name="Content-Type" type="header"/>
+                           <attribute inherit="inherit" name="icSessionId" type="header"/>
+                        </section>
+                        <section type="otherParams"/>
+                     </section>
+                  </inheritanceMetadata>
+                  <input>
+                     <parameter label="connectionId"
+                                name="connectionId"
+                                nogen="true"
+                                required="true"
+                                testWith="018Z0B0B000000000006"
+                                type="string"/>
+                     <parameter label="newRuntimeEnvironmentId"
+                                name="newRuntimeEnvironmentId"
+                                nogen="true"
+                                required="true"
+                                testWith="018Z0B2500000000000B"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="/api/v2/connection/{$connectionId}" verb="POST">
+                        <httpHeaders>
+                           <header name="Update-Mode">PARTIAL</header>
+                        </httpHeaders>
+                        <body>{{
+    "@type": "connection",
+    "runtimeEnvironmentId": "{$newRuntimeEnvironmentId}"
+}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       inherits="AbstractPostApiSkeleton"
+                       label="CreateSecureAgentGroup"
+                       maxRedirects="100"
+                       name="CreateSecureAgentGroup"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <inheritanceMetadata>
+                     <section type="input">
+                        <section type="inputParameters">
+                           <attribute inherit="inherit" name="serverUrl" type="parameter"/>
+                           <attribute inherit="inherit" name="icSessionId" type="parameter"/>
+                        </section>
+                     </section>
+                     <section type="output">
+                        <section type="outputFields">
+                           <attribute inherit="inherit" name="outEntireResponse" type="field"/>
+                        </section>
+                     </section>
+                     <section type="restSimpleBinding">
+                        <attribute inherit="extend" name="url" type="url"/>
+                        <section type="body">
+                           <attribute inherit="overwrite" name="generateUsing" type="generateUsing"/>
+                        </section>
+                        <section type="httpHeaders">
+                           <attribute inherit="inherit" name="Accept" type="header"/>
+                           <attribute inherit="inherit" name="Content-Type" type="header"/>
+                           <attribute inherit="inherit" name="icSessionId" type="header"/>
+                        </section>
+                        <section type="otherParams"/>
+                     </section>
+                  </inheritanceMetadata>
+                  <input>
+                     <parameter label="name"
+                                name="name"
+                                nogen="true"
+                                required="true"
+                                testWith="TEST"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="/api/v2/runtimeEnvironment" verb="POST">
+                        <body>{{
+  "@type": "runtimeEnvironment",
+  "name": "{$name}"
+}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="DeleteSecureAgentGroup"
+                       maxRedirects="100"
+                       name="DeleteSecureAgentGroup"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="newRuntimeEnvironmentId"
+                                name="newRuntimeEnvironmentId"
+                                nogen="true"
+                                required="true"
+                                testWith="018Z0B2500000000000B"
+                                type="string"/>
+                     <parameter label="serverUrl"
+                                name="serverUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="icSessionId"
+                                name="icSessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="7Q6r2NFj3aadvLbxKzxBYI"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$serverUrl}/api/v2/runtimeEnvironment/{$newRuntimeEnvironmentId}"
+                                        verb="DELETE">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                           <header name="Accept">application/json</header>
+                           <header name="icSessionId">{$icSessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="outStatusCode"
+                            responseStatusCode="true"
+                            type="string"/>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>fYjqHZ6uK8xc1I1BsjGfQn</types1:GUID>
+      <types1:DisplayName>scRESTConnectionAndRuntimeEnvironmentCase04292862</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:16.683Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

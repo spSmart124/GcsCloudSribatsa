@@ -1,0 +1,1256 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>f60S24FsWTzIf6r-gt-25287816-2022-09-20T11:31:43.096Z::svc.xml</types1:EntryId>
+      <types1:Name>scPO</types1:Name>
+      <types1:ParentFlowIds>wzAHufWC64Ky2uI-gt-39610945-2022-09-20T11:35:18.366Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-09-20T11:31:43Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-09-20T11:32:46Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-09-20T11:33:07Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scPO/scPO_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scPO"
+                            label=""
+                            name="scPO"
+                            uuid="59adfe50-079e-45bf-8b55-b633ffff16c3">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="test"
+                       maxRedirects="100"
+                       name="test"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/rt/4LIW2E9dmSefqixInUK4on/pParseJson"
+                                        verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <body generateUsing="JSON" preserveJsonStringFormatting="true"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="KafkaMessage"
+                            property="root"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">root</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="root">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="old" nullable="true" required="false" type="reference">
+                        <options>
+                           <option name="referenceTo">old</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="changes" nullable="true" required="false" type="string"/>
+                     <field name="event" nullable="true" required="false" type="string"/>
+                     <field name="latest" nullable="true" required="false" type="reference">
+                        <options>
+                           <option name="referenceTo">latest</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="old">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="app_decisions"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_decisions</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_decisions">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="releasedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="code" nullable="true" required="false" type="string"/>
+                     <field name="rankReleased" nullable="true" required="false" type="int"/>
+                     <field name="createdDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="decision" nullable="true" required="false" type="string"/>
+                     <field name="export3"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export3</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="rankConfirmed"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                     <field name="reasonExport5"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="rank" nullable="true" required="false" type="int"/>
+                     <field name="updatedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="confirmedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="export3">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="bannerCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="nuStatus" nullable="true" required="false" type="string"/>
+                     <field name="nuAppStatus"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="isDrop" nullable="true" required="false" type="boolean"/>
+                     <field name="setDecisionDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="latest">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="app_decisions"
+                            nullable="true"
+                            required="false"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo">app_decisions</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_payments"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_payments</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_updatedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="pers_jobs"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_jobs</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="pers_schools"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_schools</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_bannerCodes"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="app_slateApplicationId"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                     <field name="pers_name"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_name</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_slatePersonId"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                     <field name="app_status"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="app_slateInstance"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_combPersId"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="app_certifiedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="pers_sports"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_slateInstance"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_createdDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="pers_testMetadata"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_testMetadata</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_applicationId"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="app_combPersId"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_slatePersonGUID"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_slate"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_slate</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="pers_nation"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_nation</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="pers_addresses"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_addresses</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_fields"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_fields</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="pers_slatePersonId"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                     <field name="app_submittedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="app_combAppId"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_biodemo"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_biodemo</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_slatePersonGUID"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_updatedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="pers_testScores"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_testScores</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_round"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_round</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="pers_relations"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="app_applicationRound"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="app_createdDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="pers_tags" nullable="true" required="false" type="string"/>
+                     <field name="personId" nullable="true" required="false" type="string"/>
+                     <field name="pers_contact"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_contact</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="applicationId"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_status"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="pers_fields"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">pers_fields</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_payments">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="date" nullable="true" required="false" type="datetime"/>
+                     <field name="amount" nullable="true" required="false" type="double"/>
+                     <field name="paymentCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="type" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_jobs">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="employer" nullable="true" required="false" type="string"/>
+                     <field name="from" nullable="true" required="false" type="string"/>
+                     <field name="id" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_schools">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="streetLine1"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="country" nullable="true" required="false" type="string"/>
+                     <field name="slateRank" nullable="true" required="false" type="int"/>
+                     <field name="city" nullable="true" required="false" type="string"/>
+                     <field name="rawSchoolType"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="isoCountryCode"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field name="attendedFrom"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="addInfo"
+                            nullable="true"
+                            required="false"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo">addInfo</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="type" nullable="true" required="false" type="string"/>
+                     <field name="slateStateCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="attendedTo"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="slateRankOverall"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                     <field name="name" nullable="true" required="false" type="string"/>
+                     <field name="state" nullable="true" required="false" type="string"/>
+                     <field name="countryName"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="iso3Code" nullable="true" required="false" type="boolean"/>
+                     <field name="key" nullable="true" required="false" type="int"/>
+                     <field name="countryFIPSCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="addInfo">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="postalCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="geoMarket" nullable="true" required="false" type="string"/>
+                     <field name="geoMarketIndex"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_name">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="last" nullable="true" required="false" type="string"/>
+                     <field name="preferred" nullable="true" required="false" type="string"/>
+                     <field name="first" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_testMetadata">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="score2" nullable="true" required="false" type="string"/>
+                     <field name="score3" nullable="true" required="false" type="string"/>
+                     <field name="testId" nullable="true" required="false" type="string"/>
+                     <field name="score1" nullable="true" required="false" type="string"/>
+                     <field name="testName" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_slate">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="link" nullable="true" required="false" type="string"/>
+                     <field name="username" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_nation">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="primaryCitizenship"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_addresses">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="streetLine1"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="country" nullable="true" required="false" type="string"/>
+                     <field name="city" nullable="true" required="false" type="string"/>
+                     <field name="addressType"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="postalCode" nullable="true" required="false" type="int"/>
+                     <field name="isoCountryCode"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field name="geoMarket" nullable="true" required="false" type="string"/>
+                     <field name="updatedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="slateStateCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="addressId" nullable="true" required="false" type="string"/>
+                     <field name="addressRankOverall"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                     <field name="addressesRank"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                     <field name="createdDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="addressPriorityNumber"
+                            nullable="true"
+                            required="false"
+                            type="int"/>
+                     <field name="geomarketIndex"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="isSeasonal"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field name="state" nullable="true" required="false" type="string"/>
+                     <field name="countryName"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="iso3Code" nullable="true" required="false" type="boolean"/>
+                     <field name="countryFIPSCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_fields">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="app_primary_campus"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_primary_campus</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_type"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_type</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="advising_interest"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="app_student_visa_uk"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_student_visa_uk</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="recognition_program"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="app_program_modality"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_program_modality</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="coded_banner_attributes"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="campusCitizenshipStatus"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">campusCitizenshipStatus</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_enrollment_status"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_enrollment_status</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_concentration"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_concentration</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_student_visa_ca"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_student_visa_ca</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_student_visa_us"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_student_visa_us</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_term"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_term</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="work_experience_total"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">work_experience_total</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="fee_waiver_select"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="programRelatedData"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">programRelatedData</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_degree"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_degree</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_entry_term"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_entry_term</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_grad_program"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_grad_program</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="app_secondary_campus"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">app_secondary_campus</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_primary_campus">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="export5"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export5</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="category" nullable="true" required="false" type="string"/>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="export5">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="bannerCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="countryCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="citFieldPrefix"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="attributesCode"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_type">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_student_visa_uk">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_program_modality">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="campusCitizenshipStatus">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="citizenshipStatus"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="inCampusCountry"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="campusDesc"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="campusCountry"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="nuAssistance" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_enrollment_status">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="export5"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export5</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_concentration">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="category" nullable="true" required="false" type="string"/>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_student_visa_ca">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_student_visa_us">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_term">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="work_experience_total">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="programRelatedData">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="college" nullable="true" required="false" type="string"/>
+                     <field name="modality" nullable="true" required="false" type="string"/>
+                     <field name="minor" nullable="true" required="false" type="string"/>
+                     <field name="major" nullable="true" required="false" type="string"/>
+                     <field name="level" nullable="true" required="false" type="string"/>
+                     <field name="campus" nullable="true" required="false" type="string"/>
+                     <field name="degree" nullable="true" required="false" type="string"/>
+                     <field name="full_part" nullable="true" required="false" type="string"/>
+                     <field name="program" nullable="true" required="false" type="string"/>
+                     <field name="dept" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_degree">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="category" nullable="true" required="false" type="string"/>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_entry_term">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="export5"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export5</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_grad_program">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="category" nullable="true" required="false" type="string"/>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_secondary_campus">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="export5"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export5</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="category" nullable="true" required="false" type="string"/>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                     <field name="prompt" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_biodemo">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="birthdate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="deceased" nullable="true" required="false" type="string"/>
+                     <field name="sex" nullable="true" required="false" type="string"/>
+                     <field name="hispanic" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_testScores">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="createdDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="testType" nullable="true" required="false" type="string"/>
+                     <field name="rank" nullable="true" required="false" type="int"/>
+                     <field name="optional" nullable="true" required="false" type="string"/>
+                     <field name="rank_overall" nullable="true" required="false" type="int"/>
+                     <field name="testId" nullable="true" required="false" type="string"/>
+                     <field name="updatedDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                     <field name="testDate"
+                            nullable="true"
+                            required="false"
+                            type="datetime"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="app_round">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="name" nullable="true" required="false" type="string"/>
+                     <field name="export5"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export5</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_contact">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="mobile" nullable="true" required="false" type="string"/>
+                     <field name="email" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="pers_fields">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="birthnation"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">birthnation</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="nuid" nullable="true" required="false" type="reference">
+                        <options>
+                           <option name="referenceTo">nuid</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="uk_cit_status"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">uk_cit_status</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="ca_cit_status"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">ca_cit_status</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="race" nullable="true" required="false" type="string"/>
+                     <field name="sub_ethnicity"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="us_cit_status"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">us_cit_status</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="hispanic"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">hispanic</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="gender_identity"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">gender_identity</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="birth_country"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">birth_country</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="birthnation">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="nuid">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="uk_cit_status">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="export5"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export5</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="ca_cit_status">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="export5"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export5</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="us_cit_status">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="export5"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">export5</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="hispanic">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="gender_identity">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="birth_country">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="value" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>7Fa0B6lOxKefxAC7g8z5kv</types1:GUID>
+      <types1:DisplayName>scPO</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:16.201Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

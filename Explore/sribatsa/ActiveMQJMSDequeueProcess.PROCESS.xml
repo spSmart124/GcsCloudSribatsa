@@ -1,0 +1,76 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>N5XbeKLUaaaaabb-gt-59931763-2021-06-07T15:07:29.631Z::pd.xml</types1:EntryId>
+      <types1:Name>ActiveMQJMSDequeueProcess</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsawin19,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-06-07T15:07:30Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-06-06T14:24:06Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-06-06T14:24:11Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.ActiveMQJMSDequeueProcess/ActiveMQJMSDequeueProcess.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="ActiveMQJMSDequeueProcess"
+                  name="ActiveMQJMSDequeueProcess"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsawin19,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="PO" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:ActiveMQPO</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">1A81gPeVTtRdzAsirmdwyE</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="myresponse" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsawin19</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload inputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="jiqnaj3h" targetId="jiouvlrg"/>
+               </start>
+               <assignment id="jiouvlrg">
+                  <title>Get Ouput</title>
+                  <operation source="field" to="temp.myresponse">input.PO</operation>
+                  <link id="jwtu6qae" targetId="d"/>
+               </assignment>
+               <end id="d"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>8G6rnVcGec5exYLxpkieIw</types1:GUID>
+      <types1:DisplayName>ActiveMQJMSDequeueProcess</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:13.955Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

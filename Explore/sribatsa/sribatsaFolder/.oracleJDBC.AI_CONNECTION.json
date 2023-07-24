@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "74x7rjkgh02cni3sg3xJ86",
+    "name" : "oracleJDBC",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "7eLyCnNZPD4ARW8-gt-802272-2021-06-09T14:57:15.938Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : ".",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

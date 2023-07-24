@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "hZDBlOTOIk1jqwLawzYjw5",
+    "name" : "POOES",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "vop81V4AdypKwKB-gt-67838111-2021-12-01T13:07:53.49Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

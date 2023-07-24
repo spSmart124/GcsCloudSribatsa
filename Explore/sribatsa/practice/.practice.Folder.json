@@ -1,0 +1,22 @@
+{
+  "objectInfo" : {
+    "id" : "97ip9ycrK71bqnnFejDeYJ",
+    "name" : "practice",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "This is for doing practice of different concepts learned",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "objectRefs" : [ ]
+}

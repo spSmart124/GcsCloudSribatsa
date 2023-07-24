@@ -1,0 +1,103 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>E5YLnzYLnzYLnzY-gt-79963972-2021-07-02T16:19:49.499Z::pd.xml</types1:EntryId>
+      <types1:Name>BIDataService_Process_modified</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-02T16:19:49Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-07-02T17:32:07Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="BIDataService_Process_modified"
+                  name="BIDataService_Process_modified"
+                  overrideAPIName="false">
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <tempFields>
+               <field description="" name="UserName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">Informatica-svc</option>
+                  </options>
+               </field>
+               <field description="" name="Password" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="ClientAccessKey" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">CHS1Z</option>
+                  </options>
+               </field>
+               <field description="" name="UserAccessKey" type="string">
+                  <options>
+                     <option name="required">false</option>
+                     <option name="initialvalue">AXG55D0000K0</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kqmjqxi0" targetId="kqmjqxhz"/>
+               </start>
+               <assignment id="kqmjqxhz">
+                  <title>Assignment to Password</title>
+                  <operation source="formula" to="temp.Password">
+                     <expression language="XQuery">'A5]y)flihnS+lO1-b9w!i{8ssaxW$ox!_33hW{x/SD{)}sZuml'</expression>
+                  </operation>
+                  <link id="kqmjqxi1" targetId="kqcegtds"/>
+               </assignment>
+               <service id="kqcegtds">
+                  <title>Login Request</title>
+                  <serviceName>BIDataService:Login Request</serviceName>
+                  <serviceGUID>iqpWJBUQaM1da5KWmNOvIo</serviceGUID>
+                  <serviceInput>
+                     <parameter name="UserName" source="field" updatable="true">temp.UserName</parameter>
+                     <parameter name="Password" source="field" updatable="true">temp.Password</parameter>
+                     <parameter name="ClientAccessKey" source="field" updatable="true">temp.ClientAccessKey</parameter>
+                     <parameter name="UserAccessKey" source="field" updatable="true">temp.UserAccessKey</parameter>
+                  </serviceInput>
+                  <link id="kqcegtdu" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>ab252124-7688-4d6f-b2bf-b2a40bf45252</ns1:Id>
+               <ns1:Name>Test1</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-07-02T16:19:50Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-07-02T17:29:19Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>bIPXH6K9NyUhRinXYM1oyJ</types1:GUID>
+      <types1:DisplayName>BIDataService_Process_modified</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:26.77Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

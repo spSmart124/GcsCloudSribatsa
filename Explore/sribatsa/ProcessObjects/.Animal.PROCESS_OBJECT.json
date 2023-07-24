@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "kAW6T9eXxcXiiHYHHSr0wp",
+    "name" : "Animal",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "N4r6CFquUHukfRL-gt-12315874-2021-08-22T01:55:16.639Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

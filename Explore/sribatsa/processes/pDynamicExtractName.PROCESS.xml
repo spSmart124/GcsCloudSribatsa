@@ -1,0 +1,131 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>DxomUhGdwOLIFvu-gt-24070592-2022-07-18T19:05:12.483Z::pd.xml</types1:EntryId>
+      <types1:Name>pDynamicExtractName</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-07-18T19:05:12Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-07-18T19:38:45Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-08-13T16:40:04Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pDynamicExtractName/pDynamicExtractName.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pDynamicExtractName"
+                  name="pDynamicExtractName"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="inXml" required="true" type="xml">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="tempDelimitedWriter" type="reference">
+                  <options>
+                     <option name="referenceTo">apFileSribatsaRedhat:SerializeToDelimitedContentTask</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">6lVJcwBUPd0gShMGoEBneD</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+                  <wholePayload inputWholePayload="true"/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l5r4kw81" targetId="l5r4kw80"/>
+               </start>
+               <service id="l5r4kw80">
+                  <title>Extract</title>
+                  <serviceName>apScDynamicElementValueExtractCase04349392:Extract</serviceName>
+                  <serviceGUID>6g6xdzNGfBqiPmuYq30JgZ</serviceGUID>
+                  <serviceInput>
+                     <parameter name="inXml" source="formula">
+                        <expression language="XQuery">$input.inXml </expression>
+                     </parameter>
+                  </serviceInput>
+                  <link id="l5r4kw8f" targetId="l5r4kw8e"/>
+               </service>
+               <service id="l5r4kw8e">
+                  <title>DelimitedContentWriter</title>
+                  <serviceName>apFileSribatsaRedhat:DelimitedContentWriter</serviceName>
+                  <serviceGUID>6lVJcwBUPd0gShMGoEBneD</serviceGUID>
+                  <serviceInput>
+                     <parameter name="serializationTask" source="formula">
+                        <expression language="XQuery">&lt;SerializeToDelimitedContentTask&gt;
+   &lt;filePath&gt;&lt;/filePath&gt;
+   &lt;fileName&gt;dynamicElementsExtract.csv&lt;/fileName&gt;
+   &lt;delimiter&gt;&lt;/delimiter&gt;
+   &lt;textQualifier&gt;&lt;/textQualifier&gt;
+   &lt;skipHeaders&gt;&lt;/skipHeaders&gt;
+   &lt;delimitedContentObject&gt;
+      &lt;header&gt;
+         &lt;fieldIndex&gt;1&lt;/fieldIndex&gt;
+         &lt;name&gt;id&lt;/name&gt;
+      &lt;/header&gt;
+      &lt;header&gt;
+         &lt;fieldIndex&gt;2&lt;/fieldIndex&gt;
+         &lt;name&gt;key&lt;/name&gt;
+      &lt;/header&gt;
+      &lt;header&gt;
+         &lt;fieldIndex&gt;3&lt;/fieldIndex&gt;
+         &lt;name&gt;value&lt;/name&gt;
+      &lt;/header&gt;
+      {let $datas := $output.root/data/data
+
+        for $data in $datas
+        let $values := $data/values
+        for $name in $values/*/name()
+        return &lt;record&gt;
+                 &lt;index&gt;1&lt;/index&gt;
+                 &lt;field&gt;
+                    &lt;value&gt;{$data/id/text()}&lt;/value&gt;
+                 &lt;/field&gt;
+                 &lt;index&gt;2&lt;/index&gt;
+                 &lt;field&gt;
+                    &lt;value&gt;{$name}&lt;/value&gt;
+                 &lt;/field&gt;
+                 &lt;index&gt;3&lt;/index&gt;
+                 &lt;field&gt;
+                    &lt;value&gt;{$values/*[name()=$name]/text()}&lt;/value&gt;
+                 &lt;/field&gt;
+              &lt;/record&gt;}
+   &lt;/delimitedContentObject&gt;
+&lt;/SerializeToDelimitedContentTask&gt;</expression>
+                     </parameter>
+                  </serviceInput>
+                  <link id="l5r4kw8g" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>a9Xh98j418ObUEjW6hLd23</types1:GUID>
+      <types1:DisplayName>pDynamicExtractName</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:27.1Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "9IBz2EBKg6zcFuMFc7lIKO",
+    "name" : "Oauth-header-case-03125028",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "OlkZ2sBsoZduD2L-gt-75216430-2021-07-01T12:17:18.657Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "OAuth1.0",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

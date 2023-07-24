@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "1f8QMcp9bs9bqiKped0iIM",
+    "name" : "SendGridSvcCn-case-03126325",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "AX0ZkL0jmu6lS01-gt-87278056-2021-07-05T10:09:14.21Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

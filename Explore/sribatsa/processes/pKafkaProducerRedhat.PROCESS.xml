@@ -1,0 +1,98 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>RhELlBWlD2pHALV-gt-53609955-2023-04-09T16:07:14.693Z::pd.xml</types1:EntryId>
+      <types1:Name>pKafkaProducerRedhat</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:g01_agent_01,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-04-09T16:07:15Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-04-09T16:24:13Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-04-09T16:24:25Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pKafkaProducerRedhat/pKafkaProducerRedhat.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pKafkaProducerRedhat"
+                  name="pKafkaProducerRedhat"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:g01_agent_01,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="inMessage" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="tempKafkaEvent" type="reference">
+                  <options>
+                     <option name="referenceTo">apKafkaRedhat:KafkaMessage</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">9Y3NuyDA1GohbDn0XFsZwD</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>g01_agent_01</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lg9l3aun" targetId="lg9l3aum"/>
+               </start>
+               <service id="lg9l3aum">
+                  <title>KafkaProducer</title>
+                  <serviceName>apKafkaRedhat:KafkaProducer</serviceName>
+                  <serviceGUID>9Y3NuyDA1GohbDn0XFsZwD</serviceGUID>
+                  <serviceInput>
+                     <parameter name="event" source="formula">
+                        <expression language="XQuery">&lt;KafkaMessage&gt;
+   &lt;body&gt;{$input.inMessage }
+   &lt;/body&gt;
+&lt;/KafkaMessage&gt;
+</expression>
+                     </parameter>
+                  </serviceInput>
+                  <link id="lg9l3auo" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>d08024d5-b34a-487a-8b14-86d84928ad9a</ns1:Id>
+               <ns1:Name>test</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2023-04-09T16:24:52Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2023-04-10T14:33:54Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "inMessage": "Test CAI Redhat 2"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>7hJc8eO1QMHjrmuTQrl3Il</types1:GUID>
+      <types1:DisplayName>pKafkaProducerRedhat</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.518Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

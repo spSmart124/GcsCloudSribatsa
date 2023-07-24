@@ -1,0 +1,68 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>OlOETyxKf3eFhBJ-gt-16354586-2021-08-02T13:24:48.657Z::conn.xml</types1:EntryId>
+      <types1:Name>acMySqlServerCase03151095</types1:Name>
+      <types1:ParentFlowIds>3MYOuVGTiPZx1Xm-gt-43747560-2021-08-24T11:39:10.875Z::pd.xml,5G7MDOp7jvppppp-gt-118885-2021-08-11T06:42:26.908Z::gt.xml,9HXTD86CjqFVNN5-gt-23298142-2021-12-31T06:33:52.972Z::pd.xml,D6I1dq2ME9paabd-gt-34841696-2021-12-02T08:35:01.468Z::pd.xml,EBNjDg8SOlA1vyo-gt-8944994-2021-12-16T11:46:14.494Z::pd.xml,Qif6A1vyoY2G7Qn-gt-37701787-2021-08-22T16:38:16.679Z::pd.xml,rfWWCSHbf13ErhN-gt-6867228-2021-08-13T13:46:43.284Z::pd.xml,SEaaaaaaaaaaaaa-gt-16429943-2021-08-02T13:55:18.724Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-02T13:24:49Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-09-09T10:46:00Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-08-17T08:13:51Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/acMySqlServerCase03151095/acMySqlServerCase03151095.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acMySqlServerCase03151095"
+                     label="acMySqlServerCase03151095"
+                     name="acMySqlServerCase03151095">
+            <description>.</description>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <agent>sribatsa-redhat.informatica.com</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="JDBC Connection URL"
+                          value="jdbc:sqlserver://eugcssql17:1433;databaseName=support"/>
+               <attribute encrypted="false" name="JDBC Jar Directory" value=""/>
+               <attribute encrypted="false"
+                          name="JDBC Driver Class Name"
+                          value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+               <attribute encrypted="false" name="Schema" value="c03066279"/>
+               <attribute encrypted="false" name="Username" value="c03066279"/>
+               <attribute encrypted="true" name="Password" value=""/>
+               <attribute encrypted="false" name="Object Filter" value=""/>
+               <attribute encrypted="false" name="TimeZone" value="Etc/GMT+8"/>
+               <attribute encrypted="false" name="$read-Isolation Level" value="None"/>
+               <attribute encrypted="false"
+                          name="$read-Override Isolation Level"
+                          value="false"/>
+               <attribute encrypted="false" name="$write-Number of retries" value="5"/>
+               <attribute encrypted="false" name="$write-Retry wait period" value="3"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="ICS"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="true"
+                           supportsOData="true"
+                           supportsPublishSkipMetadataRefresh="true"
+                           type="GenericJDBCAdapter"
+                           uuid="33ec8fc7-dc6d-4d2e-9f6f-a950669a62d1">
+               <description>JDBC  Generic Cloud Adapter</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>1GtQkmXWu6Vlpvaou3Un8k</types1:GUID>
+      <types1:DisplayName>acMySqlServerCase03151095</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:16.806Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

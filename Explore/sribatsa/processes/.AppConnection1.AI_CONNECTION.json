@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "hLQcJv81x8abdmAD72OAg4",
+    "name" : "AppConnection1",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "oSeE1KoJBUhtyco-gt-4858796-2023-06-15T15:20:20.239Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

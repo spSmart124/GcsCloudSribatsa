@@ -1,0 +1,146 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>zOZduD2L5SeE1Ko-gt-12480394-2022-06-02T04:13:05.408Z::svc.xml</types1:EntryId>
+      <types1:Name>ServiceConnector1-2</types1:Name>
+      <types1:ParentFlowIds>MPbdrxeLeG3vASa-gt-12598991-2022-06-02T06:01:26.218Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-06-02T04:13:05Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-06-06T09:35:52Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-06-06T09:35:55Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/ServiceConnector1_2/ServiceConnector1_2_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="ServiceConnector1"
+                            label=""
+                            name="ServiceConnector1-2"
+                            uuid="738f1c07-8ff7-441a-86be-938f5a981e66">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="url"
+                                    required="false"
+                                    testWith="https://na1.ai.dm-us.informaticacloud.com/active-bpel/odata/v4/acMySqlServer1"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="select"
+                                    required="false"
+                                    testWith="?%24select=Name%2CCustomer_Code%2CCustomer_ADDR&amp;"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="format"
+                                    required="false"
+                                    testWith="&amp;$format=json"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="get"
+                       maxRedirects="100"
+                       name="get"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="$select"
+                                required="false"
+                                testWith="Name,Customer_Code,Customer_ADDR"
+                                type="string"/>
+                     <parameter name="$filter"
+                                required="false"
+                                testWith="Customer_Code eq '40742'"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$url}/Customer1" verb="GET">
+                        <authentication>
+                           <username>GcsCloudAdminSri</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" entireResponse="true" name="op" type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="get2"
+                       maxRedirects="100"
+                       name="get2"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="$filter"
+                                required="false"
+                                testWith="Customer_Code eq '40742'"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$url}/Customer1{$select}"
+                                        verb="GET">
+                        <authentication>
+                           <username>GcsCloudAdminSri</username>
+                           <password/>
+                           <isExpressionInPassword>false</isExpressionInPassword>
+                        </authentication>
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="" entireResponse="true" name="op" type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                     <field description="" name="result" type="reference">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                        <xquery>{$op//value}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>6VvXyPCZ4Y6ejUkm2qz7s5</types1:GUID>
+      <types1:DisplayName>ServiceConnector1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.239Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

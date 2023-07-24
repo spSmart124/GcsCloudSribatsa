@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "8VALgmzQ8YMfX3MFoeBBAC",
+    "name" : "conn-TcPCM",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "IGSM8NciZBpDUQb-gt-94054881-2021-07-07T13:49:28.561Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "7QCQEPkPHIhlVwQ2gqXAkR",
+    "name" : "serviceConn-TcPCM",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "uSRCU7uMydx2CGe-gt-58547421-2021-07-07T13:49:28.327Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa"
+  } ]
+}

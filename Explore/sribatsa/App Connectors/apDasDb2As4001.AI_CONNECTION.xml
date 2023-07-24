@@ -1,0 +1,63 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>EpciZBpDUQbgdwU-gt-50603975-2022-07-28T19:41:39.492Z::conn.xml</types1:EntryId>
+      <types1:Name>apDasDb2As4001</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-07-28T19:41:39Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-07-28T20:00:11Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apDasDb2As4001"
+                     label="apDasDb2As4001"
+                     name="apDasDb2As4001">
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <agent>sribatsa-redhat.informatica.com</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="driver"
+                          value="com.ibm.as400.access.AS400JDBCDriver"/>
+               <attribute encrypted="false" name="jdbcUrl" value="jdbc:as400://I5V7R4/GNU"/>
+               <attribute encrypted="false" name="username" value="vmysore"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="initialSize" value="5"/>
+               <attribute encrypted="false" name="maxActive" value="10"/>
+               <attribute encrypted="false" name="minIdle" value="1"/>
+               <attribute encrypted="false" name="maxIdle" value="5"/>
+               <attribute encrypted="false" name="maxWait" value=""/>
+               <attribute encrypted="false" name="defaultTransactionIsolation" value="0"/>
+               <attribute encrypted="false" name="minEvictableIdleTimeMillis" value=""/>
+               <attribute encrypted="false" name="numTestsPerEvictionRun" value=""/>
+               <attribute encrypted="false" name="testOnBorrow" value=""/>
+               <attribute encrypted="false" name="testOnReturn" value=""/>
+               <attribute encrypted="false" name="testWhileIdle" value=""/>
+               <attribute encrypted="false" name="validationQuery" value=""/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="true"
+                               connectorPath="project:/rt.connector/dasDb2As400_1/dasDb2As400_1_svcDef.xml"
+                               guid="9S0uPdqhb6ddGsVCieno6l"
+                               name="dasDb2As400_1"
+                               plugin="DAS"
+                               supportsConnectionTest="true"
+                               uuid="fcbec58e-2c60-450a-be4d-ccee3e38dba6">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>fUrKE4zHfc0hJx1Mp91VGL</types1:GUID>
+      <types1:DisplayName>apDasDb2As4001</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.712Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

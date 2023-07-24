@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "0SUy0tLHJQskBqo6mKlYML",
+    "name" : "apRestV2Win",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "f6riX2FNBeNTYgl-gt-20153437-2023-03-15T15:17:49.096Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

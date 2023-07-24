@@ -1,0 +1,46 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>q2ME9paabdqpw0V-gt-68615354-2021-09-02T11:12:26.262Z::conn.xml</types1:EntryId>
+      <types1:Name>acGetWholeResponse</types1:Name>
+      <types1:ParentFlowIds>aaaa-gt-66287727-2021-09-02T11:16:29.006Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>REQUIRE_UPDATE</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-09-02T11:12:26Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-09-03T07:09:42Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/acGetWholeResponse/acGetWholeResponse.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acGetWholeResponse"
+                     label="acGetWholeResponse"
+                     name="acGetWholeResponse">
+            <description/>
+            <tags>.agent:sribatsa-redhat</tags>
+            <agent>sribatsa-redhat</agent>
+            <attributes/>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scMyService/scMyService_svcDef.xml"
+                               guid="bRmpIaqczQ6dQKGcuzORWM"
+                               name="scMyService"
+                               supportsConnectionTest="false"
+                               uuid="3d3d7b50-ecc1-4151-a861-0e15551864cb">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>5wbZZNEFq4HjeIf5YDy4UW</types1:GUID>
+      <types1:DisplayName>acGetWholeResponse</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.534Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

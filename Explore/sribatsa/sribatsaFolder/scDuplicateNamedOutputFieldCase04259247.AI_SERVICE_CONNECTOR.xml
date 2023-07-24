@@ -1,0 +1,91 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>gpKi9zhFtybduaa-gt-68341191-2022-01-07T06:14:21.12Z::svc.xml</types1:EntryId>
+      <types1:Name>scDuplicateNamedOutputFieldCase04259247</types1:Name>
+      <types1:ParentFlowIds>vlEQT53nQciSrZM-gt-68343754-2022-01-07T06:16:32.349Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-01-07T06:14:21Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-01-07T06:23:47Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-01-07T06:23:53Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scDuplicateNamedOutputFieldCase04259247/scDuplicateNamedOutputFieldCase04259247_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scDuplicateNamedOutputFieldCase04259247"
+                            label=""
+                            name="scDuplicateNamedOutputFieldCase04259247"
+                            uuid="005c63a5-0011-43bd-98f3-fbcfc9fc6d5a">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="url"
+                                    masked="false"
+                                    name="url"
+                                    required="true"
+                                    testWith="https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/rt/4LIW2E9dmSefqixInUK4on/pNamedResponseCase04259247"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="StatisticPost"
+                       maxRedirects="100"
+                       name="StatisticPost"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$url}" verb="GET"/>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="StatisticId"
+                            property="StatisticId"
+                            type="string"/>
+                     <field description=""
+                            name="RelatedStatisticId"
+                            property="RelatedStatisticId"
+                            type="string"/>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="StatisticId">
+                  <description/>
+                  <detail>
+                     <field name="nil" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="RelatedStatisticId">
+                  <description/>
+                  <detail>
+                     <field name="nil" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>8ICWyQs4wOojTtq9Afpief</types1:GUID>
+      <types1:DisplayName>scDuplicateNamedOutputFieldCase04259247</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:14.899Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

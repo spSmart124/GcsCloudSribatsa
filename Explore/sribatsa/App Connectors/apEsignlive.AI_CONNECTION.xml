@@ -1,0 +1,48 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>JVxYi0Nmumf6S3w-gt-14412152-2023-02-14T06:49:19.572Z::conn.xml</types1:EntryId>
+      <types1:Name>apEsignlive</types1:Name>
+      <types1:ParentFlowIds>peJRvDINciZBpDU-gt-14415692-2023-02-14T06:51:54.246Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-02-14T06:49:20Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-02-14T06:49:37Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apEsignlive/apEsignlive.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apEsignlive"
+                     label="apEsignlive"
+                     name="apEsignlive">
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <agent>sribatsa-redhat.informatica.com</agent>
+            <attributes>
+               <attribute encrypted="true" name="Authorization" value=""/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scEsignlive/scEsignlive_svcDef.xml"
+                               guid="gQkzM9W6peogkS4z1doCmP"
+                               name="scEsignlive"
+                               supportsConnectionTest="false"
+                               uuid="20ccf7af-9b92-4ec3-a4ac-0c9538f83b6e">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>8hmaXIG8ak4emIxICtO3Ea</types1:GUID>
+      <types1:DisplayName>apEsignlive</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:23.163Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

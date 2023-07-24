@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "2B9q6glmgeUkdHxqEVWkkR",
+    "name" : "acSalesforceOAuth1",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "zLPJljxcghuImXy-gt-33711451-2022-06-27T14:59:34.407Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "b8kxrSnegIEbEEFTtlYtKC",
+    "name" : "pDummy",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ASAP38nXxpr1Iw8-gt-36697026-2022-09-02T10:10:48.42Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

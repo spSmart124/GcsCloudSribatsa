@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "8VGrndsK4DzfryhixKRhIt",
+    "name" : "POPlanEntregaDetalle",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "OhJWjzDt0x7bcoq-gt-67838150-2021-12-01T13:07:53.656Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : ".",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

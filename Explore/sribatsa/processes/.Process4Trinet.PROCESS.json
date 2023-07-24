@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "8kcvkEjEhxCjjw9liD4feR",
+    "name" : "Process4Trinet",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jhwLdqcgm8lnCmp-gt-2816139-2023-07-10T14:05:26.145Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "gKlKXpsJlsdcxbTxn2jr2V",
+    "name" : "AppConnscTestXquery",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "gq695kchzt1Y6tM-gt-2813652-2023-07-10T14:04:45.112Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "asdf",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/processes"
+  } ]
+}

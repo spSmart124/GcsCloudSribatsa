@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "hZKsdarfWsjlTtlJwgNPGE",
+    "name" : "pCustomXqueryCase04264485",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "K0XabeAzu2JQhtG-gt-11310251-2022-01-19T14:06:12.591Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

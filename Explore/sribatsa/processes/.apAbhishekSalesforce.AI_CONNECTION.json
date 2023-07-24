@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "0qrhA12IUuocIks1uXpAuY",
+    "name" : "apAbhishekSalesforce",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "QZuPtokMJoGsF4X-gt-69854478-2023-07-06T11:36:26.684Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

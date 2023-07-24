@@ -1,0 +1,128 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>8SOlA1vyoY2G7Qn-gt-25289683-2022-09-20T11:54:11.952Z::po.xml</types1:EntryId>
+      <types1:Name>KafkalatestpersFields</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-09-20T11:54:12Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        isByCopy="true"
+                        name="KafkalatestpersFields">
+            <description xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd">This object was generated from [Kafkalatestpers_fields complex type] located in the [Kafka.json.xsd] source XML schema.</description>
+            <detail>
+               <field label="birthnation"
+                      name="birthnation"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:KafkalatestpersFieldsbirthnation</option>
+                     <option name="guid">gEtCwt2wUcniKpu5h5xBcm</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="nuid" name="nuid" nullable="false" type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:KafkalatestpersFieldsnuid</option>
+                     <option name="guid">5hgSysPciCKhx64R7BeVO1</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="uk_cit_status"
+                      name="uk_cit_status"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:KafkalatestpersFieldsukCitStatus</option>
+                     <option name="guid">4bWxCOAIlNGhHOopRDPJgN</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="ca_cit_status"
+                      name="ca_cit_status"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:KafkalatestpersFieldscaCitStatus</option>
+                     <option name="guid">4pN6dZTcZbHgIxfshqON0b</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="race"
+                      name="race"
+                      nullable="false"
+                      type="string"/>
+               <field xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                      label="sub_ethnicity"
+                      name="sub_ethnicity"
+                      nullable="false"
+                      type="string"/>
+               <field label="us_cit_status"
+                      name="us_cit_status"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:KafkalatestpersFieldsusCitStatus</option>
+                     <option name="guid">8cTejo25XB9fG3j0tSIvAa</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="hispanic"
+                      name="hispanic"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:KafkalatestpersFieldshispanic</option>
+                     <option name="guid">0h8XwZI6kmflRo9UE8L9gq</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="gender_identity"
+                      name="gender_identity"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:KafkalatestpersFieldsgenderIdentity</option>
+                     <option name="guid">1OuQbNMZomfhRT8TQjAdYe</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+               <field label="birth_country"
+                      name="birth_country"
+                      nullable="false"
+                      type="reference">
+                  <options>
+                     <option xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                             name="referenceTo">$po:KafkalatestpersFieldsbirthCountry</option>
+                     <option name="guid">9WCYONgaWT0cpC0EAjsKSb</option>
+                     <option name="relationshipName">Child</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>6Z2d3bAOvAidbRSFuQUigD</types1:GUID>
+      <types1:DisplayName>KafkalatestpersFields</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.089Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

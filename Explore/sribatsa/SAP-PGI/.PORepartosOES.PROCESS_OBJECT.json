@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "5tnqbEHMR87iNoRHGAGvUI",
+    "name" : "PORepartosOES",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "LQnbf6riX2FNBeN-gt-67838131-2021-12-01T13:07:53.605Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

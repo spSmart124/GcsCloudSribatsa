@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "4Vcfqb3Fm1CbvonV7MWdyZ",
+    "name" : "MOCPart4MySQL - Copy 1",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "WYVMPINciZBpDUQ-gt-9678475-2022-01-18T11:02:10.786Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

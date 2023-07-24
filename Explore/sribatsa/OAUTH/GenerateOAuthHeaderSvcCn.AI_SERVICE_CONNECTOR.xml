@@ -1,0 +1,197 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>aaaaa-gt-3540017-2021-07-19T12:44:45.008Z::svc.xml</types1:EntryId>
+      <types1:Name>GenerateOAuthHeaderSvcCn</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>OAuth1.0</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-19T12:44:45Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="GenerateOAuthHeaderSvcCn"
+                            label=""
+                            name="GenerateOAuthHeaderSvcCn"
+                            uuid="3c1630e0-621e-476d-88c1-b602dc01064d">
+            <description>OAuth1.0</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="consumer_key"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="consumer_secret"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="access_token"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="access_token_secret"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="url"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="signature_method"
+                                    required="false"
+                                    testWith="HMAC-SHA256"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="version"
+                                    required="false"
+                                    testWith="1.0"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="method"
+                                    required="false"
+                                    testWith="GET"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="true"
+                                    name="realm"
+                                    required="false"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="Generate Header"
+                       maxRedirects="100"
+                       name="Generate Header"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="script" required="false" testWith="314" type="string"/>
+                     <parameter name="deploy" required="false" testWith="1" type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$url}" verb="GET">
+                        <otherParams>
+                           <otherParam name="oauth_nonce" nogen="true">{util:generateUUID()}</otherParam>
+                           <otherParam name="oauth_timestamp" nogen="true">{floor(date:now() div 1000)}</otherParam>
+                           <otherParam name="parameter_string" nogen="true">{let $parameters :=
+
+        &lt;parameters&gt;
+            &lt;param name="deploy" value="{$deploy }"/&gt;       
+ 			&lt;param name="oauth_consumer_key" value="{$consumer_key }"/&gt;
+            &lt;param name="oauth_nonce" value="{$oauth_nonce }"/&gt;
+            &lt;param name="oauth_signature_method" value="{$signature_method}"/&gt;
+            &lt;param name="oauth_timestamp" value="{$oauth_timestamp }"/&gt;
+            &lt;param name="oauth_token" value="{$access_token}"/&gt;
+            &lt;param name="oauth_version" value="{$version}"/&gt; 
+            &lt;param name="script" value="{$script}"/&gt;
+            
+        &lt;/parameters&gt;
+        
+let $separator :='&amp;amp;'  
+
+return fn:string-join(
+        for $param in $parameters/param
+        let $name := encode-for-uri($param/@name)
+        let $value := encode-for-uri($param/@value)
+        order by $name, $value
+        return
+            concat($name, '=', $value)
+        ,
+        $separator
+    )}</otherParam>
+                           <otherParam name="signature_base_string" nogen="true">{fn:string-join(
+                (
+                upper-case($method),
+                encode-for-uri($url),
+                encode-for-uri($parameter_string )
+                )
+                ,
+                '&amp;amp;'
+            )}</otherParam>
+                           <otherParam name="signing_key" nogen="true">{concat(encode-for-uri($consumer_secret), '&amp;amp;', encode-for-uri($access_token_secret))}</otherParam>
+                           <otherParam name="oauth_signature" nogen="true">{dsig:hmacSHA256signature($signature_base_string ,$signing_key)}</otherParam>
+                           <otherParam name="oauth_params" nogen="true">{(
+            &lt;param name="realm" value="{$realm}"/&gt;,
+ 			&lt;param name="oauth_consumer_key" value="{$consumer_key}"/&gt;,
+            &lt;param name="oauth_nonce" value="{$oauth_nonce }"/&gt;,
+            &lt;param name="oauth_signature_method" value="{$signature_method}"/&gt;,
+            &lt;param name="oauth_timestamp" value="{$oauth_timestamp }"/&gt;,
+            &lt;param name="oauth_token" value="{$access_token}"/&gt;,
+            &lt;param name="oauth_version" value="{$version}"/&gt; ,
+            &lt;param name="script" value="{$script}"/&gt;,
+            &lt;param name="deploy" value="{$deploy }"/&gt;
+        )}</otherParam>
+                           <otherParam name="final_oauth_string" nogen="true">{let $oauth_params := 
+             &lt;parameters&gt;
+                    &lt;param name="realm" value="{$realm}"/&gt;
+ 			&lt;param name="oauth_consumer_key" value="{$consumer_key }"/&gt;
+            &lt;param name="oauth_nonce" value="{$oauth_nonce }"/&gt;
+            &lt;param name="oauth_signature_method" value="{$signature_method}"/&gt;
+            &lt;param name="oauth_timestamp" value="{$oauth_timestamp }"/&gt;
+            &lt;param name="oauth_token" value="{$access_token}"/&gt;
+            &lt;param name="oauth_version" value="{$version}"/&gt; 
+            
+             &lt;param name="oauth_signature" value="{$oauth_signature}"/&gt;
+        &lt;/parameters&gt;
+           
+               
+            
+  let $separator := ', '
+  
+  return 
+  string-join(
+        for $param in $oauth_params//param
+        let $name := encode-for-uri($param/@name)
+        let $value := encode-for-uri($param/@value)
+        order by $name, $value
+        return
+            concat($name, '="',$value,'"')
+        ,
+        $separator
+    )}</otherParam>
+                           <otherParam name="authorization_header" nogen="true">{concat('OAuth ',$final_oauth_string )}</otherParam>
+                        </otherParams>
+                        <httpHeaders>
+                           <header name="Authorization">{$authorization_header}</header>
+                           <header name="Content-Type">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>a8AHzzTgRntdE2ecDpheYe</types1:GUID>
+      <types1:DisplayName>GenerateOAuthHeaderSvcCn</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:19.253Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

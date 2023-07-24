@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "hNVfr5ACB08l52MzCLyC2d",
+    "name" : "AppConn-Dltd-NPS-Audience-Platt-SVC",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "aaaaabdvhxiQLnz-gt-2411377-2021-07-13T06:00:00.103Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

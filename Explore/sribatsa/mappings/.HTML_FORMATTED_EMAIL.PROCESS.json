@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "lyEQnoUZEYTbaIIDxF56Uz",
+    "name" : "HTML_FORMATTED_EMAIL",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "OVuslqAOclkZ2sB-gt-33148584-2023-02-28T12:30:43.646Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "6RnqhiL58CRehCryxDJaSk",
+    "name" : "acOutlookEmailService",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lP0ttNfWoAXUCZ4-gt-18899977-2021-06-18T15:43:19.191Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/sribatsaFolder"
+  } ]
+}

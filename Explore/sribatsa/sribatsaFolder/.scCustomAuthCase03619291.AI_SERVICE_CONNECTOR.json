@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "eyFvIB6qlatbeztHUnCRu4",
+    "name" : "scCustomAuthCase03619291",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "WoAXUCZ4nzYLnzY-gt-9038735-2021-10-18T08:16:27.76Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

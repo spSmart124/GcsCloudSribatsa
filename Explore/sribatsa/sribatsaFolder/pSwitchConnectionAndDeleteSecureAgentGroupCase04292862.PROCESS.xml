@@ -1,0 +1,221 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Li36ln6lRuImXyc-gt-19093674-2022-03-21T14:45:49.609Z::pd.xml</types1:EntryId>
+      <types1:Name>pSwitchConnectionAndDeleteSecureAgentGroupCase04292862</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-03-21T14:45:50Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-03-22T11:38:11Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-03-22T11:38:16Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pSwitchConnectionAndDeleteSecureAgentGroupCase04292862/pSwitchConnectionAndDeleteSecureAgentGroupCase04292862.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pSwitchConnectionAndDeleteSecureAgentGroupCase04292862"
+                  name="pSwitchConnectionAndDeleteSecureAgentGroupCase04292862"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="inSecureAgentGroupName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="inNewSecureAgentGroupName" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l10wnjrz" targetId="l10wnjry"/>
+               </start>
+               <service id="l10wnjry">
+                  <title>LoginV2</title>
+                  <serviceName>apRESTConnectionAndRuntimeEnvironmentCase04292862:LoginV2</serviceName>
+                  <serviceGUID>73aNEjFxMmejPxlhopWSgl</serviceGUID>
+                  <serviceInput/>
+                  <link id="l10wnjs7" targetId="l10wnjs6"/>
+               </service>
+               <service id="l10wnjs6">
+                  <title>GetEnvironmentByNameOldRuntimeEnv1</title>
+                  <serviceName>apRESTConnectionAndRuntimeEnvironmentCase04292862:GetEnvironmentByName</serviceName>
+                  <serviceGUID>73aNEjFxMmejPxlhopWSgl</serviceGUID>
+                  <serviceInput>
+                     <parameter name="serverUrl" source="field" updatable="true">output.serverUrl</parameter>
+                     <parameter name="icSessionId" source="field" updatable="true">output.icSessionId</parameter>
+                     <parameter name="secureAgentName" source="field" updatable="true">input.inSecureAgentGroupName</parameter>
+                  </serviceInput>
+                  <link id="l10wnjsk" targetId="l10wnjsj"/>
+               </service>
+               <service id="l10wnjsj">
+                  <title>ListConnectionByRuntimeEnvironment</title>
+                  <serviceName>apRESTConnectionAndRuntimeEnvironmentCase04292862:ListConnectionByRuntimeEnvironment</serviceName>
+                  <serviceGUID>73aNEjFxMmejPxlhopWSgl</serviceGUID>
+                  <serviceInput>
+                     <parameter name="serverUrl" source="field" updatable="true">output.serverUrl</parameter>
+                     <parameter name="icSessionId" source="field" updatable="true">output.icSessionId</parameter>
+                     <parameter name="runtimeEnvironmentId" source="field" updatable="true">output.runtimeEnvironmentId</parameter>
+                  </serviceInput>
+                  <link id="l121iy6f" targetId="l121iy6e"/>
+               </service>
+               <service id="l121iy6e">
+                  <title>GetEnvironmentByNameForNewSecureAgentGroup</title>
+                  <serviceName>apRESTConnectionAndRuntimeEnvironmentCase04292862:GetEnvironmentByName</serviceName>
+                  <serviceGUID>73aNEjFxMmejPxlhopWSgl</serviceGUID>
+                  <serviceInput>
+                     <parameter name="serverUrl" source="field" updatable="true">output.serverUrl</parameter>
+                     <parameter name="icSessionId" source="field" updatable="true">output.icSessionId</parameter>
+                     <parameter name="secureAgentName" source="field" updatable="true">input.inNewSecureAgentGroupName</parameter>
+                  </serviceInput>
+                  <link id="l121iy6g" targetId="l10wnjt3"/>
+               </service>
+               <container id="l10wnjt3" type="exclusive">
+                  <title>shortConnectionDetails</title>
+                  <flow id="l10wnjt7">
+                     <service id="l10wnjti">
+                        <title>UpdateConnectionRuntimeEnvironment</title>
+                        <serviceName>apRESTConnectionAndRuntimeEnvironmentCase04292862:UpdateConnection</serviceName>
+                        <serviceGUID>73aNEjFxMmejPxlhopWSgl</serviceGUID>
+                        <serviceInput>
+                           <parameter name="serverUrl" source="field" updatable="true">output.serverUrl</parameter>
+                           <parameter name="icSessionId" source="field" updatable="true">output.icSessionId</parameter>
+                           <parameter name="connectionId" source="formula">
+                              <expression language="XQuery">$output.shortConnectionDetails/id</expression>
+                           </parameter>
+                           <parameter name="newRuntimeEnvironmentId" source="field" updatable="true">output.runtimeEnvironmentId</parameter>
+                        </serviceInput>
+                        <link id="l10wnjts" targetId="l10wnjtr"/>
+                     </service>
+                     <assignment id="l10wnjtr">
+                        <title>Assignment to shortConnectionDetails</title>
+                        <operation source="formula" to="output.shortConnectionDetails">
+                           <expression language="XQuery">fn:tail($output.shortConnectionDetails )</expression>
+                        </operation>
+                        <link id="l121iy2w" targetId="l121iy2u"/>
+                     </assignment>
+                     <jumpTo id="l121iy2u">
+                        <link id="l121iy2v" targetId="l10wnjt3"/>
+                     </jumpTo>
+                  </flow>
+                  <flow id="l10wnjta">
+                     <service id="l121iy6z">
+                        <title>GetEnvironmentByNameOldRuntimeEnv2</title>
+                        <serviceName>apRESTConnectionAndRuntimeEnvironmentCase04292862:GetEnvironmentByName</serviceName>
+                        <serviceGUID>73aNEjFxMmejPxlhopWSgl</serviceGUID>
+                        <serviceInput>
+                           <parameter name="serverUrl" source="field" updatable="true">output.serverUrl</parameter>
+                           <parameter name="icSessionId" source="field" updatable="true">output.icSessionId</parameter>
+                           <parameter name="secureAgentName" source="field" updatable="true">input.inSecureAgentGroupName</parameter>
+                        </serviceInput>
+                        <link id="l121iy70" targetId="l121iy39"/>
+                     </service>
+                     <service id="l121iy39">
+                        <title>DeleteSecureAgentGroup</title>
+                        <serviceName>apRESTConnectionAndRuntimeEnvironmentCase04292862:DeleteSecureAgentGroup</serviceName>
+                        <serviceGUID>73aNEjFxMmejPxlhopWSgl</serviceGUID>
+                        <serviceInput>
+                           <parameter name="newRuntimeEnvironmentId" source="field" updatable="true">output.runtimeEnvironmentId</parameter>
+                           <parameter name="serverUrl" source="field" updatable="true">output.serverUrl</parameter>
+                           <parameter name="icSessionId" source="field" updatable="true">output.icSessionId</parameter>
+                        </serviceInput>
+                     </service>
+                     <link id="l10wnjtb" targetId="l10wnjt3" type="containerLink"/>
+                  </flow>
+                  <link id="l10wnjt6" targetId="l10wnjt7" type="containerLink">
+                     <condition source="formula">
+                        <function name="not-empty">
+                           <arg name="field">{$output.shortConnectionDetails}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="l10wnjt9" targetId="l10wnjta" type="containerLink">
+                     <condition source="formula">
+                        <function name="empty">
+                           <arg name="field">{$output.shortConnectionDetails}</arg>
+                        </function>
+                     </condition>
+                  </link>
+                  <link id="l10wnjth" targetId="c"/>
+               </container>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>3a3243a4-fb0c-44bf-8acb-ac8f54bcf8ff</ns1:Id>
+               <ns1:Name>input</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-03-21T17:10:55Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-03-21T17:10:55Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "inSecureAgentGroupName": "TEST"
+}</ns1:Data>
+            </ns1:SampleData>
+            <ns1:SampleData>
+               <ns1:Id>d4b7f093-7470-450f-b007-294be8882ad5</ns1:Id>
+               <ns1:Name>sribatsa-redhat-new-SribatsaAgentGroup</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-03-22T12:14:02Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-03-22T12:14:13Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "inSecureAgentGroupName": "sribatsa-redhat-new",
+	 "inNewSecureAgentGroupName": "SribatsaAgentGroup"
+}</ns1:Data>
+            </ns1:SampleData>
+            <ns1:SampleData>
+               <ns1:Id>170e63a0-3569-46cb-b234-1fd81e5e4db5</ns1:Id>
+               <ns1:Name>SribatsaSecureAgentGroup-TEST</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-03-22T11:39:41Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-03-22T11:40:03Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "inSecureAgentGroupName": "SribatsaAgentGroup",
+	 "inNewSecureAgentGroupName": "TEST"
+}</ns1:Data>
+            </ns1:SampleData>
+            <ns1:SampleData>
+               <ns1:Id>9059c07f-3ef3-46b9-9397-1c9fc0e09bac</ns1:Id>
+               <ns1:Name>TEST-SribatsaAgentGroup</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-03-22T11:23:27Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-03-22T11:23:39Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "inSecureAgentGroupName": "TEST",
+	 "inNewSecureAgentGroupName": "SribatsaAgentGroup"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>3OIioRf5TjecuVoBn8qWeU</types1:GUID>
+      <types1:DisplayName>pSwitchConnectionAndDeleteSecureAgentGroupCase04292862</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:27.08Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

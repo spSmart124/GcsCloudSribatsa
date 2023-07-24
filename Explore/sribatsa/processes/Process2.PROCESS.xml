@@ -1,0 +1,113 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>5lRuImXycotFgpK-gt-25262798-2023-07-18T06:14:09.12Z::pd.xml</types1:EntryId>
+      <types1:Name>Process2-4</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-07-18T06:14:09Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-07-18T06:27:37Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-07-18T06:27:40Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process2-4/Process2-4.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Process2"
+                  name="Process2-4"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="transaction_id" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="business_entity_type" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="business_type_unique_id" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="error_description" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="op" type="reference">
+                  <options>
+                     <option name="referenceTo">$po:$any</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="lk7we8lf" targetId="lk7we8le"/>
+               </start>
+               <assignment id="lk7we8le">
+                  <title>Assignment to op</title>
+                  <operation source="formula" to="output.op">
+                     <expression language="XQuery">let $x:=&lt;root&gt;
+&lt;transaction_id&gt;{$input.transaction_id }&lt;/transaction_id&gt;
+&lt;business_entity_type&gt;{$input.business_entity_type }&lt;/business_entity_type&gt;
+&lt;business_type_unique_id&gt;{$input.business_type_unique_id}&lt;/business_type_unique_id&gt;
+&lt;error_description&gt;{$input.error_description }&lt;/error_description&gt;
+&lt;/root&gt;
+
+return "{'"|| util:toJSON($x//*) || "'}"</expression>
+                  </operation>
+                  <link id="lk7we8lg" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>b6ad15b0-532c-418c-a107-d04a563a0fd8</ns1:Id>
+               <ns1:Name>test</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2023-07-18T06:24:14Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2023-07-18T06:24:14Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "transaction_id": "1",
+	 "business_entity_type": "text",
+	 "business_type_unique_id": "10",
+	 "error_description": "NA"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>3w07kTzK3EBe3BQgaWCr8S</types1:GUID>
+      <types1:DisplayName>Process2</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:16.017Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

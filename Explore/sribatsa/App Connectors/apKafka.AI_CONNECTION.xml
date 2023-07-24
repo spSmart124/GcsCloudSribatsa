@@ -1,0 +1,123 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>IMmlMickgpbdoPV-gt-53313389-2023-04-09T06:33:11.562Z::conn.xml</types1:EntryId>
+      <types1:Name>apKafka</types1:Name>
+      <types1:ParentFlowIds>bfSn8mgaabclvAh-gt-11130177-2023-04-13T13:18:54.029Z::pd.xml,ghrPG9VtsDaaabd-gt-52859789-2023-04-09T06:59:21.105Z::pd.xml,YZcjKsJlv58pIO3-gt-52780688-2023-04-09T06:49:08.11Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsawin19</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-04-09T06:33:12Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-04-13T13:17:26Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apKafka"
+                     label="apKafka"
+                     name="apKafka">
+            <description/>
+            <tags>.agent:sribatsawin19</tags>
+            <agent>sribatsawin19</agent>
+            <attributes>
+               <attribute encrypted="false" name="kafkaHost" value="localhost"/>
+               <attribute encrypted="false" name="kafkaPort" value="9092"/>
+               <attribute encrypted="false" name="additionalBrokers" value=""/>
+               <attribute encrypted="false" name="otherAttributesCommon" value=""/>
+               <attribute encrypted="false"
+                          name="sslTruststoreLocation"
+                          value="GcsCloudAdminSri"/>
+               <attribute encrypted="true" name="sslTruststorePassword" value=""/>
+               <attribute encrypted="false" name="sslKeystoreLocation" value=""/>
+               <attribute encrypted="true" name="sslKeystorePassword" value=""/>
+               <attribute encrypted="true" name="sslKeyPassword" value=""/>
+               <attribute encrypted="false" name="saslMechanism" value="PLAIN"/>
+               <attribute encrypted="false" name="saslJaasConfig" value=""/>
+               <attribute encrypted="false" name="Use SSL" value="false"/>
+               <attribute encrypted="false" name="Use SASL" value="false"/>
+            </attributes>
+            <consumers>
+               <consumer enabled="true" name="source" typeName="KafkaConsumer">
+                  <description>Use this event source to read new messages from Kafka.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="loadBalance" value="false"/>
+                     <attribute encrypted="false" name="topic" value="source"/>
+                     <attribute encrypted="false" name="groupId" value="2"/>
+                     <attribute encrypted="false" name="contentFormat" value="TEXT"/>
+                     <attribute encrypted="false" name="simplifyContent" value="false"/>
+                     <attribute encrypted="false" name="otherAttributesProducerConsumer" value=""/>
+                  </attributes>
+               </consumer>
+               <consumer enabled="true" name="KafkaConsumerTarget" typeName="KafkaConsumer">
+                  <description>Use this event source to read new messages from Kafka.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="loadBalance" value="false"/>
+                     <attribute encrypted="false" name="topic" value="target"/>
+                     <attribute encrypted="false" name="groupId" value="2"/>
+                     <attribute encrypted="false" name="contentFormat" value="TEXT"/>
+                     <attribute encrypted="false" name="simplifyContent" value="false"/>
+                     <attribute encrypted="false" name="otherAttributesProducerConsumer" value=""/>
+                  </attributes>
+               </consumer>
+               <consumer enabled="true"
+                         name="KafkaConsumerMultiTopic"
+                         typeName="KafkaConsumer">
+                  <description>Use this event source to read new messages from Kafka.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="loadBalance" value="false"/>
+                     <attribute encrypted="false" name="topic" value="multiTopic"/>
+                     <attribute encrypted="false" name="groupId" value="1"/>
+                     <attribute encrypted="false" name="contentFormat" value="TEXT"/>
+                     <attribute encrypted="false" name="simplifyContent" value="false"/>
+                     <attribute encrypted="false"
+                                name="otherAttributesProducerConsumer"
+                                value="consumersCount=3"/>
+                  </attributes>
+               </consumer>
+            </consumers>
+            <producers>
+               <producer enabled="true" name="KafkaProducer" typeName="KafkaProducer">
+                  <description>Use this event target to write new messages to Kafka.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="topic" value="target"/>
+                     <attribute encrypted="false" name="groupId" value="2"/>
+                     <attribute encrypted="false" name="contentFormat" value="TEXT"/>
+                     <attribute encrypted="false" name="otherAttributesProducerConsumer" value=""/>
+                  </attributes>
+               </producer>
+               <producer enabled="true"
+                         name="KafkaProducerMultiTarget"
+                         typeName="KafkaProducer">
+                  <description>Use this event target to write new messages to Kafka.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="topic" value="multiTopic"/>
+                     <attribute encrypted="false" name="groupId" value="1"/>
+                     <attribute encrypted="false" name="contentFormat" value="TEXT"/>
+                     <attribute encrypted="false" name="otherAttributesProducerConsumer" value=""/>
+                  </attributes>
+               </producer>
+            </producers>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           supportsPublishSkipMetadataRefresh="false"
+                           type="KAFKA"
+                           uuid="c5d3f9bc-95ba-48e6-99df-5bca133b44b3">
+               <description>Provides connections to KAFKA brokers.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>eAEdREqpUQ0kGsnTwkULua</types1:GUID>
+      <types1:DisplayName>apKafka</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.616Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

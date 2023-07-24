@@ -1,0 +1,111 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Kf3eFhBJQWSwxF1-gt-41850634-2021-08-25T16:40:50.592Z::pd.xml</types1:EntryId>
+      <types1:Name>procCase03174294</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-25T16:40:51Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-08-25T16:45:19Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procCase03174294"
+                  name="procCase03174294"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-redhat,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="inputText" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <tempFields>
+               <field description="" name="attachment" type="attachment">
+                  <options>
+                     <option hide="true" name="count">1</option>
+                     <option name="maxsize">5242880</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="tempFileWriterTask" type="reference">
+                  <options>
+                     <option name="referenceTo">AC-SFTP-Connection:FileWriteTask</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">aXtSfVyETCEf187ca3tLei</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="none">
+               <targetLocation>sribatsa-redhat</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="ksrps49r" targetId="ksrps49q"/>
+               </start>
+               <assignment id="ksrps49q">
+                  <title>Assignment to File name, Content Format etc.</title>
+                  <operation source="constant" to="temp.tempFileWriterTask[1]/fileName">test.txt</operation>
+                  <operation source="constant" to="temp.tempFileWriterTask[1]/format">Attachment</operation>
+                  <operation source="constant" to="temp.tempFileWriterTask[1]/filePath">/C2</operation>
+                  <link id="ksrps4a9" targetId="ksrps4a8"/>
+               </assignment>
+               <assignment id="ksrps4a8">
+                  <title>Assignment to attachment</title>
+                  <operation source="formula" to="temp.attachment">
+                     <expression language="XQuery">sff:createAttachmentFromBase64($temp.tempFileWriterTask[1]/fileName ,util:base64Encode($input.inputText ,"UTF-8",true()), "text/xml")</expression>
+                  </operation>
+                  <link id="ksrps4aa" targetId="ksrps49x"/>
+               </assignment>
+               <service id="ksrps49x">
+                  <title>FTPWriter</title>
+                  <serviceName>AC-SFTP-Connection:FTPWriter</serviceName>
+                  <serviceGUID>aXtSfVyETCEf187ca3tLei</serviceGUID>
+                  <serviceInput>
+                     <parameter name="fileWriteTask" source="field" updatable="true">temp.tempFileWriterTask</parameter>
+                     <parameter name="attachment" source="field" updatable="true">temp.attachment</parameter>
+                  </serviceInput>
+                  <link id="ksrps49z" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>9e10f553-f91e-45e1-bd8d-9ed4567d1939</ns1:Id>
+               <ns1:Name>dummy</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-08-25T16:42:37Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-08-25T16:42:37Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "inputText": "Testme"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>izcSI6Txz6Sep1ikUIwhOL</types1:GUID>
+      <types1:DisplayName>procCase03174294</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.939Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

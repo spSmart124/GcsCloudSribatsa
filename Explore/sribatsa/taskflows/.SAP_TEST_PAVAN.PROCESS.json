@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "1sr7IaEyVfncfRqtZWZM44",
+    "name" : "SAP_TEST_PAVAN",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "sDaaabdvhxiQLnz-gt-76441231-2022-10-03T19:27:57.291Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "jdPv9oo29Mdh6GOvCWCOGs",
+    "name" : "BAPI-con",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "1seBfWoAXUCZ4nz-gt-40376734-2022-09-20T15:43:29.844Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Rajan/Rockwool_repro"
+  } ]
+}

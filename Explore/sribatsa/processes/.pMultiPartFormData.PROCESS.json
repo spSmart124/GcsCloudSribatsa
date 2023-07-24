@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "73K9rzTbeuYeYqBBhLLj0d",
+    "name" : "pMultiPartFormData",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Jr5uCMLkZlkZ2sB-gt-23107405-2023-02-01T11:09:35.76Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

@@ -1,0 +1,45 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>4qscotFgpKi9zhF-gt-30753200-2021-08-22T01:55:16.901Z::po.xml</types1:EntryId>
+      <types1:Name>Metadata-1</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-22T01:55:17Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-08-22T01:58:08Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                        isByCopy="true"
+                        name="Metadata-1">
+            <description>This object was generated from [metadata complex type] located in the [claim-1.0.schema.json.xsd] source XML schema.</description>
+            <detail>
+               <field label="TransactionTime" name="TransactionTime" type="string"/>
+               <field label="UniqueID" name="UniqueID" type="string"/>
+               <field label="IsConverted" name="IsConverted" type="boolean"/>
+               <field label="DataDepot" name="DataDepot" type="string"/>
+               <field label="PolicySymbol" name="PolicySymbol" type="string"/>
+               <field label="ClaimNumber" name="ClaimNumber" type="string"/>
+               <field label="ClaimLossType" name="ClaimLossType" type="string"/>
+               <field label="TransactionName" name="TransactionName" type="string"/>
+               <field label="Environment" name="Environment" type="string"/>
+               <field label="BusinessUnit" name="BusinessUnit" type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>aOENDG7zgm4iaM3S5SM983</types1:GUID>
+      <types1:DisplayName>Metadata</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:19.798Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

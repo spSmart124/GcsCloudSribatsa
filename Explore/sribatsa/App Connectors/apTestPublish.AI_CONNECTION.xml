@@ -1,0 +1,48 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>PVFJ2oTVMTonQYW-gt-12867343-2023-07-14T14:16:06.166Z::conn.xml</types1:EntryId>
+      <types1:Name>apTestPublish</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa_ibmmq</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2023-07-14T14:16:06Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-07-14T14:16:42Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-07-14T14:37:25Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apTestPublish/apTestPublish.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apTestPublish"
+                     label="apTestPublish"
+                     name="apTestPublish">
+            <description/>
+            <tags>.agent:sribatsa_ibmmq</tags>
+            <agent>sribatsa_ibmmq</agent>
+            <attributes>
+               <attribute encrypted="true" name="Authorization" value=""/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scEsignlive/scEsignlive_svcDef.xml"
+                               guid="gQkzM9W6peogkS4z1doCmP"
+                               name="scEsignlive"
+                               supportsConnectionTest="false"
+                               uuid="20ccf7af-9b92-4ec3-a4ac-0c9538f83b6e">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>9mhoqyhKVWEbNbBw2xERoM</types1:GUID>
+      <types1:DisplayName>apTestPublish</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.091Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

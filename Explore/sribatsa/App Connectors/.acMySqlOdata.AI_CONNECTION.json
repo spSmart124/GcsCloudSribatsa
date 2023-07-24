@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "1udJzrcSuhXgmJZdWQI4uX",
+    "name" : "acMySqlOdata",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "OEzrwn2H0Fdw8jI-gt-36864419-2023-03-21T12:57:19.659Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Changed",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

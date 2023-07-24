@@ -1,0 +1,148 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>A2UfTRgpDqotxGo-gt-43089592-2021-10-25T11:44:03.443Z::svc.xml</types1:EntryId>
+      <types1:Name>scRestApiVesion2Case04207931</types1:Name>
+      <types1:ParentFlowIds>oFxWZvWMOxBchzt-gt-19846256-2021-10-25T11:46:13.23Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-10-25T11:44:03Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-10-25T11:44:46Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-10-25T11:45:26Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scRestApiVesion2Case04207931/scRestApiVesion2Case04207931_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scRestApiVesion2Case04207931"
+                            label=""
+                            name="scRestApiVesion2Case04207931"
+                            uuid="936be01d-b8d0-42f5-9b37-f330aadc67f9">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="loginUrl"
+                                    required="true"
+                                    testWith="https://dm-us.informaticacloud.com/ma/api/v2/user/login"
+                                    type="string"/>
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="activityLogUri"
+                                    required="true"
+                                    testWith="/api/v2/activity/activityLog"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="Login"
+                       maxRedirects="100"
+                       name="Login"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="type"
+                                nogen="true"
+                                required="true"
+                                testWith="login"
+                                type="string"/>
+                     <parameter name="username"
+                                nogen="true"
+                                required="true"
+                                testWith="GcsCloudAdminSri"
+                                type="string"/>
+                     <parameter name="password"
+                                nogen="true"
+                                required="true"
+                                testWith="infa@1234"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$loginUrl}" verb="POST">
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                        <body>{{"@type": "{$type}",
+"username": "{$username}",
+"password": "{$password}"}}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="serverUrl"
+                            property="serverUrl"
+                            type="string"/>
+                     <field description=""
+                            name="icSessionId"
+                            property="icSessionId"
+                            type="string"/>
+                  </output>
+               </action>
+               <action category="Activitylog"
+                       failOnError="true"
+                       forSearch="false"
+                       label="Activitylog"
+                       maxRedirects="100"
+                       name="Activitylog"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="serverUrl"
+                                name="serverUrl"
+                                nogen="true"
+                                required="true"
+                                testWith="https://na1.dm-us.informaticacloud.com/saas"
+                                type="string"/>
+                     <parameter label="icSessionId"
+                                name="icSessionId"
+                                nogen="true"
+                                required="true"
+                                testWith="2dfN3f4qf01cflFcqtPt2E"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="{$serverUrl}{$activityLogUri}"
+                                        verb="GET">
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                           <header name="icSessionId">{$icSessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            entireResponse="true"
+                            name="outResponse"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>40qdP1gnuahf45ZCYhOFoG</types1:GUID>
+      <types1:DisplayName>scRestApiVesion2Case04207931</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.53Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

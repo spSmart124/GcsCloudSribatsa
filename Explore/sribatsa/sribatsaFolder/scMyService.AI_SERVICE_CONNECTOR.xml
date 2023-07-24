@@ -1,0 +1,79 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>mn9OQcjoYsjqluQ-gt-66504856-2021-09-02T11:05:52.205Z::svc.xml</types1:EntryId>
+      <types1:Name>scMyService</types1:Name>
+      <types1:ParentFlowIds>q2ME9paabdqpw0V-gt-68615354-2021-09-02T11:12:26.262Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-09-02T11:05:52Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-09-08T13:21:13Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-09-08T13:21:18Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scMyService/scMyService_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scMyService"
+                            label=""
+                            name="scMyService"
+                            uuid="3d3d7b50-ecc1-4151-a861-0e15551864cb">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="Url to be used"
+                                    masked="false"
+                                    name="url"
+                                    required="false"
+                                    testWith="https://run.mocky.io/v3/27f7ed75-e874-4d2b-bc34-323f0fa14625"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="getAppFormByBarcodeId"
+                       maxRedirects="100"
+                       name="getAppFormByBarcodeId"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$url}" verb="POST">
+                        <httpHeaders>
+                           <header name="Accept">application/xml</header>
+                        </httpHeaders>
+                        <body/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            entireResponse="true"
+                            name="wholeResponseAttachment"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo"/>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>bRmpIaqczQ6dQKGcuzORWM</types1:GUID>
+      <types1:DisplayName>scMyService</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.344Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

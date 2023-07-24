@@ -1,0 +1,50 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>vlEQT53nQciSrZM-gt-68343754-2022-01-07T06:16:32.349Z::conn.xml</types1:EntryId>
+      <types1:Name>apDuplicateNamedOutputFieldCase04259247</types1:Name>
+      <types1:ParentFlowIds>2kVNKSmvD4teIss-gt-6942012-2022-01-14T08:22:19.861Z::pd.xml,FuR55aaabdqpw0V-gt-35006537-2022-01-07T06:17:54.513Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-01-07T06:16:32Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-01-07T06:24:15Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apDuplicateNamedOutputFieldCase04259247/apDuplicateNamedOutputFieldCase04259247.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apDuplicateNamedOutputFieldCase04259247"
+                     label="apDuplicateNamedOutputFieldCase04259247"
+                     name="apDuplicateNamedOutputFieldCase04259247">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false"
+                          name="url"
+                          value="https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/rt/4LIW2E9dmSefqixInUK4on/pNamedResponseCase04259247"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scDuplicateNamedOutputFieldCase04259247/scDuplicateNamedOutputFieldCase04259247_svcDef.xml"
+                               guid="8ICWyQs4wOojTtq9Afpief"
+                               name="scDuplicateNamedOutputFieldCase04259247"
+                               supportsConnectionTest="false"
+                               uuid="005c63a5-0011-43bd-98f3-fbcfc9fc6d5a">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>2gjQZ9aYFGNjduYqaVfhO6</types1:GUID>
+      <types1:DisplayName>apDuplicateNamedOutputFieldCase04259247</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.814Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

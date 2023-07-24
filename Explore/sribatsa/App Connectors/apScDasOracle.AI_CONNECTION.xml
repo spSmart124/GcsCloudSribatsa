@@ -1,0 +1,67 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>3Bw8jIw8jIw8jIw-gt-50914594-2022-07-28T19:37:41.874Z::conn.xml</types1:EntryId>
+      <types1:Name>apScDasOracle</types1:Name>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-07-28T19:37:42Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-07-28T19:38:21Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apScDasOracle/apScDasOracle.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apScDasOracle"
+                     label="apScDasOracle"
+                     name="apScDasOracle">
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <agent>sribatsa-redhat.informatica.com</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="driver"
+                          value="oracle.jdbc.driver.OracleDriver"/>
+               <attribute encrypted="false"
+                          name="jdbcUrl"
+                          value="jdbc:oracle:thin:@SUGLXDB23/PDB01"/>
+               <attribute encrypted="false" name="username" value="c03066279"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false" name="initialSize" value="5"/>
+               <attribute encrypted="false" name="maxActive" value="10"/>
+               <attribute encrypted="false" name="minIdle" value="1"/>
+               <attribute encrypted="false" name="maxIdle" value="5"/>
+               <attribute encrypted="false" name="maxWait" value=""/>
+               <attribute encrypted="false" name="defaultTransactionIsolation" value=""/>
+               <attribute encrypted="false" name="minEvictableIdleTimeMillis" value=""/>
+               <attribute encrypted="false" name="numTestsPerEvictionRun" value=""/>
+               <attribute encrypted="false" name="testOnBorrow" value=""/>
+               <attribute encrypted="false" name="testOnReturn" value=""/>
+               <attribute encrypted="false" name="testWhileIdle" value=""/>
+               <attribute encrypted="false" name="validationQuery" value=""/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="true"
+                               connectorPath="project:/rt.connector/scDasOracle/scDasOracle_svcDef.xml"
+                               guid="amJ9b9zyPtai8gQypaY6w8"
+                               name="scDasOracle"
+                               plugin="DAS"
+                               supportsConnectionTest="true"
+                               uuid="d71e81dd-c610-4d8f-9be6-debb52345ce1">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>4BaYBkUBrKSliHz7MePiyh</types1:GUID>
+      <types1:DisplayName>apScDasOracle</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.614Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

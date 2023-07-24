@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "71yazKlwDeldRcQkEytv0I",
+    "name" : "BIDataService-case-03126254 - Copy 1",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "P1x46hyifPNzUze-gt-97357362-2021-07-08T14:02:57.662Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "le60EVFqxiujxhvxoArcsk",
+    "name" : "BIDataService-case-03126254 - Copy 1",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Dmhwq9bdsreK8ZA-gt-60559927-2021-07-08T14:02:57.471Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Report-as-a-Service API",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/SOAP Services"
+  } ]
+}

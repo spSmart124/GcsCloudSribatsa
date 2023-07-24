@@ -1,0 +1,38 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>BIQZdt5OjiTIKch-gt-38298814-2021-08-24T11:25:19.442Z::po.xml</types1:EntryId>
+      <types1:Name>PO_i_quote_price_list</types1:Name>
+      <types1:ParentFlowIds>3MYOuVGTiPZx1Xm-gt-43747560-2021-08-24T11:39:10.875Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-24T11:25:19Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="PO_i_quote_price_list"
+                        isByCopy="true"
+                        name="PO_i_quote_price_list">
+            <description/>
+            <tags/>
+            <detail>
+               <field label="id" name="id" type="string"/>
+               <field label="product" name="product" type="string"/>
+               <field label="start_date" name="start_date" type="string"/>
+               <field label="end_date" name="end_date" type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>cJEvgekp4SkffWMQdgtgQL</types1:GUID>
+      <types1:DisplayName>PO_i_quote_price_list</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:15.113Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

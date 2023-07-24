@@ -1,0 +1,99 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>3hJvsGRvDINciZB-gt-10148210-2021-09-27T13:54:35.872Z::svc.xml</types1:EntryId>
+      <types1:Name>scNullElementCreation</types1:Name>
+      <types1:ParentFlowIds>eMUvIw8jIw8jIw8-gt-20497266-2022-12-08T11:09:19.078Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-09-27T13:54:36Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-12-08T12:38:00Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-12-08T11:55:39Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/scNullElementCreation/scNullElementCreation_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="scNullElementCreation"
+                            label=""
+                            name="scNullElementCreation"
+                            uuid="d882063a-6090-4ef8-b935-82b0f4746081">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description=""
+                                    masked="false"
+                                    name="url"
+                                    required="false"
+                                    testWith="https://na1.ai.dm-us.informaticacloud.com/active-bpel/public/rt/4LIW2E9dmSefqixInUK4on/pOutputXmlIncompleteCase04418009"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="Test"
+                       maxRedirects="100"
+                       name="Test"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated" url="{$url}" verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            entireResponse="true"
+                            name="response"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">$po:$any</option>
+                        </options>
+                     </field>
+                     <field description="" name="modifiedResponse" type="reference">
+                        <options>
+                           <option name="referenceTo">root</option>
+                        </options>
+                        <xquery>{let $mandatoryTags := ("altIdValue")
+
+return &lt;root&gt;
+   {
+  $response/*[not(exists(index-of("AlternateIdentifier", ./name())))]
+}
+   {
+  let $AlternateIdentifiers := $response/AlternateIdentifier
+  for $AlternateIdentifier in $AlternateIdentifiers
+  return &lt;AlternateIdentifier&gt;
+    &lt;altIdValue&gt;{$AlternateIdentifier/altIdValue/text()}&lt;/altIdValue&gt;
+    {$AlternateIdentifier/*[not(exists(index-of($mandatoryTags, ./name())))]}
+  &lt;/AlternateIdentifier&gt;
+}
+&lt;/root&gt;}</xquery>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>1J4rAujIioSjqTwpKdN7kd</types1:GUID>
+      <types1:DisplayName>scNullElementCreation</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:17.266Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

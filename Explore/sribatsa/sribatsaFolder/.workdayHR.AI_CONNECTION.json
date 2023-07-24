@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "aGEH5pzTrjRburcmK3zHKx",
+    "name" : "workdayHR",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Fn2H0Fdw8jIw8jI-gt-49021147-2021-05-18T13:24:50.502Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

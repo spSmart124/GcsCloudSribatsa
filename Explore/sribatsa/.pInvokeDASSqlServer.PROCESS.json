@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "eaBYEIeSasLeNj6SIpUOyP",
+    "name" : "pInvokeDASSqlServer",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "fUEbfV3HRvsGRvD-gt-13733218-2022-12-19T14:07:48.086Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

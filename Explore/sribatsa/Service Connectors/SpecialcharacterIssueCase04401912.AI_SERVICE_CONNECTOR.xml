@@ -1,0 +1,66 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>u4JsJGD4ARW8UBM-gt-6920507-2022-11-15T04:08:33.302Z::svc.xml</types1:EntryId>
+      <types1:Name>SpecialcharacterIssueCase04401912</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-11-15T04:08:33Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-11-15T04:20:19Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="SpecialcharacterIssueCase04401912"
+                            label=""
+                            name="SpecialcharacterIssueCase04401912"
+                            uuid="d0634bdd-eb2f-4ba1-8c98-aa08fa482921">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"/>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="GET"
+                       maxRedirects="100"
+                       name="GET"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://wd2-impl-services1.workday.com/ccx/service/customreport2/wycliffe1/MEL_HULL/Workday_to_CBC_Worker_Data_Test?format=json"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Authorization">Basic SVNVX1dvcmtkYXlfQ0JDX1dvcmtlcl9EYXRhOkNcIy0zc2UpMHpaPSxVWTs2XmRJ</header>
+                           <header name="Accept">*/*</header>
+                           <header name="Accept-Encoding">"gzip, deflate, br"</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects/>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>0rNxz6X1z4fk68oDIIIKqo</types1:GUID>
+      <types1:DisplayName>SpecialcharacterIssueCase04401912</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:19.675Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

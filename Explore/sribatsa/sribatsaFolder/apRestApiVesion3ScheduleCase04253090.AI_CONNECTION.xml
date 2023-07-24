@@ -1,0 +1,55 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>bcgiciT6sFsdsFs-gt-36255705-2021-12-28T14:10:28.018Z::conn.xml</types1:EntryId>
+      <types1:Name>apRestApiVesion3ScheduleCase04253090</types1:Name>
+      <types1:ParentFlowIds>gk1AhrswVYx8R8W-gt-35767978-2021-12-28T14:15:11.108Z::pd.xml,goKlIabchDxomUh-gt-19106584-2021-12-28T15:22:44.111Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>REQUIRE_UPDATE</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-28T14:10:28Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-12-28T15:20:59Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apRestApiVesion3ScheduleCase04253090/apRestApiVesion3ScheduleCase04253090.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apRestApiVesion3ScheduleCase04253090"
+                     label="apRestApiVesion3ScheduleCase04253090"
+                     name="apRestApiVesion3ScheduleCase04253090">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false"
+                          name="loginUrl"
+                          value="https://dm-us.informaticacloud.com/saas/public/core/v3/login"/>
+               <attribute encrypted="false" name="username" value="GcsCloudAdminSri"/>
+               <attribute encrypted="true" name="password" value=""/>
+               <attribute encrypted="false"
+                          name="scheduleUri"
+                          value="/public/core/v3/schedule"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/scRestApiVesion3ScheduleCase04253090/scRestApiVesion3ScheduleCase04253090_svcDef.xml"
+                               guid="0DQDKpQARUcjYv5rldsdeL"
+                               name="scRestApiVesion3ScheduleCase04253090"
+                               supportsConnectionTest="false"
+                               uuid="1b791136-2ee0-4732-ad64-a25e2b7ead3e">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>1b8xITb5d59drKogGF73yp</types1:GUID>
+      <types1:DisplayName>apRestApiVesion3ScheduleCase04253090</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:21.906Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

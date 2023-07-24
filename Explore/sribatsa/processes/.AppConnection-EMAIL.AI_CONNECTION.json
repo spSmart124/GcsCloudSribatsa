@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "6NE9EWaIGp4jORc9M4bQCt",
+    "name" : "AppConnection-EMAIL",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "NoC2g0aaaaaaaaa-gt-58672150-2023-06-09T21:32:28.634Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "4tya68on5aZeVuXmKwVG6p",
+    "name" : "SC_EMAIL",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "cgfVzeHbcjqbdpI-gt-58671092-2023-06-09T21:31:47.032Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/processes"
+  } ]
+}

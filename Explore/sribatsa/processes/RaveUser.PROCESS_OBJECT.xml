@@ -1,0 +1,165 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>OZduD2L5SeE1KoJ-gt-22465671-2022-12-28T12:05:26.54Z::po.xml</types1:EntryId>
+      <types1:Name>RaveUser-1</types1:Name>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-12-28T12:05:27Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        xmlns:aetgt="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:internal2="http://schemas.informatica.com/socrates/processobject/factory/2019/07/internal/infaProcessObjectFactory.xsd"
+                        xmlns:ns2="http://schemas.active-endpoints.com/appmodules/screenflow/2011/07/avosCommon.xsd"
+                        isByCopy="true"
+                        name="RaveUser-1">
+            <description>This object was generated from [raveUser complex type] located in the [serviceSchema.xsd.xml] source XML schema.</description>
+            <detail>
+               <field label="firstName"
+                      name="firstName"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field label="lastName"
+                      name="lastName"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field label="email"
+                      name="email"
+                      nullable="false"
+                      required="true"
+                      type="string"/>
+               <field label="alternateEmail1"
+                      name="alternateEmail1"
+                      nullable="false"
+                      type="string"/>
+               <field label="alternateEmail2"
+                      name="alternateEmail2"
+                      nullable="false"
+                      type="string"/>
+               <field label="sisId" name="sisId" nullable="false" type="string"/>
+               <field label="gender" name="gender" nullable="false" type="picklist">
+                  <options>
+                     <option name="values">[{"label":"FEMALE","value":"FEMALE"},{"label":"MALE","value":"MALE"},{"label":"UNKNOWN","value":"UNKNOWN"}]</option>
+                  </options>
+               </field>
+               <field label="ssoId" name="ssoId" nullable="false" type="string"/>
+               <field label="languagePreference"
+                      name="languagePreference"
+                      nullable="false"
+                      type="picklist">
+                  <options>
+                     <option name="values">[{"label":"ar","value":"ar"},{"label":"bg","value":"bg"},{"label":"ca","value":"ca"},{"label":"cs","value":"cs"},{"label":"da","value":"da"},{"label":"de","value":"de"},{"label":"el","value":"el"},{"label":"en","value":"en"},{"label":"es","value":"es"},{"label":"fi","value":"fi"},{"label":"fr","value":"fr"},{"label":"he","value":"he"},{"label":"hi","value":"hi"},{"label":"hr","value":"hr"},{"label":"id","value":"id"},{"label":"it","value":"it"},{"label":"ja","value":"ja"},{"label":"ko","value":"ko"},{"label":"lt","value":"lt"},{"label":"lv","value":"lv"},{"label":"nl","value":"nl"},{"label":"no","value":"no"},{"label":"pl","value":"pl"},{"label":"pt","value":"pt"},{"label":"ro","value":"ro"},{"label":"ru","value":"ru"},{"label":"sk","value":"sk"},{"label":"sl","value":"sl"},{"label":"sr","value":"sr"},{"label":"sv","value":"sv"},{"label":"tl","value":"tl"},{"label":"uk","value":"uk"},{"label":"vi","value":"vi"},{"label":"zh","value":"zh"},{"label":"zh_tw","value":"zh_tw"}]</option>
+                  </options>
+               </field>
+               <field label="administrationRole"
+                      name="administrationRole"
+                      nullable="false"
+                      type="picklist">
+                  <options>
+                     <option name="values">[{"label":"BROADCAST_ADMIN","value":"BROADCAST_ADMIN"},{"label":"FACULTY","value":"FACULTY"},{"label":"LIST_ADMIN","value":"LIST_ADMIN"},{"label":"SITE_ADMIN","value":"SITE_ADMIN"},{"label":"USER","value":"USER"}]</option>
+                  </options>
+               </field>
+               <field label="role" name="role" nullable="false" type="string"/>
+               <field label="mobileNumber1"
+                      name="mobileNumber1"
+                      nullable="false"
+                      type="string"/>
+               <field label="mobileCarrier1"
+                      name="mobileCarrier1"
+                      nullable="false"
+                      type="int"/>
+               <field label="mobile1Confirmed"
+                      name="mobile1Confirmed"
+                      nullable="false"
+                      type="boolean"/>
+               <field label="useMobile1ForVoice"
+                      name="useMobile1ForVoice"
+                      nullable="false"
+                      type="boolean"/>
+               <field label="mobileNumber2"
+                      name="mobileNumber2"
+                      nullable="false"
+                      type="string"/>
+               <field label="useMobile2ForVoice"
+                      name="useMobile2ForVoice"
+                      nullable="false"
+                      type="boolean"/>
+               <field label="mobileCarrier2"
+                      name="mobileCarrier2"
+                      nullable="false"
+                      type="int"/>
+               <field label="useMobile3ForVoice"
+                      name="useMobile3ForVoice"
+                      nullable="false"
+                      type="boolean"/>
+               <field label="mobileNumber3"
+                      name="mobileNumber3"
+                      nullable="false"
+                      type="string"/>
+               <field label="mobileCarrier3"
+                      name="mobileCarrier3"
+                      nullable="false"
+                      type="int"/>
+               <field label="voiceOnlyPhoneNumber1"
+                      name="voiceOnlyPhoneNumber1"
+                      nullable="false"
+                      type="string"/>
+               <field label="voiceOnlyPhoneExtension1"
+                      name="voiceOnlyPhoneExtension1"
+                      nullable="false"
+                      type="string"/>
+               <field label="voiceOnlyPhoneNumber2"
+                      name="voiceOnlyPhoneNumber2"
+                      nullable="false"
+                      type="string"/>
+               <field label="voiceOnlyPhoneExtension2"
+                      name="voiceOnlyPhoneExtension2"
+                      nullable="false"
+                      type="string"/>
+               <field label="voiceOnlyPhoneNumber3"
+                      name="voiceOnlyPhoneNumber3"
+                      nullable="false"
+                      type="string"/>
+               <field label="voiceOnlyPhoneExtension3"
+                      name="voiceOnlyPhoneExtension3"
+                      nullable="false"
+                      type="string"/>
+               <field label="institutionRole"
+                      name="institutionRole"
+                      nullable="false"
+                      type="string"/>
+               <field label="userAttribute1"
+                      name="userAttribute1"
+                      nullable="false"
+                      type="string"/>
+               <field label="userAttribute2"
+                      name="userAttribute2"
+                      nullable="false"
+                      type="string"/>
+               <field label="userAttribute3"
+                      name="userAttribute3"
+                      nullable="false"
+                      type="string"/>
+               <field label="userAttribute4"
+                      name="userAttribute4"
+                      nullable="false"
+                      type="string"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>fSFROYIKrgqgJ1p5YpdeMs</types1:GUID>
+      <types1:DisplayName>RaveUser</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.802Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

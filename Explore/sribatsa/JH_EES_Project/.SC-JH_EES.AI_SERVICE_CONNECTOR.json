@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "0dFTQLnJajAlmxyVWWkEmL",
+    "name" : "SC-JH_EES",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "WHK80FIRi92qBbb-gt-18151106-2021-07-22T16:17:40.778Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

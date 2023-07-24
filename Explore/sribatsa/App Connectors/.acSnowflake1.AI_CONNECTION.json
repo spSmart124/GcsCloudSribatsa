@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "1U63abF9FvXgWMkFHWDNyk",
+    "name" : "acSnowflake1",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "htPk7HNCnchKGXS-gt-27164037-2023-04-19T09:50:59.114Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

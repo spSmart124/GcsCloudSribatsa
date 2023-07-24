@@ -1,0 +1,122 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>3MYOuVGTiPZx1Xm-gt-43747560-2021-08-24T11:39:10.875Z::pd.xml</types1:EntryId>
+      <types1:Name>procCase3152361</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-window,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-08-24T11:39:11Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-08-24T13:30:14Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-08-24T13:30:41Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.procCase3152361/procCase3152361.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="procCase3152361"
+                  name="procCase3152361"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:sribatsa-window,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="out_i_quote_price_list" type="objectlist">
+                  <options>
+                     <option name="referenceTo">$po:PO_i_quote_price_list</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">cJEvgekp4SkffWMQdgtgQL</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="" name="tempRecordList" type="objectlist">
+                  <options>
+                     <option name="referenceTo">acMySqlServerCase03151095:vw_i_quote_price_list</option>
+                     <option hide="true" name="multiSelect">true</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">1GtQkmXWu6Vlpvaou3Un8k</option>
+                  </options>
+               </field>
+               <field description="" name="srch_Quote_Start_Date" type="date">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>sribatsa-window</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kspzrl81" targetId="kspzrl80"/>
+               </start>
+               <assignment id="kspzrl80">
+                  <title>Assignment to srch_Quote_Start_Date</title>
+                  <operation source="constant" to="temp.srch_Quote_Start_Date">2021-07-08</operation>
+                  <link id="kspzrl8m" targetId="kspzrl8l"/>
+               </assignment>
+               <assignment id="kspzrl8l">
+                  <title>Assignment to tempRecordList</title>
+                  <operation source="list" to="temp.tempRecordList">
+                     <query advanceQuery="false"
+                            from="acMySqlServerCase03151095:vw_i_quote_price_list">
+                        <where>start_date={$temp.srch_Quote_Start_Date}</where>
+                     </query>
+                  </operation>
+                  <link id="kspzrl8x" targetId="kspzrl8w"/>
+               </assignment>
+               <assignment id="kspzrl8w">
+                  <title>Assignment to out_i_quote_price_list</title>
+                  <operation source="formula" to="output.out_i_quote_price_list">
+                     <expression language="XQuery">let $dummy := "dummy"
+for $record in $temp.tempRecordList 
+return &lt;PO_i_quote_price_list&gt;
+   &lt;id&gt;{$record/id}&lt;/id&gt;
+   &lt;product&gt;{$record/product}&lt;/product&gt;
+   &lt;start_date&gt;{fn:adjust-dateTime-to-timezone($record/start_date, xs:dayTimeDuration("PT0H"))}&lt;/start_date&gt;
+   &lt;end_date&gt;{$record/end_date} : {fn:current-dateTime()} : {date:getTimeZone()}&lt;/end_date&gt;
+&lt;/PO_i_quote_price_list&gt;
+
+</expression>
+                  </operation>
+                  <link id="kspzrl8y" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>c30d1fc5-e6b5-4884-b00a-4d820276ab99</ns1:Id>
+               <ns1:Name>dummy</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-08-24T11:39:42Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-08-24T11:39:42Z</ns1:ModificationDate>
+               <ns1:Data format="json">{}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>4v4wM6FztmZlIVJT3Hrsqx</types1:GUID>
+      <types1:DisplayName>procCase3152361</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:21.782Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

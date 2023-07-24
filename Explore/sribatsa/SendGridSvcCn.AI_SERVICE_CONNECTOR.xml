@@ -1,0 +1,141 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>lluk1SwEYrwn2H0-gt-93576499-2021-07-07T10:43:52.178Z::svc.xml</types1:EntryId>
+      <types1:Name>SendGridSvcCn</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-07T10:43:52Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="true"
+                            debug="false"
+                            displayName="SendGridSvcCn"
+                            label=""
+                            name="SendGridSvcCn"
+                            uuid="90ef7f58-6e06-44b1-ab15-d18846736fd1">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="The Bearer Token used for authorization to your SendGrid Account"
+                                    masked="true"
+                                    name="BearerToken"
+                                    required="true"
+                                    testWith=""
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category=""
+                       failOnError="true"
+                       forSearch="false"
+                       label="SendEmail"
+                       maxRedirects="100"
+                       name="SendEmail"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter name="root"
+                                required="true"
+                                testWith="&lt;root&gt;&#xA;&#x9;&lt;personalizations&gt;&#xA;&#x9;&#x9;&lt;to&gt;&#xA;&#x9;&#x9;&#x9;&lt;email&gt;xmaskuli@mailinator.com&lt;/email&gt;&#xA;&#x9;&#x9;&lt;/to&gt;&#xA;&#x9;&lt;/personalizations&gt;&#xA;&#x9;&#xA;&#x9;&lt;subject&gt;Sending with SendGrid is Fun&lt;/subject&gt;&#xA;&#x9;&#x9;&lt;content&gt;&#xA;&#x9;&#x9;&#x9;&lt;type&gt;text/plain&lt;/type&gt;&#xA;&#x9;&#x9;&#x9;&lt;value&gt;and easy to do anywhere, even with cURL&lt;/value&gt;&#xA;&#x9;&lt;/content&gt;&#xA;&lt;/root&gt;"
+                                type="reference">
+                        <options>
+                           <option name="referenceTo">root</option>
+                        </options>
+                     </parameter>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://api.sendgrid.com/v3/mail/send"
+                                        verb="POST">
+                        <httpHeaders>
+                           <header name="Authorization">Bearer {$BearerToken}</header>
+                        </httpHeaders>
+                        <body generateUsing="UnwrappedJSON" preserveJsonStringFormatting="true"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output/>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="root">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="personalizations" type="objectlist">
+                        <options>
+                           <option name="referenceTo">personalizations</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="from" type="reference">
+                        <options>
+                           <option name="referenceTo">from</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="subject" type="string"/>
+                     <field name="content" type="objectlist">
+                        <options>
+                           <option name="referenceTo">content</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="personalizations">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="to" type="objectlist">
+                        <options>
+                           <option name="referenceTo">to</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="to">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="email" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="from">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="email" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="content">
+                  <description>An automatically generated process object</description>
+                  <detail>
+                     <field name="type" type="string"/>
+                     <field name="value" type="string"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>8fAaPOoFWGYjerYJKDbNUa</types1:GUID>
+      <types1:DisplayName>SendGridSvcCn</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:14.156Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

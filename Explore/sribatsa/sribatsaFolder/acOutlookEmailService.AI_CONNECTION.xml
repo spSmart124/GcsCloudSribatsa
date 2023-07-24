@@ -1,0 +1,69 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>lP0ttNfWoAXUCZ4-gt-18899977-2021-06-18T15:43:19.191Z::conn.xml</types1:EntryId>
+      <types1:Name>acOutlookEmailService</types1:Name>
+      <types1:ParentFlowIds>06xqPVEQrXhNUdy-gt-26173845-2023-02-08T08:54:20.984Z::pd.xml,1fPHy1MuzBq695k-gt-26091216-2023-02-08T09:14:08.43Z::pd.xml,2PKDC0hCHbf2XZP-gt-27491-2022-08-11T04:35:20.858Z::pd.xml,5uxTtlI20hELlBW-gt-33369043-2021-06-18T15:43:19.907Z::pd.xml,5YqTNkSmbduaa-gt-7694674-2023-07-20T08:53:51.915Z::pd.xml,6beFJ7XhFtybdua-gt-24560867-2023-02-07T13:14:57.922Z::pd.xml,6Hbf13ErhNzUzeA-gt-9860907-2022-08-15T09:53:54.919Z::pd.xml,6pCtbdsreK8ZAZf-gt-20025122-2023-01-31T10:41:00.93Z::pd.xml,8oX9cjIw8jIw8jI-gt-25857094-2022-05-02T08:20:57.955Z::pd.xml,aabbeJOSM8NciZB-gt-1768879-2022-05-12T08:49:28.011Z::pd.xml,AYSsO7RY6pkTjFI-gt-56039700-2022-05-10T16:18:34.422Z::pd.xml,CCVf4VQT53nQciS-gt-587515-2023-02-09T09:48:47.452Z::pd.xml,CeKF96xZ6or3rp3-gt-26133985-2022-05-02T08:10:10.459Z::pd.xml,dq6beFJ7XhFtybd-gt-1797295-2022-05-12T09:31:10.51Z::pd.xml,dqcgm8lnCmp6oIu-gt-55566884-2022-03-31T15:05:29.051Z::pd.xml,draaaaaa-gt-28442542-2022-05-25T12:23:35.053Z::pd.xml,duR55aaabdqpw0V-gt-48582895-2023-07-07T05:27:57.057Z::pd.xml,HzSZkL0jmu6lS01-gt-16420696-2022-05-02T09:39:05.542Z::pd.xml,JcnZZQSBi9zhFty-gt-4922306-2022-05-12T09:14:05.66Z::pd.xml,KlIabchDxomUhGd-gt-88263445-2023-06-09T21:20:29.593Z::pd.xml,MKQr3rp3yD7tyGo-gt-7574441-2023-06-15T15:23:25.621Z::pd.xml,OVuslqAOclkZ2sB-gt-33148584-2023-02-28T12:30:43.646Z::pd.xml,rVTxhFdw8jIw8jI-gt-14379-2022-08-11T05:06:12.788Z::pd.xml,uWG6UtLnzYLnzYL-gt-55495370-2022-03-31T14:35:10.328Z::pd.xml,VAIqy3eHRi92qBb-gt-21555518-2023-04-17T12:43:55.764Z::pd.xml,wW6jKsJlv58pIO3-gt-19913-2022-08-11T04:59:40.357Z::pd.xml,XJvQHqlGwm7iUQb-gt-57294760-2022-04-01T07:39:24.797Z::pd.xml,yYwDxomUhGdwOLI-gt-8966819-2022-05-26T10:06:27.397Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-06-18T15:43:19Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-06-15T15:46:51Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-06-15T15:47:27Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/acOutlookEmailService/acOutlookEmailService.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acOutlookEmailService"
+                     label="acOutlookEmailService"
+                     name="acOutlookEmailService">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false" name="hostName" value="smtp-mail.outlook.com"/>
+               <attribute encrypted="false" name="port" value="587"/>
+               <attribute encrypted="false"
+                          name="testToAddress"
+                          value="pavansaipolakam20@gmail.com"/>
+               <attribute encrypted="false"
+                          name="fromAddress"
+                          value="outlook_71C3C67127A69AA2@outlook.com"/>
+            </attributes>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="false"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           supportsPublishSkipMetadataRefresh="false"
+                           type="Email"
+                           uuid="9a8a03d0-0437-46c4-bedf-70acb4173c1f">
+               <description>Provides connections to email host servers.</description>
+            </javaConnector>
+            <authentication type="$infa_basicform">
+               <attributes>
+                  <attribute encrypted="false" name="Authentication" value="Enable"/>
+                  <attribute encrypted="false"
+                             name="username"
+                             value="spradhan.pradhan8@gmail.com"/>
+                  <attribute encrypted="true" name="password" value=""/>
+                  <attribute encrypted="false" name="security" value="TLS"/>
+                  <attribute encrypted="false" name="connectionTimeout" value="300000"/>
+               </attributes>
+            </authentication>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>6RnqhiL58CRehCryxDJaSk</types1:GUID>
+      <types1:DisplayName>acOutlookEmailService</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.715Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,44 @@
+{
+  "objectInfo" : {
+    "id" : "6g6xdzNGfBqiPmuYq30JgZ",
+    "name" : "apScDynamicElementValueExtractCase04349392",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "UfTRgpDqotxGomU-gt-12116415-2022-07-18T19:02:37.742Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "15l3htaTvCffGzUFlVPVcJ",
+    "name" : "scDynamicElementValueExtractCase04349392",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "TbeJOSM8NciZBpD-gt-11810599-2022-07-18T15:27:15.728Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/Service Connectors"
+  } ]
+}

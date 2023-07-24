@@ -1,0 +1,106 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ck8jKBmeK3jhBjo-gt-49485751-2021-11-24T06:50:40.041Z::conn.xml</types1:EntryId>
+      <types1:Name>acAmazonS3</types1:Name>
+      <types1:ParentFlowIds>48beAzu2JQhtGci-gt-49629603-2022-07-28T07:20:48.94Z::pd.xml,7YGeFRqXpIW7WHK-gt-60263363-2022-09-03T07:04:59.371Z::pd.xml,kVf4VQT53nQciSr-gt-35871801-2023-01-06T11:25:58.166Z::pd.xml,SM8NciZBpDUQbgd-gt-31587936-2023-01-03T14:54:17.718Z::pd.xml,vFpGY2KsJlv58pI-gt-19695911-2022-06-10T16:03:16.339Z::pd.xml,Wf3A1vyoY2G7QnG-gt-31585134-2023-01-03T14:52:35.77Z::pd.xml,XUfTRgpDqotxGom-gt-49520995-2021-11-24T07:10:39.792Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat.informatica.com</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-11-24T06:50:40Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2023-01-25T15:03:15Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2023-01-25T15:03:59Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/acAmazonS3/acAmazonS3.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="acAmazonS3"
+                     label="acAmazonS3"
+                     name="acAmazonS3">
+            <description/>
+            <tags>.agent:sribatsa-redhat.informatica.com</tags>
+            <agent>sribatsa-redhat.informatica.com</agent>
+            <attributes>
+               <attribute encrypted="false" name="accessKey" value="AKIAQC25YNDWXWNCG472"/>
+               <attribute encrypted="true" name="secretKey" value=""/>
+               <attribute encrypted="false" name="policy" value=""/>
+               <attribute encrypted="false"
+                          name="amazonS3Endpoint"
+                          value="s3.us-west-2.amazonaws.com"/>
+               <attribute encrypted="false" name="region" value="us-west-2"/>
+               <attribute encrypted="false" name="encryptObjects" value="false"/>
+               <attribute encrypted="false" name="encryptionAlgorithm" value=""/>
+               <attribute encrypted="true" name="encryptionKey" value=""/>
+               <attribute encrypted="true" name="encryptionPassword" value=""/>
+            </attributes>
+            <consumers>
+               <consumer enabled="true" name="AwsS3Monitor" typeName="AwsS3Monitor">
+                  <description>This event source can be used to read new objects from Amazon S3 storage.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="bucketName" value="iam.qa.bucket"/>
+                     <attribute encrypted="false" name="prefix" value="gcs/sribatsa/src/"/>
+                     <attribute encrypted="false" name="initialDelay" value="1"/>
+                     <attribute encrypted="false" name="delay" value="1"/>
+                     <attribute encrypted="false" name="maxMessagesPerPoll" value=""/>
+                     <attribute encrypted="false" name="deleteReadObjects" value="No"/>
+                     <attribute encrypted="false" name="moveToBucket" value=""/>
+                     <attribute encrypted="false" name="movePrefix" value=".ae-done/"/>
+                     <attribute encrypted="false" name="moveFailedToBucket" value=""/>
+                     <attribute encrypted="false" name="moveFailedPrefix" value=".ae-error/"/>
+                     <attribute encrypted="false" name="directoryName" value=""/>
+                     <attribute encrypted="false" name="directoryNameFailed" value=""/>
+                     <attribute encrypted="false" name="maxRetryInterval" value="3600"/>
+                     <attribute encrypted="false" name="contentFormat" value="Ignore"/>
+                     <attribute encrypted="false" name="simplifyContent" value="false"/>
+                     <attribute encrypted="false" name="singleObjectContent" value="false"/>
+                  </attributes>
+               </consumer>
+            </consumers>
+            <producers>
+               <producer enabled="true" name="TargetAwsS3Writer" typeName="AwsS3Writer">
+                  <description>Use this event target to write new objects to the Amazon S3 storage.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="bucketName" value="iam.qa.bucketIncorrect"/>
+                     <attribute encrypted="false" name="storageClass" value="STANDARD"/>
+                  </attributes>
+               </producer>
+               <producer enabled="true"
+                         name="AwsS3DelimitedContentWriter"
+                         typeName="AwsS3DelimitedContentWriter">
+                  <description>Event target that serializes process objects to delimited content files (for example, CSV) and stores them in an Amazon S3 bucket.</description>
+                  <attributes>
+                     <attribute encrypted="false" name="bucketName" value="iam.qa.bucket"/>
+                     <attribute encrypted="false" name="storageClass" value="STANDARD"/>
+                     <attribute encrypted="false" name="delimiter" value=","/>
+                     <attribute encrypted="false" name="textQualifier" value="&#34;"/>
+                     <attribute encrypted="false" name="skipHeaders" value="false"/>
+                     <attribute encrypted="false" name="lineEnding" value="Unix"/>
+                  </attributes>
+               </producer>
+            </producers>
+            <javaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                           agentOnly="true"
+                           plugin="Camel"
+                           supportsConnectionTest="true"
+                           supportsDataPreview="false"
+                           supportsOData="false"
+                           supportsPublishSkipMetadataRefresh="false"
+                           type="AWSS3"
+                           uuid="fb38e8f3-3552-4837-8bcd-6f938183d3dd">
+               <description>Amazon Simple Storage Service (S3) Connector.</description>
+            </javaConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>ijE0pQqz8wakRpRvzqrhys</types1:GUID>
+      <types1:DisplayName>acAmazonS3</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.844Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

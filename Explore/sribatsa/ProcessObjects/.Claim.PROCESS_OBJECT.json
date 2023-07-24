@@ -1,0 +1,284 @@
+{
+  "objectInfo" : {
+    "id" : "9TCWwWua9inccpcCqNeHeZ",
+    "name" : "Claim",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "yhBWJgki8MZgpDq-gt-31335432-2021-08-22T01:55:13.401Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "ccD6kpeCISIj0651u8mR6B",
+    "name" : "Policy",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Tp5OjG4abck0Kn7-gt-30753269-2021-08-22T01:55:17.736Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "fK9xrBlrdSQflf9j2KxLoN",
+    "name" : "UnderlyingCoverage",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "x2iUFpr1Iw8jIw8-gt-35825271-2021-08-22T01:55:17.385Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "726ZycGflFJfi0EpsZG7E7",
+    "name" : "Address",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "wNRMloVVVVVVVVV-gt-31335458-2021-08-22T01:55:13.55Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "0T8YMr2AM7qfYEcDieLjeY",
+    "name" : "FullDenialReason",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "wNRMloVVVVVVVVV-gt-35825263-2021-08-22T01:55:17.355Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "2vRrQpp30mTlNaxH5XTDuD",
+    "name" : "ThirdPartyAdmin",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "WLU6S6fPAreFRqX-gt-30753279-2021-08-22T01:55:17.78Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "35htGpScVuYbaF19kneDuH",
+    "name" : "OtherBenefit",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "BbeAzu2JQhtGci3-gt-35825066-2021-08-22T01:55:13.447Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "aOENDG7zgm4iaM3S5SM983",
+    "name" : "Metadata",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "4qscotFgpKi9zhF-gt-30753200-2021-08-22T01:55:16.901Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "0MZJzUj8RC6iFcLtZ19OU6",
+    "name" : "Official",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "UrXoE9paabdqpw0-gt-30753153-2021-08-22T01:55:16.743Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "hC4BIfvsqqVgVGCTzoDMUZ",
+    "name" : "ConcurrentEmployment",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "EVMTonQYWeIssjq-gt-30753322-2021-08-22T01:55:18.487Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "lVKYOQDm0y0inRELgSaG8N",
+    "name" : "EmploymentData",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "dxsnCmp6oIuQaaa-gt-31335659-2021-08-22T01:55:18.061Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "2Gp35UpgYgGgeLa3S2fiSl",
+    "name" : "ClaimContact",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "sI2HBxZmtK9hCHb-gt-35825032-2021-08-22T01:55:13.292Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "7d014w2AyfreitVeg3CG2B",
+    "name" : "WCWaitingPeriod",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Qf4TsrT2htghGZ5-gt-30753145-2021-08-22T01:55:16.693Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  }, {
+    "id" : "6jGJzdiO0RWifAj3NyPpWs",
+    "name" : "Incident",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "LFKi9zhFtybduaa-gt-12315866-2021-08-22T01:55:16.612Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sribatsa/ProcessObjects"
+  } ]
+}

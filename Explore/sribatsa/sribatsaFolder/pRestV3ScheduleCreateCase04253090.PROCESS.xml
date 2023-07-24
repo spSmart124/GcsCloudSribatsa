@@ -1,0 +1,112 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>goKlIabchDxomUh-gt-19106584-2021-12-28T15:22:44.111Z::pd.xml</types1:EntryId>
+      <types1:Name>pRestV3ScheduleCreateCase04253090</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-28T15:22:44Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-12-28T15:24:49Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-12-28T15:24:54Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.pRestV3ScheduleCreateCase04253090/pRestV3ScheduleCreateCase04253090.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="pRestV3ScheduleCreateCase04253090"
+                  name="pRestV3ScheduleCreateCase04253090"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="name" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="startTime" required="true" type="datetime">
+                  <options>
+                     <option name="thirtyMinutesIncrement">true</option>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="interval" required="true" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="frequency" required="true" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="kxq9brnd" targetId="kxq9brnc"/>
+               </start>
+               <service id="kxq9brnc">
+                  <title>Login</title>
+                  <serviceName>apRestApiVesion3ScheduleCase04253090:Login</serviceName>
+                  <serviceGUID>1b8xITb5d59drKogGF73yp</serviceGUID>
+                  <serviceInput/>
+                  <link id="kxq9brne" targetId="kxq9brn1"/>
+               </service>
+               <service id="kxq9brn1">
+                  <title>CreateSchedule</title>
+                  <serviceName>apRestApiVesion3ScheduleCase04253090:CreateSchedule</serviceName>
+                  <serviceGUID>1b8xITb5d59drKogGF73yp</serviceGUID>
+                  <serviceInput>
+                     <parameter name="baseApiUrl" source="field" updatable="true">output.baseApiUrl</parameter>
+                     <parameter name="sessionId" source="field" updatable="true">output.sessionId</parameter>
+                     <parameter name="name" source="field" updatable="true">input.name</parameter>
+                     <parameter name="startTime" source="field" updatable="true">input.startTime</parameter>
+                     <parameter name="interval" source="field" updatable="true">input.interval</parameter>
+                     <parameter name="frequency" source="field" updatable="true">input.frequency</parameter>
+                  </serviceInput>
+                  <link id="kxq9brn3" targetId="c"/>
+               </service>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>c4caa483-bea6-42da-8e25-25d28f156576</ns1:Id>
+               <ns1:Name>Input</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2021-12-28T15:27:09Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2021-12-28T15:27:33Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "name": "ScheduleFromRestV3Process",
+	 "startTime": "2022-09-17T00:00:00.000Z",
+	 "interval": "Minutely",
+	 "frequency": 10
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>93KFcuJVzsKjB1dCFUt2ss</types1:GUID>
+      <types1:DisplayName>pRestV3ScheduleCreateCase04253090</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:27.023Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

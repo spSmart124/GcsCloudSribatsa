@@ -1,0 +1,64 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>HWOMzeHbcjqbdpI-gt-33225505-2021-12-01T13:07:53.545Z::po.xml</types1:EntryId>
+      <types1:Name>PO-Respuesta-STE</types1:Name>
+      <types1:ParentFlowIds>zREhNWIsoZduD2L-gt-67631267-2021-12-01T13:07:55.408Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-12-01T13:07:54Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="PO-Respuesta-STE"
+                        isByCopy="true"
+                        name="PO-Respuesta-STE">
+            <description/>
+            <tags/>
+            <detail>
+               <field label="Instancia"
+                      name="Instancia"
+                      nullable="false"
+                      required="false"
+                      type="string"/>
+               <field label="STE_ID"
+                      name="STE_ID"
+                      nullable="false"
+                      required="false"
+                      type="string"/>
+               <field label="Codigo"
+                      name="Codigo"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="Mensaje"
+                      name="Mensaje"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="Fecha_Respuesta"
+                      name="Fecha_Respuesta"
+                      nullable="false"
+                      required="false"
+                      type="string"/>
+               <field label="IICS"
+                      name="IICS"
+                      nullable="false"
+                      required="false"
+                      type="int"/>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>7PoaEbsfm69lUlJtPiFQQ2</types1:GUID>
+      <types1:DisplayName>PO-Respuesta-STE</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:18.931Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

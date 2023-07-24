@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "5eGJ5YR2SWbhDCJNxsXZqm",
+    "name" : "acMySqlServer1",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "eBqluQgabcjk91p-gt-125353630-2021-06-07T05:11:20.067Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}

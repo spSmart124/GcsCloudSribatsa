@@ -1,0 +1,48 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>yNnQMMnGbciZBpD-gt-86507029-2021-09-09T16:53:18.395Z::conn.xml</types1:EntryId>
+      <types1:Name>apEnrollment</types1:Name>
+      <types1:ParentFlowIds>KCv2jop81V4Adyp-gt-53272701-2021-09-09T16:55:00.759Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-09-09T16:53:18Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-09-09T16:53:45Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/apEnrollment/apEnrollment.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="apEnrollment"
+                     label="apEnrollment"
+                     name="apEnrollment">
+            <description/>
+            <tags/>
+            <agent/>
+            <attributes>
+               <attribute encrypted="false" name="url" value=""/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/serviceConnectorEnrollment/serviceConnectorEnrollment_svcDef.xml"
+                               guid="9rtL7CDCyGkhANnpxYC1eq"
+                               name="serviceConnectorEnrollment"
+                               supportsConnectionTest="false"
+                               uuid="653bc6df-530f-49fe-ab8d-ab829e7a312c">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>9Rw7K7qaIuHhxMMiHIsTQ9</types1:GUID>
+      <types1:DisplayName>apEnrollment</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:23.223Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

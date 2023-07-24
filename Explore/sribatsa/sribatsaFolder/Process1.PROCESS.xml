@@ -1,0 +1,134 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>TEyE0aaaaaaaaaa-gt-54100021-2022-05-10T10:23:15.738Z::pd.xml</types1:EntryId>
+      <types1:Name>Process1-1</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:ppolakam,.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2022-05-10T10:23:16Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2022-05-12T05:26:46Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2022-05-12T05:26:57Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process1-1/Process1-1.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Process1"
+                  name="Process1-1"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.agent:ppolakam,.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="POND_AUDIT_KEY" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="SSR_ID" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="APP_SYSTEM_NAME" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="TABLE_NAME" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="PROCESS_ID" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="LOAD_STATUS" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+               <parameter description="" name="AUDIT_KEY_PRIM" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="" name="op" type="reference">
+                  <options>
+                     <option name="referenceTo">appConnectionMySqlServerWindows:Customer</option>
+                     <option name="required">false</option>
+                     <option name="isCopy">true</option>
+                     <option name="guid">220e4lFDe60gwQbXZmITcs</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <targetLocation>ppolakam</targetLocation>
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l3007k81" targetId="l3007k80"/>
+               </start>
+               <create id="l3007k80">
+                  <title>POND_AUDIT_BKP_2</title>
+                  <entityName>Pavan-Oracle:POND_AUDIT_BKP_2</entityName>
+                  <createInput>
+                     <parameter name="POND_AUDIT_KEY" source="field" updatable="true">input.POND_AUDIT_KEY</parameter>
+                     <parameter name="SSR_ID" source="field" updatable="true">input.SSR_ID</parameter>
+                     <parameter name="APP_SYSTEM_NAME" source="field" updatable="true">input.APP_SYSTEM_NAME</parameter>
+                     <parameter name="TABLE_NAME" source="field" updatable="true">input.TABLE_NAME</parameter>
+                     <parameter name="PROCESS_ID" source="field" updatable="true">input.PROCESS_ID</parameter>
+                     <parameter name="LOAD_STATUS" source="field" updatable="true">input.LOAD_STATUS</parameter>
+                     <parameter name="CREATED_TIME" source="constant" updatable="true">2022-05-10T06:30:00Z</parameter>
+                     <parameter name="AUDIT_KEY_PRIM" source="field" updatable="true">input.AUDIT_KEY_PRIM</parameter>
+                  </createInput>
+                  <link id="l31wwktg" targetId="c"/>
+               </create>
+               <end id="c"/>
+            </flow>
+         </process>
+         <ns1:sample-data-sets xmlns:ns1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/sampleData.xsd">
+            <ns1:SampleData>
+               <ns1:Id>b5bd570d-f957-4590-a577-a3dc07a49121</ns1:Id>
+               <ns1:Name>test</ns1:Name>
+               <ns1:CreatedBy>GcsCloudAdminSri</ns1:CreatedBy>
+               <ns1:CreationDate>2022-05-12T05:10:41Z</ns1:CreationDate>
+               <ns1:ModifiedBy>GcsCloudAdminSri</ns1:ModifiedBy>
+               <ns1:ModificationDate>2022-05-12T05:27:26Z</ns1:ModificationDate>
+               <ns1:Data format="json">{
+	 "POND_AUDIT_KEY": "69",
+	 "SSR_ID": "fewa",
+	 "APP_SYSTEM_NAME": "gasd",
+	 "TABLE_NAME": "gsa",
+	 "PROCESS_ID": "43",
+	 "LOAD_STATUS": "sdfh",
+"AUDIT_KEY_PRIM":"66"
+}</ns1:Data>
+            </ns1:SampleData>
+         </ns1:sample-data-sets>
+      </types1:Entry>
+      <types1:GUID>1FqzautLSWKkHSKheGlc8H</types1:GUID>
+      <types1:DisplayName>Process1</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:22.451Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,51 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>I4ARW8UBM7zsZvE-gt-93833596-2021-07-07T12:09:45.555Z::conn.xml</types1:EntryId>
+      <types1:Name>conn-TcPCM-case-03125542</types1:Name>
+      <types1:ParentFlowIds>TrKkQIW3Ni7A7vN-gt-94056989-2021-07-07T12:09:45.729Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:sribatsa-redhat</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>GcsCloudAdminSri</types1:CreatedBy>
+      <types1:CreationDate>2021-07-07T12:09:46Z</types1:CreationDate>
+      <types1:ModifiedBy>GcsCloudAdminSri</types1:ModifiedBy>
+      <types1:ModificationDate>2021-07-07T12:23:13Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>GcsCloudAdminSri</types1:PublishedBy>
+      <types1:PublicationDate>2021-07-07T12:23:26Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/conn-TcPCM-case-03125542/conn-TcPCM-case-03125542.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="conn-TcPCM-case-03125542"
+                     label="conn-TcPCM-case-03125542"
+                     name="conn-TcPCM-case-03125542">
+            <description/>
+            <tags>.agent:sribatsa-redhat</tags>
+            <agent>sribatsa-redhat</agent>
+            <attributes>
+               <attribute encrypted="false"
+                          name="host"
+                          value="http://ktmathqtcpcm01t.ktm.local:8080/tcpcmT"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="true"
+                               connectorPath="project:/rt.connector/serviceConn_TcPCM_case_03125542/serviceConn_TcPCM_case_03125542_svcDef.xml"
+                               guid="aRv1JRH7HA0jMluWBW6lej"
+                               name="serviceConn-TcPCM-case-03125542"
+                               supportsConnectionTest="false"
+                               uuid="b2eed51f-08be-44f5-82fb-4802e4783431">
+               <description/>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>3M6DxF5d2mQb0B4rjCO5KH</types1:GUID>
+      <types1:DisplayName>conn-TcPCM-case-03125542</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2023-07-24T12:27:19.284Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,24 @@
+{
+  "objectInfo" : {
+    "id" : "jQfrAwjCdKzgSRUxOxtlmL",
+    "name" : "POPlanEntregaRetenciones",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HCC6LlRkPUEbfV3-gt-67838119-2021-12-01T13:07:53.542Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ ]
+}
