@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "3gXReLFXVMhhLqfvLuWtEJ",
+    "name" : "sriDev",
+    "type" : "Project",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "Development folder to test souce control",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-07-03T12:54:39.895Z",
+  "objectRefs" : [ ]
+}
