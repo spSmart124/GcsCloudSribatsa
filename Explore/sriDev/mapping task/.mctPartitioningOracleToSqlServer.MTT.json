@@ -17,13 +17,13 @@
       } ],
       "additionalInfo" : {
         "description" : null,
-        "contentType" : null,
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2024-07-03T12:54:39.894Z",
+  "updateTime" : "2024-07-03T13:06:16.634Z",
   "objectRefs" : [ {
     "id" : "7CgF1e544uye04iJB7oE6X",
     "name" : "g01_agent_01",
@@ -65,7 +65,7 @@
     },
     "path" : "/SYS"
   }, {
-    "id" : "87GQbRLLcIllE8BIWoVQCA",
+    "id" : "90KvaAPUgqaescSFoaKKCy",
     "name" : "mPartitioningOracleToSqlServer",
     "type" : "DTEMPLATE",
     "metadata" : {
@@ -74,16 +74,16 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "018Z0B1700000000002I"
+        "repoHandle" : "018Z0B1700000000002J"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
-        "contentType" : "JSON",
+        "contentType" : null,
         "documentState" : "VALID"
       }
     },
-    "path" : "/Explore/sribatsa/mappings"
+    "path" : "/Explore/sriDev/mappings"
   }, {
     "id" : "ciPLI8bWuclbsfEHFkldKT",
     "name" : "ConnOracle_2",
